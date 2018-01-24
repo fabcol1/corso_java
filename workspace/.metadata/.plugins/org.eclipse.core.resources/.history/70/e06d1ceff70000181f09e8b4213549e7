@@ -1,0 +1,10 @@
+package esempi;
+
+public class CopyPasteDaConsole {
+
+	public static void main(String[] args) {
+		String absoluteInputFileName = args[0];
+		System.out.println("Il nome assoluto del file da copiare è: " + absoluteInputFileName);
+	}
+
+}

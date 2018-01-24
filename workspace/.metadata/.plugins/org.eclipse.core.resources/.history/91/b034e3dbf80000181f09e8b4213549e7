@@ -1,0 +1,28 @@
+package esempi;
+
+import java.io.File;
+
+public class CopyPasteDaConsole {
+
+	public static void main(String[] args) {
+		String absoluteInputFileName = args[0];
+		System.out.println("Il nome assoluto del file da copiare è: " + absoluteInputFileName);
+		File absoluteInputFile = new File(absoluteInputFileName);
+		System.out.println("Verifico se esiste...");
+		if(absoluteInputFile.exists()) {
+			startFileCopy(absoluteInputFile);
+		} else {
+			System.out.println("Il File: " + absoluteInputFileName + " NON ESISTE. APPLICAZIONE TERMINATA");
+		}
+	}
+	
+	public static void startFileCopy(File absoluteInputFile) {
+		String outputFileName = getOutputFileName(absoluteInputFile.getName());
+		System.out.println("outputFileName: " + outputFileName);
+	}
+	
+	public static String getOutputFileName(String absoluteInputFile) {
+		
+	}
+
+}
