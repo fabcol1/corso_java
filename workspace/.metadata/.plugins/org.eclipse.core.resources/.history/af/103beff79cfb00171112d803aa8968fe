@@ -1,0 +1,12 @@
+package prova;
+
+public class Prova {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+	
+	public void String() {
+		System.out.println("il mio metodo");
+	}
+}

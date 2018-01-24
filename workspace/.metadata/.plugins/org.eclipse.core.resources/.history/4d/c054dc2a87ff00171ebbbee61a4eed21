@@ -1,0 +1,14 @@
+package esercizioEreditarieta;
+
+public class Cane extends EssereVivente  {
+	String nome;
+	String razza;
+	String colore;
+	
+	public void gioca() {
+	}
+	public void bisogni() {
+	}
+	public void mangia() {
+	}
+}

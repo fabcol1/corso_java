@@ -1,0 +1,9 @@
+package prova;
+
+public class Calcolo {
+	
+	int somma(int a, int b) {
+		Math.max(3,4);
+		return a+b;
+	}
+}

@@ -1,0 +1,14 @@
+package esercizioEreditarieta;
+
+public class Uomo {
+	String nome;
+	String cognome;
+	String occupazione;
+	
+	public void mangia() {
+	}
+	public void dorme() {
+	}
+	public void programma() {
+	}
+}

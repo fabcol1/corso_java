@@ -1,0 +1,12 @@
+package esercizioEreditarieta;
+
+public class Uomo extends EssereVivente  {
+	String cognome;
+	String occupazione;
+	
+
+	public void dorme() {
+	}
+	public void programma() {
+	}
+}

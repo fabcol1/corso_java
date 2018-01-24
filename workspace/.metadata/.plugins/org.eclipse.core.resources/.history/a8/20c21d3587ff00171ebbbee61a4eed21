@@ -1,0 +1,14 @@
+package esercizioEreditarieta;
+
+public class Pesce extends EssereVivente {
+	int occhi;
+	String nome;
+	boolean acquaSalata;
+
+	public void risalire() {
+	}
+	public void nuota() {
+	}
+	public void mangia() {
+	}
+}

@@ -1,0 +1,17 @@
+package corso;
+
+public class Automobile {
+	public int cv;
+	public int numeroRuote;
+	public int numeroFari = 4;
+	
+	public void giraADestra() {
+		if(numeroFari==4) {
+			System.out.println("La macchina è accesa");
+		}
+	}
+	
+	public void giraASinistra() {
+		
+	}
+}

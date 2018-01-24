@@ -1,0 +1,14 @@
+package corso;
+
+public class Automobile {
+	public int cv;
+	public int numeroRuote, numeroFari;
+	
+	public void giraADestra() {
+		
+	}
+	
+	public void giraASinistra() {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package esempiHash;
+
+import java.util.Hashtable;
+
+public class esempiHashTable {
+	public static void main(String[] args) {
+		Hashtable appoHash = new Hashtable<>();
+	}
+}

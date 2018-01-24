@@ -1,0 +1,8 @@
+package esercizioEreditarieta;
+
+public class Uomo {
+	String nome;
+	String cognome;
+	String occupazione;
+
+}

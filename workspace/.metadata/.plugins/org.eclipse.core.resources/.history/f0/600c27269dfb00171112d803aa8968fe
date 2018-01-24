@@ -1,0 +1,14 @@
+package prova;
+
+public class Prova {
+
+	public static void main(String[] args) {
+		String s = "ccc";
+		System.out.println("Hello World");
+		String();
+	}
+	
+	public static void String() {
+		System.out.println("il mio metodo");
+	}
+}

@@ -1,0 +1,7 @@
+package esempi;
+
+public class esempioIO {
+	public static void main(String[] args) {
+		
+	}
+}

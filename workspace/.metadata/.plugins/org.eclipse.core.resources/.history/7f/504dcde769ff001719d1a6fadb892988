@@ -1,0 +1,11 @@
+package esempi;
+
+public class StaticField {
+	public static int numero;
+	
+	public static void main(String[] args) {
+		
+	}
+}
+
+

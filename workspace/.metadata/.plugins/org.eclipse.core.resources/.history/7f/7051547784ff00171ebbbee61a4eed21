@@ -1,0 +1,19 @@
+package esempi;
+
+public class EsempioCicli {
+	public static void main(String[] args) {
+		// CICLO FOR
+		for(int i=0; i<10; i++) {
+			System.out.println("L'indice è: " + i);
+		}
+		// CICLO WHILE
+		int i = 0;
+		while(i<10) {
+			System.out.println("L'indice è: " + i++);
+		}
+		// CICLO DO WHILE
+		do {
+			System.out.println("L'indice è: " + i--);
+		} while(i > 0);
+	}
+}

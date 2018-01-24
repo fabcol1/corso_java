@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="parcheggio.Automobile"/>
+<fullyQualifiedTypeName name="parcheggio.Veicolo"/>
+<fullyQualifiedTypeName name="parcheggio.VeicoloAMotore"/>
+<fullyQualifiedTypeName name="parcheggio.VeicoloADieselInterface"/>
+<fullyQualifiedTypeName name="esempi.LaMiaClasse"/>
+<fullyQualifiedTypeName name="esempi.Implementazione"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthScrollBarUI"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.SaCamminareInterface"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.NuotaInterface"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.NonParlaInterface"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.Cane"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.Uomo"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.RespiraSottoAcquaInterface"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.Pesce"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="esercizioEreditarieta.EssereVivente"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.net.Inet4Address"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.URLConnection"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
+<fullyQualifiedTypeName name="esempi.reteServer"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSeparatorUI"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="java.net.InetAddress"/>
+</qualifiedTypeNameHistroy>

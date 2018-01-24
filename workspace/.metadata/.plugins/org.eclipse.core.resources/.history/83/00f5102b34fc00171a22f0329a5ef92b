@@ -1,0 +1,13 @@
+package prova;
+
+import java.util.Random;
+
+public class Prova2 {
+
+	static Random r = new Random();
+	
+	public static void main(String[] args) {
+		Calcolo c = new Calcolo();
+		System.out.println();
+	}
+}

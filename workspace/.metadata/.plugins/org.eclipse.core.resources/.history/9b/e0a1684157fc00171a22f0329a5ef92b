@@ -1,0 +1,5 @@
+package parcheggio;
+
+public class Veicolo {
+	public boolean motore = true;
+}

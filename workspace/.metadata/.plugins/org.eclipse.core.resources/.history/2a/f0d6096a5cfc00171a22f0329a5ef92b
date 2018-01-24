@@ -1,0 +1,8 @@
+package parcheggio;
+
+public interface VeicoloADieselInterface {
+	void scaldareCandele();
+	static void fareIlPienoDiDiesel() {
+		
+	}
+}

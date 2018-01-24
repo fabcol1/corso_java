@@ -1,0 +1,17 @@
+package esercizioEreditarieta;
+
+public class Pesce extends EssereVivente implements RespiraSottoAcquaInterface {
+	int occhi;
+	boolean acquaSalata;
+
+	public void risalire() {
+	}
+	public void nuota() {
+	}
+	
+	@Override
+	public void respiraSottoAcqua() {
+		// TODO Auto-generated method stub
+		
+	}
+}

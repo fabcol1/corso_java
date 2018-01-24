@@ -1,0 +1,6 @@
+package corso;
+
+public class Automobile {
+	public int cv;
+	public int numeroRuote, numeroFari;
+}

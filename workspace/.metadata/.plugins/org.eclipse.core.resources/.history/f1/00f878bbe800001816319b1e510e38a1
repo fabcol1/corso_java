@@ -1,0 +1,29 @@
+package esempi;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class esempioIO {
+	public static void main(String[] args) {
+		try {
+			readLocalFile();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void readLocalFile() throws IOException {
+		BufferedReader in = new BufferedReader(
+			new FileReader("C:\\Users\\UTENTE9\\Desktop\\workspace\\prova.txt")
+		);
+		String s, s2 = new String();
+		while((s = in.readLine()) != null) {
+			s2 += s + "\n";
+		}
+		in.close();
+		System.out.println(s2);
+	}
+}
+
+

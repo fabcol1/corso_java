@@ -1,0 +1,12 @@
+package parcheggio;
+
+public abstract class Veicolo {
+	public boolean motore = true;
+	
+	public void siAccende() {
+		System.out.println("");
+	}
+	public abstract void siSpegne();
+	public abstract void esplode();
+}
+

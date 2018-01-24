@@ -1,0 +1,24 @@
+package esempi;
+
+public class StampaParametro {
+
+	public static void main(String[] args) {
+		
+		System.out.println(args[0] + " " + args[1] + " " + args[2]);
+		
+		for(String s : args) {
+			if(s!=null) {
+				System.out.print(s + " " );
+			}
+		}
+	}
+	
+	public void esercizio1(String[] args) {
+		
+	}
+
+}
+
+// 1 - inserisco 3 stringhe
+// 2 - inserisco 3 numeri
+// 3 - inserisco 2 numeri + stringa che identifica tipo di operazione + - / * %

@@ -1,0 +1,13 @@
+package parcheggio;
+
+public class VeicoloAMotore extends Veicolo {
+	@Override
+	public void siSpegne() {
+		System.out.println("");		
+	}
+
+	@Override
+	public void esplode() {
+		
+	}
+}

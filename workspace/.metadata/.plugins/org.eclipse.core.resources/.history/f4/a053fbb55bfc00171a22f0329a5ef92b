@@ -1,0 +1,23 @@
+package parcheggio;
+
+public class Automobile extends VeicoloAMotore implements VeicoloADieselInterface {
+
+	@Override
+	public void scaldareCandele() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void fareIlPienoDiDiesel() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void esplode() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,5 @@
+package parcheggio;
+
+public class Automobile extends VeicoloAMotore implements VeicoloADieselInterface {
+	
+}

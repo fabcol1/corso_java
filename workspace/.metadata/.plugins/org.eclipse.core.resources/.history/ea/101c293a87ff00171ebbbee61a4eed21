@@ -1,0 +1,6 @@
+package esercizioEreditarieta;
+
+public class EssereVivente {
+	String nome;
+
+}

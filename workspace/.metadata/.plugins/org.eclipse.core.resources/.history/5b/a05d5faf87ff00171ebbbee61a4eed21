@@ -1,0 +1,16 @@
+package esercizioEreditarieta;
+
+public class Uomo extends EssereVivente implements SaCamminareInterface  {
+	String cognome;
+	String occupazione;
+	
+	public void dorme() {
+	}
+	public void programma() {
+	}
+	@Override
+	public void cammina() {
+		// TODO Auto-generated method stub
+		
+	}
+}

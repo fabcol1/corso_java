@@ -1,0 +1,20 @@
+package esempi;
+
+import javax.swing.plaf.synth.SynthScrollBarUI;
+
+public class EsempioSwitch {
+
+	public static void main(String[] args) {
+		switch("primo") {
+		case "primo" :
+			System.out.println("primo");
+		case "secondo" :
+			System.out.println("secondo");
+			break;
+		case "terzo" :
+			System.out.println("terzo");
+		}
+		
+		if(args[0].equals("ciao") ? System.out.println("true") : System.out.println("false"));
+	}
+}

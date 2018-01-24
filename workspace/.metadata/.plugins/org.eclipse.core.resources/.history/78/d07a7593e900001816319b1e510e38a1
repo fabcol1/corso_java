@@ -1,0 +1,48 @@
+package esempi;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class esempioIO {
+	public static void main(String[] args) {
+//		try {
+//			readLocalFile();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		writeLocalFile();
+	}
+	
+	private static void readLocalFile() throws IOException {
+		BufferedReader in = new BufferedReader(
+			new FileReader("C:\\Users\\UTENTE9\\Desktop\\workspace\\prova.txt")
+		);
+		String s, s2 = new String();
+		while((s = in.readLine()) != null) {
+			s2 += s + "\n";
+		}
+		in.close();
+		System.out.println(s2);
+	}
+	
+	private static void writeLocalFile() {
+		String fileToWrite = "C:\\Users\\UTENTE9\\Desktop\\workspace\\scrittura.txt";
+		File f = new File(fileToWrite);
+		// creo lo stream di output per file
+		FileOutputStream fos = new FileOutputStream(f);
+		// creo un printwriter per scrivere il file
+		PrintWriter pw = new PrintWriter(fos);
+		// scrivo sul file la riga ciao
+		pw.println("ciao");
+		pw.println("weeeeee");
+		pw.close();
+		fos.close();
+		
+	}
+}
+
+
