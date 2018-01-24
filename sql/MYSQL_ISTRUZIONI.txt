@@ -1,0 +1,35 @@
+------- NUOVO USER SU DB MYSQL ------------------
+
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'psq';
+
+oppure
+(((( CREATE USER 'newuser'@'%' IDENTIFIED BY 'psw'; --> l'utente si può connettere da che ip?? da tutti perchè cè l'% ))))
+
+GRANT ALL ON *.* TO 'newuser'@'%'; ----> *.* sta per TUTTI GLI SCHEMI + TUTTE LE TABELLE
+
+FLUSH PRIVILEGES; --> aggiorna le istruzioni ma non fare il restart del db!!
+
+--------- PER INIZIARE A FARE QUERY -----------
+
+USE schema_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
