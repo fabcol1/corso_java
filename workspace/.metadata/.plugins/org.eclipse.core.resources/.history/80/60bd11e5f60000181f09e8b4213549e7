@@ -28,7 +28,7 @@ public class esempioIO {
 	
 	private static void readLocalFile() throws IOException {
 		BufferedReader in = new BufferedReader(
-			new FileReader("C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\workspace\\prova.txt")
+			new FileReader("C:\\Users\\UTENTE9\\Desktop\\workspace\\prova.txt")
 		);
 		String s, s2 = new String();
 		while((s = in.readLine()) != null) {
@@ -38,7 +38,7 @@ public class esempioIO {
 		System.out.println(s2);
 	}
 	private static void writeLocalFile() throws IOException {
-		String fileToWrite = "C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\workspace\\dacopiare.txt";
+		String fileToWrite = "C:\\Users\\UTENTE9\\Desktop\\workspace\\dacopiare.txt";
 		File f = new File(fileToWrite);
 		// creo lo stream di output per file
 		FileOutputStream fos = new FileOutputStream(f);
@@ -52,11 +52,11 @@ public class esempioIO {
 	}
 	
 	private static void copyPasteFile() throws IOException {
-		String fileToCopy= "C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\workspace\\dacopiare.txt";
+		String fileToCopy= "C:\\Users\\UTENTE9\\Desktop\\workspace\\dacopiare.txt";
 		File f = new File(fileToCopy);
 		
 		if(f.exists()) {
-			String mkdir = "C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\workspace\\backupDir";
+			String mkdir = "C:\\Users\\UTENTE9\\Desktop\\workspace\\backupDir";
 			File dir = new File(mkdir);
 			
 			int i = 0;

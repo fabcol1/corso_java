@@ -56,7 +56,7 @@ public class esempioIO {
 		File f = new File(fileToCopy);
 		
 		if(f.exists()) {
-			String mkdir = "C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\workspace\\backupDir";
+			String mkdir = "C:\\Users\\UTENTE9\\Desktop\\workspace\\backupDir";
 			File dir = new File(mkdir);
 			
 			int i = 0;
