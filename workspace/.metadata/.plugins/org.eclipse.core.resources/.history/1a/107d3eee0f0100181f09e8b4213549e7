@@ -1,0 +1,9 @@
+package esempi;
+
+public class esempioNIO {
+
+	public static void main(String[] args) {
+
+	}
+
+}

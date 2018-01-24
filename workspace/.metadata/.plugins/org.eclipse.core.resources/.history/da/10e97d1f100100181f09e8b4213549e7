@@ -1,0 +1,28 @@
+package esempi;
+
+import java.io.FileInputStream;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+
+public class esempioNIO {
+
+	public static void main(String[] args) {
+
+	}
+	
+	Exception {
+			String filePathToRead = "C:/....";
+			File fileToRead = new File(filePathToRead);
+			FileInputStream fis = new FileInputStream(fileToRead);
+			
+			FileChannel inChannel = fis.getChannel();
+			ByteBuffer buffer = ByteBuffer.allocate(1024);
+			
+			while(inChannel.read(buffer)>0) {
+				buffer.flip();
+				for(int i = 0; i < buffer.limit(); i++) {
+					System.out.println((char) buffer.get());
+				}
+			}
+	}
+}

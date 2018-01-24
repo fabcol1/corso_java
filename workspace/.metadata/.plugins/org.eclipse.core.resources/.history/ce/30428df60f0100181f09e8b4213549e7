@@ -1,0 +1,13 @@
+package esempi;
+
+public class esempioNIO {
+
+	public static void main(String[] args) {
+
+	}
+	
+	Exception {
+			String filePathToRead = "C:/....";
+			File fileToRead = new File(filePathToRead);
+	}
+}
