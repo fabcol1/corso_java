@@ -1,0 +1,17 @@
+package esempi;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class ReadFromKeyboard {
+
+	public static void main(String[] args) {
+		// leggere da Standard input
+		BufferedReader stdin = new BufferedReader(
+				new InputStreamReader(System.in)
+		);
+		
+		System.out.println("Enter a line: ");
+	}
+
+}

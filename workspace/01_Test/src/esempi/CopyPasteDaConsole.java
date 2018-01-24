@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Formatter;
+import java.util.GregorianCalendar;
 
 public class CopyPasteDaConsole {
 	
@@ -40,7 +41,9 @@ public class CopyPasteDaConsole {
 		String s, s2 = new String();
 		while((s = in.readLine()) != null) {
 				s2 += s + "\n";
+				pw.println(s);
 		}
+		
 		in.close();
 		pw.close();
 		System.out.println(s2);
@@ -49,7 +52,7 @@ public class CopyPasteDaConsole {
 	
 	public static String getOutputFileName(String relativeInputFileName) {
 	    SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss");
-		String outputFileName =  dt1.format(new Date(System.currentTimeMillis()))  + "_" + relativeInputFileName;
+		String outputFileName =  dt1.format(new Date())  + "_" + relativeInputFileName;
 		return outputFileName;
 	}
 
