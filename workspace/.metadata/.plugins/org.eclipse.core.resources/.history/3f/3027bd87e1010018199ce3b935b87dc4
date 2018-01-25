@@ -1,0 +1,29 @@
+package es.serializable;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+
+import test.Message;
+
+public class SerializeTest {
+	
+	public static void main(String[] args) {
+		serializeWriteMessage();
+	}
+	
+	private static void serializeWriteMessage() {
+		Message mex = new Message();
+		
+		FileOutputStream fos = null;
+		fos = new FileOutputStream("...");
+		FileInputStream fis = null;
+		fis = new FileInputStream("C:/..");
+		
+		ObjectInputStream ois;
+		ois = new ObjectInputStream(fis);
+		
+		Message mex = (Messag)
+	}
+
+}

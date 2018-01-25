@@ -1,0 +1,20 @@
+package es.serializable;
+
+import java.io.FileInputStream;
+
+import test.Message;
+
+public class SerializeTest {
+	
+	public static void main(String[] args) {
+		serializeMessage();
+	}
+	
+	private static void serializeMessage() {
+		Message mex = null;
+		
+		FileInputStream fis = null;
+		fis = new FileInputStream("C:/..");
+	}
+
+}

@@ -1,0 +1,16 @@
+package es.serializable;
+
+import test.Message;
+
+public class SerializeTest {
+	
+	public static void main(String[] args) {
+		serializeMessage();
+	}
+	
+	private static void serializeMessage() {
+		Message mex = null;
+		
+	}
+
+}
