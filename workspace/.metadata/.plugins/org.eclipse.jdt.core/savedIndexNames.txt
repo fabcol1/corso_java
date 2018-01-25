@@ -4,7 +4,6 @@ INDEX VERSION 1.130+C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\.me
 408110248.index
 3249271204.index
 2709445462.index
-3819183758.index
 2178438400.index
 938977149.index
 2441585233.index

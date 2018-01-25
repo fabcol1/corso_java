@@ -10,7 +10,9 @@ import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -18,7 +20,25 @@ import java.util.concurrent.Executors;
 public class ServerChat {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		objectServerMultiUser();
+		objectServerMultiUserSimpleChat();
+	}
+	
+	private static void objectServerMultiUserSimpleChat() throws IOException, ClassNotFoundException {
+		ServerSocket serverSock = new ServerSocket(ClientChat.SERVER_SOCKET_PORT);
+		InetAddress address = InetAddress.getLocalHost();
+		System.out.println("##### SERVER HOSTNAME/IP: " + address + " #####");
+		ExecutorService executor = Executors.newCachedThreadPool();
+
+		ArrayList<Message> messages = new ArrayList<>();
+		
+		 while (true) {
+				System.out.println("################################################");
+				System.out.println("##### SERVER HOSTNAME/IP: " + address + " READY #####");
+				System.out.println("Server socket started. Listening on port: " + ClientChat.SERVER_SOCKET_PORT);
+				
+				Socket client = serverSock.accept();
+				executor.submit(new MyClientHandlerSimpleChat(client, messages));
+		 }
 	}
 	
 	private static void objectServerMultiUser() throws IOException, ClassNotFoundException {
