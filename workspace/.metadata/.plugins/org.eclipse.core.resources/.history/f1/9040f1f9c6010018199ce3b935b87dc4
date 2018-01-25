@@ -1,0 +1,36 @@
+package test;
+
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.net.InetAddress;
+import java.net.Socket;
+
+public class MyClientHandler implements Runnable {
+
+	Socket client;
+	public MyClientHandler(Socket client) {
+		this.client = client;
+	}
+	
+	@Override
+	public void run() {
+		while(true) {
+			InetAddress currentClientInetAddress = client.getInetAddress();
+			System.out.println("Connection established with: " + currentClientInetAddress);
+		
+			InputStream is = client.getInputStream();
+			ObjectInputStream ois = new ObjectInputStream(is);
+			
+			Message m = (Message) ois.readObject();
+			System.out.println(m.getUsername() + " " + m.getTextMessage());
+	        System.out.println("Closing connection with client");
+	        ois.close();
+	        is.close();
+	        client.close();
+	        
+	        if(m.getUsername().equals("quit")) break;	
+		}
+	
+	}
+
+}

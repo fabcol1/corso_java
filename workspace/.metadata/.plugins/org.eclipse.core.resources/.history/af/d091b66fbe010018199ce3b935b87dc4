@@ -1,0 +1,30 @@
+package test;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class ClientChat {
+	
+	public static final int SERVER_SOCKET_PORT = 8053;
+
+	public static void main(String[] args) throws IOException {
+		Socket client = new Socket("localhost", SERVER_SOCKET_PORT);
+		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+		out.write("CIAOCIAOCIAO");
+		out.close();
+		System.out.println("messaggio inviato");
+	}
+	
+	
+	private static void sendMessage() {
+		
+	}
+
+}

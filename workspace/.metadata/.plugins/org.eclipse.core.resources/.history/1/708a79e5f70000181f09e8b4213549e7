@@ -1,9 +1,0 @@
-package esempi;
-
-public class CopyPasteDaConsole {
-
-	public static void main(String[] args) {
-
-	}
-
-}

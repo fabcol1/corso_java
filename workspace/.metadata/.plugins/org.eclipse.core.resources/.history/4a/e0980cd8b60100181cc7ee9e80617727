@@ -1,0 +1,11 @@
+package clientServer;
+
+public class ClientChat {
+	
+	public static final int SERVER_SOCKET_PORT = 8053;
+
+	public static void main(String[] args) {
+
+	}
+
+}
