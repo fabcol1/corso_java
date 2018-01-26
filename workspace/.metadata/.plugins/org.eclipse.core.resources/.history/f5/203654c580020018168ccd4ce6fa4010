@@ -1,0 +1,103 @@
+package test;
+
+import java.io.*;
+import java.net.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class SimpleChatAdvSerialization implements Runnable {
+
+	Socket client;
+
+	public SimpleChatAdvSerialization(Socket client) {
+		this.client = client;
+	}
+
+	@Override
+	public void run() {
+		InetAddress currentClientInetAddress = client.getInetAddress();
+		System.out.println("Connection established with: " + currentClientInetAddress);
+
+		InputStream is;
+		ObjectInputStream ois;
+		OutputStream os;
+		ObjectOutputStream oos;
+		Message m = null;
+		try {
+
+			// leggo Message da Client
+			is = client.getInputStream();
+			ois = new ObjectInputStream(is);
+			m = (Message) ois.readObject();
+			System.out.println(m.getUsername() + " " + m.getTextMessage());
+
+			// serializzo il messaggio in locale
+			// per data temporale LOCALDATETIME -> ISTANZIARLO AL MOMENTO CORRENTE GG/MM/YY HH/MM/SS 
+			// OTTENGO STRINGA SIGNIFICATIVA E QUESTA STRINGA è IL NOME DEL FILE 
+			LocalDateTime data = LocalDateTime.now();
+			String dataString = data.format(DateTimeFormatter.ofPattern("yyyMMdd_HHmmss_SSSS")); 
+			
+			serializeWriteMessage(m, dataString);
+
+			// deserializzo e invio
+			os = client.getOutputStream();
+			oos = new ObjectOutputStream(os);
+			List<Message> messages = deserializeMessages();
+			oos.writeObject(deserializeReadMessage(dataString));
+
+			System.out.println("Closing connection with client");
+			oos.close();
+			os.close();
+			ois.close();
+			is.close();
+			client.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	private void serializeWriteMessage(Message mex, String name) throws IOException {
+		FileOutputStream fos = null;
+		fos = new FileOutputStream("C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\messaggiSerializzati\\" + name);
+		ObjectOutputStream oos;
+		oos = new ObjectOutputStream(fos);
+		oos.writeObject(mex);
+		oos.close();
+		fos.close();
+	}
+	
+	
+	// PATH "C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\messaggioSerializzato.ser"
+	private List<Message> deserializeMessages(String name) throws IOException, ClassNotFoundException {
+		File dir = new File("C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\messaggiSerializzati\\");
+		if(!dir.isDirectory()) return null;
+		ArrayList<Message> messages = new ArrayList<>();
+		File[] backupDir = dir.listFiles();
+		
+		for(File file : backupDir) {
+			messages.add(deserializeMessages(file.getName()));
+		}
+		
+		
+		return mex;
+	}
+	
+	private Message deserializeReadMessage(String name) throws IOException, ClassNotFoundException {
+		Message mex = null;
+		FileInputStream fis = null;
+		fis = new FileInputStream("C:\\Users\\UTENTE9\\Desktop\\corso_java\\corso_java\\messaggiSerializzati\\" + name);
+		ObjectInputStream ois;
+		ois = new ObjectInputStream(fis);
+		mex = (Message) ois.readObject();
+		ois.close();
+		fis.close();
+		
+		return mex;
+	}
+
+}

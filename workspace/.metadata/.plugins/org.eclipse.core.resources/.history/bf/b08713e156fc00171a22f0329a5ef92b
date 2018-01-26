@@ -1,5 +1,0 @@
-package parcheggio;
-
-public class Automobile {
-	public boolean motore = true;
-}

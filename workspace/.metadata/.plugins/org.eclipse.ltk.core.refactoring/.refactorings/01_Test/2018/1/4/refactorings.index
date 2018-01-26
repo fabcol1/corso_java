@@ -4,3 +4,5 @@
 1516793522164	Rename local variable 'absolutePathFileName'
 1516806443974	Copy compilation units
 1516874719340	Rename package 'clientServer'
+1516958530742	Delete element
+1516963242939	Encapsulate field 'timeStamp'

@@ -1,5 +1,0 @@
-package parcheggio;
-
-public interface VeicoloADieselInterface {
-
-}

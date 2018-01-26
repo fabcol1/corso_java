@@ -1,5 +1,0 @@
-package esempi;
-
-public class LaMiaClasse {
-	public double valore;
-}

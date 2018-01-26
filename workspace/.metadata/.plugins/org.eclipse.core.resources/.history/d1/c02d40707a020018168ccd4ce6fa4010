@@ -1,0 +1,14 @@
+package es.localDateTime;
+
+import java.time.LocalDateTime;
+
+public class LocalDateTimeExamples {
+	public static void main(String[] args) {
+		LocalDateTime today = LocalDateTime.now();
+		System.out.println("Today is: " + today);
+		
+		//Current Date using LocalDate and LocalTime
+		today = LocalDateTime.of(LocalDate.now(), LocalTime.now());
+		System.out.println("Current DateTime="+today);
+	}
+}

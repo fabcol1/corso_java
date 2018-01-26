@@ -1,11 +1,13 @@
 package test;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 public class Message implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	private LocalDateTime timeStamp;
 	private String username;
 	private String textMessage;
 	
@@ -22,6 +24,10 @@ public class Message implements Serializable {
 	public void setTextMessage(String textMessage) {
 		this.textMessage = textMessage;
 	}
-	
-	
+	public LocalDateTime getTimeStamp() {
+		return timeStamp;
+	}
+	public void setTimeStamp(LocalDateTime timeStamp) {
+		this.timeStamp = timeStamp;
+	}
 }

@@ -20,7 +20,24 @@ import java.util.concurrent.Executors;
 public class ServerChat {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		objectServerMultiUserSimpleChat();
+		multiUserSimpleChatSerialization();
+	}
+	
+	private static void multiUserSimpleChatSerialization() throws IOException, ClassNotFoundException {
+		ServerSocket serverSock = new ServerSocket(ClientChat.SERVER_SOCKET_PORT);
+		InetAddress address = InetAddress.getLocalHost();
+		System.out.println("##### SERVER HOSTNAME/IP: " + address + " #####");
+		ExecutorService executor = Executors.newCachedThreadPool();
+
+		 while (true) {
+				System.out.println("################################################");
+				System.out.println("##### SERVER HOSTNAME/IP: " + address + " READY #####");
+				System.out.println("Server socket started. Listening on port: " + ClientChat.SERVER_SOCKET_PORT);
+				
+				Socket client = serverSock.accept();
+//				executor.submit(new SimpleChatSerialization(client));
+				executor.submit(new SimpleChatAdvSerialization(client));
+		 }
 	}
 	
 	private static void objectServerMultiUserSimpleChat() throws IOException, ClassNotFoundException {

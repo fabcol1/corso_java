@@ -9,6 +9,8 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,7 +19,7 @@ public class ClientChat {
 	public static final int SERVER_SOCKET_PORT = 8057;
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		simpleChat();
+		simpleChatAdvanced();
 	}
 	
 	
@@ -74,13 +76,8 @@ public class ClientChat {
 			InputStream in = client.getInputStream();
 			ObjectInputStream ois = new ObjectInputStream(in);
 			
-//			Message msg = (Message) ois.readObject();
-//			System.out.println(msg.getUsername() + " " + msg.getTextMessage());
-
-			ArrayList<Message> messages = (ArrayList<Message>) ois.readObject();
-			for(Message msg : messages) {
-				System.out.println(msg.getUsername() + " " + msg.getTextMessage());
-			}
+			Message msg = (Message) ois.readObject();
+			System.out.println(msg.getUsername() + " " + msg.getTextMessage());
 
 			ois.close();
 			in.close();
@@ -89,10 +86,58 @@ public class ClientChat {
 			os.close();
 			client.close();
 			
+			if(m.getTextMessage().equals("quit")) break;
+		}
+		System.out.println("Client chiuso");		
+	}
+	
+	private static void simpleChatAdvanced() throws IOException, ClassNotFoundException {
+		
+		// alla prima connessione scarico tutti i messaggi pregressi
+		LocalDateTime data = LocalDateTime.MIN;
+		Scanner s = new Scanner(System.in);
+		System.out.print("Inserisci username: ");
+		String name = s.nextLine();
+		while(true) {
+			
+			Message m = new Message();
+			m.setTimeStamp(data);
+			m.setUsername(name);
+			System.out.print("Inserisci messaggio: ");
+			m.setTextMessage(s.nextLine());
+			
+			Socket client = new Socket("localhost",  SERVER_SOCKET_PORT);
+			OutputStream os = client.getOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(os);
+			oos.writeObject(m);
+			
+			InputStream in = client.getInputStream();
+			ObjectInputStream ois = new ObjectInputStream(in);
+			
+			ArrayList<Message> messages;
+			try  {
+				messages = (ArrayList<Message>) ois.readObject();	
+			} catch(Exception ex) {
+				messages = new ArrayList<>();
+			}
+			
+			System.out.println("------------------------------------------------------------------------");
+			int j = 0;
+			String dataString;
+			for(int i = 0; i < messages.size()-1; i++) {
+				dataString = messages.get(i).getTimeStamp().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+				System.out.format("%3d|\t%-10s - %-10s - %s\n", j++, dataString, messages.get(i).getUsername(), messages.get(i).getTextMessage());
+			}
+			data = messages.get(messages.size()-1).getTimeStamp();
+			System.out.println("------------------------------------------------------------------------");
+			ois.close();
+			in.close();
+			oos.close();
+			os.close();
+			client.close();
+			
 			if(m.getUsername().equals("quit")) break;
 		}
-//		oos.close();
-//		os.close();
 		System.out.println("Client chiuso");		
 	}
 }
