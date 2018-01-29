@@ -17,12 +17,12 @@ public class RequestThread extends Thread {
 	public void run() {
 		Socket client;
 		try {
-			client = new Socket("mercurio", ClientChat.SERVER_SOCKET_PORT_FOR_REQUEST);
+			client = new Socket(ClientChat.SERVER_HOST, ClientChat.SERVER_SOCKET_PORT_FOR_REQUEST);
 			OutputStream os = client.getOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(os);
 			oos.writeObject(m);
 			
-			
+//			System.out.println(m.getLastMessageSendTime());
 			InputStream in = client.getInputStream();
 			ObjectInputStream ois = new ObjectInputStream(in);
 
@@ -33,9 +33,14 @@ public class RequestThread extends Thread {
 				System.out.println("Log: eccezione in lettura da server");
 			}
 			
-			for(Message m : messages) {
-				System.out.println(m.getUsername() + " " + m.getTextMessage());
+			for(Message msg : messages) {
+				System.out.println(msg.getUsername() + " " + msg.getTextMessage() + " " + msg.getLastTimeActive() );
 			}
+			
+			if(messages!=null && messages.length!=0) {
+				m.setLastMessageSendTime(messages[messages.length-1].getLastTimeActive());
+			}
+			
 			ois.close();
 			in.close();
 			oos.close();

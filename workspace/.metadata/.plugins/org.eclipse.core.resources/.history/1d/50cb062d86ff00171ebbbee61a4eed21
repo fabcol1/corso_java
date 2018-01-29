@@ -1,7 +1,0 @@
-package esercizioEreditarieta;
-
-public class Pesce {
-	int occhi;
-	String nome;
-	boolean acquaSalata;
-}

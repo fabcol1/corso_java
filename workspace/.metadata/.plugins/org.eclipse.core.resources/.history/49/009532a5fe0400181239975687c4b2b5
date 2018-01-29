@@ -1,0 +1,9 @@
+package test;
+
+public class CommunityMessageServer extends Thread {
+	
+	public void run() {
+		
+	}
+
+}

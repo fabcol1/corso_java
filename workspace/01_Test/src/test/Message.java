@@ -10,6 +10,14 @@ public class Message implements Serializable {
 //	private LocalDateTime timeStamp;
 	private String username;
 	private String textMessage;
+	private String lastTimeActive;
+	
+	public String getLastTimeActive() {
+		return lastTimeActive;
+	}
+	public void setLastTimeActive(String lastTimeActive) {
+		this.lastTimeActive = lastTimeActive;
+	}
 	
 	public String getUsername() {
 		return username;
@@ -17,6 +25,7 @@ public class Message implements Serializable {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+	
 	public String getTextMessage() {
 		return textMessage;
 	}

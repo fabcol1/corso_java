@@ -1,0 +1,16 @@
+package test;
+
+public class ClientReadMessages {
+
+	// CLIENT PER LEGGERE I MESSAGGI SULLA CHAT
+	public static void main(String[] args) throws InterruptedException {
+		while(true) {
+			Thread.sleep(2000);
+			MessagesRequest msgReq = new MessagesRequest();
+			msgReq.setLastMessageSendTime("RICHIESTA");
+			
+			new RequestThread(msgReq).start();
+		}
+	}
+
+}

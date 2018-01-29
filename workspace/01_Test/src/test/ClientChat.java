@@ -15,21 +15,23 @@ public class ClientChat {
 
 	public static final int SERVER_SOCKET_PORT = 8053;
 	public static final int SERVER_SOCKET_PORT_FOR_REQUEST = 8055;
+	public static final String SERVER_HOST = "mercurio";
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 		multiThreadClient();
 	}
 	
+	// CLIENT PER SCRIVERE MESSAGGI ALLA CHAT (SUL SERVER E POI AD ALTRI UTENTI)
 	private static void multiThreadClient() throws UnknownHostException, IOException, InterruptedException {
 			new MessageThread().start();
 			
-			while(true) {
-				Thread.sleep(2000);
-				MessagesRequest msgReq = new MessagesRequest();
-				msgReq.setLastMessageSendTime("RICHIESTA");
-				
-				new RequestThread(msgReq).start();
-			}
+//			while(true) {
+//				Thread.sleep(2000);
+//				MessagesRequest msgReq = new MessagesRequest();
+//				msgReq.setLastMessageSendTime("RICHIESTA");
+//				
+//				new RequestThread(msgReq).start();
+//			}
 	}
 
 	private static void sendMessage() throws UnknownHostException, IOException {

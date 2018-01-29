@@ -1,0 +1,15 @@
+package test;
+
+public class ClientReadMessages {
+
+	public static void main(String[] args) throws InterruptedException {
+		while(true) {
+			Thread.sleep(2000);
+			MessagesRequest msgReq = new MessagesRequest();
+			msgReq.setLastMessageSendTime("RICHIESTA");
+			
+			new RequestThread(msgReq).start();
+		}
+	}
+
+}

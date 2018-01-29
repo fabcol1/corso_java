@@ -1,0 +1,73 @@
+package test;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class CommunityRequestServer extends Thread {
+	
+	public void run() {
+		ServerSocket serverSock;
+		try {
+			serverSock = new ServerSocket(ServerChat.SERVER_SOCKET_PORT_FOR_REQUEST);
+			InetAddress address = InetAddress.getLocalHost();
+			System.out.println("##### SERVER HOSTNAME/IP: " + address + " #####");
+
+			 while (true) {
+					System.out.println("################################################");
+					System.out.println("##### SERVER HOSTNAME/IP: " + address + " READY #####");
+					System.out.println("Server socket started. Listening on port: " + ServerChat.SERVER_SOCKET_PORT_FOR_REQUEST);
+					
+					Socket client = serverSock.accept();
+					
+					InetAddress currentClientInetAddress = client.getInetAddress();
+					System.out.println("Connection established with: " + currentClientInetAddress);
+
+					InputStream is;
+					ObjectInputStream ois;
+					OutputStream os;
+					ObjectOutputStream oos;
+					
+					MessagesRequest req = null;
+					Message[] m = null;
+					try {
+						// leggo Message da Client
+						is = client.getInputStream();
+						ois = new ObjectInputStream(is);
+						req = (MessagesRequest) ois.readObject();
+					
+						m = new Message();
+						m.setUsername("Risposta");
+						m.setTextMessage("Messaggio di risposta");
+						
+						os = client.getOutputStream();
+						oos = new ObjectOutputStream(os);
+						oos.writeObject(m);
+						
+						System.out.println("Closing connection with client");
+						oos.close();
+						os.close();
+						ois.close();
+						is.close();
+						client.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					} catch (ClassNotFoundException e) {
+						e.printStackTrace();
+					}
+			 }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

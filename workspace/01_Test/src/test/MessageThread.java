@@ -19,7 +19,7 @@ public class MessageThread extends Thread {
 			
 			Socket client;
 			try {
-				client = new Socket("mercurio", ClientChat.SERVER_SOCKET_PORT);
+				client = new Socket(ClientChat.SERVER_HOST, ClientChat.SERVER_SOCKET_PORT);
 				OutputStream os = client.getOutputStream();
 				ObjectOutputStream oos = new ObjectOutputStream(os);
 				oos.writeObject(m);

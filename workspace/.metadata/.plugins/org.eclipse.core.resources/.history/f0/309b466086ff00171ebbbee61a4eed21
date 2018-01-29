@@ -1,9 +1,0 @@
-package esercizioEreditarieta;
-
-public class Cane {
-	String nome;
-	String razza;
-	String colore;
-	
-	
-}
