@@ -1,0 +1,47 @@
+package test;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+
+public class RequestThread extends Thread {
+	MessagesRequest m;
+	
+	public RequestThread(MessagesRequest m) {
+		this.m = m;
+	}
+	
+	public void run() {
+		Socket client;
+		try {
+			client = new Socket("mercurio", ClientChat.SERVER_SOCKET_PORT);
+			OutputStream os = client.getOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(os);
+			oos.writeObject(m);
+			
+			
+			InputStream in = client.getInputStream();
+			ObjectInputStream ois = new ObjectInputStream(in);
+
+			Message[] messages;
+			try {
+				messages = (Message[]) ois.readObject();
+			} catch (Exception ex) {
+			}
+			
+			System.out.println(messages);
+
+			ois.close();
+			in.close();
+			oos.close();
+			os.close();
+			client.close();			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

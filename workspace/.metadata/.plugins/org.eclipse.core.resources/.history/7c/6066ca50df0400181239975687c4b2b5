@@ -1,0 +1,12 @@
+package es.thread;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ThreadExample th = new ThreadExample("yeeee");
+		System.out.println(th.getState());
+		th.start();
+		System.out.println(th.getState());
+	}
+
+}

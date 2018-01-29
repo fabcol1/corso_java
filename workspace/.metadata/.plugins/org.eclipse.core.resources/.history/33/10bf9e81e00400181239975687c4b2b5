@@ -1,0 +1,10 @@
+package es.thread;
+
+public class RunnableExample implements Runnable {
+
+	@Override
+	public void run() {
+		
+	}
+
+}

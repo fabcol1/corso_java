@@ -1,0 +1,7 @@
+package es.thread;
+
+public class ThreadExample extends Thread {
+	public ThreadExample(String str) {
+		super(str);
+	}
+}

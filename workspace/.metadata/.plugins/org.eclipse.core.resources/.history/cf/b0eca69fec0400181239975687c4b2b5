@@ -1,0 +1,10 @@
+package test;
+
+public class RequestThread extends Thread {
+	MessagesRequest m;
+	
+	public MessageThread(MessagesRequest m) {
+		this.m = m;
+	}
+
+}

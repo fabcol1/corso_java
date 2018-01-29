@@ -1,0 +1,30 @@
+package es.thread;
+
+public class Main {
+
+	public static void main(String[] args) throws InterruptedException {
+	}
+
+	private static void runWithThreadClass() throws InterruptedException {
+		ThreadExample th = new ThreadExample("yeeee");
+		System.out.println("State: " + th.getState());
+		th.start();
+		Thread.sleep(11000);
+		System.out.println("State: " + th.getState());
+		
+		new ThreadExample("Pippo").start();
+		new ThreadExample("Pluto").start();
+	}
+	
+	private static void runWithThreadClass() throws InterruptedException {
+		ThreadExample th = new ThreadExample("yeeee");
+		System.out.println("State: " + th.getState());
+		th.start();
+		Thread.sleep(11000);
+		System.out.println("State: " + th.getState());
+		
+		new ThreadExample("Pippo").start();
+		new ThreadExample("Pluto").start();
+	}
+	
+}

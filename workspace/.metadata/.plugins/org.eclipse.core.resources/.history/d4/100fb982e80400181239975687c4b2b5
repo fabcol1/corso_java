@@ -1,0 +1,8 @@
+package test;
+
+public class MessageThread extends Thread {
+	
+	public void run() {
+		
+	}
+}

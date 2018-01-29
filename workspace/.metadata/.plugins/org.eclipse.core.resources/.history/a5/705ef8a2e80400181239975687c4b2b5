@@ -1,0 +1,14 @@
+package test;
+
+public class MessageThread extends Thread {
+	
+	Message m;
+	
+	public MessageThread(Message m) {
+		this.m = m;
+	}
+	
+	public void run() {
+		
+	}
+}

@@ -1,0 +1,5 @@
+package es.thread;
+
+public class RunnableExample {
+
+}
