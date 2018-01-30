@@ -1,0 +1,18 @@
+package es.db;
+
+public class DBExamples {
+	public static void main(String[] args) throws ClassNotFoundException {
+		// driver di tipo "bridge jdbc-odbc"
+		String driver = "com.mysql.jdbc.Driver";
+		// se la chiamata va a buon fine. Ho i driver caricati correttamente nel class path
+		Class.forName(driver);
+		
+		// stringa di connessione
+//		String url
+	}
+	
+	private static void querySelect() {
+		
+	}
+
+}
