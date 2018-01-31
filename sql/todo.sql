@@ -17,3 +17,41 @@ FLUSH PRIVILEGES;
 CREATE TABLE testDBTable ( nome CHAR(30), password CHAR(30) );
 
 INSERT INTO testDBTable (nome,password) VALUES('fab','fab');
+
+----------------- QUERY SEMPLICI ---------------------
+DELETE FROM testDBTable WHERE nome='LUCA';
+UPDATE testDBTable SET nome='LUCA' WHERE nome='LUCAKIZ';
+INSERT INTO testDBTable (nome,password) VALUES('CIAO','CIAO');
+DROP TABLE testDBTable;
+ALTER TABLE testDBTable UNIQUE (email);
+--------------------------------------------------------
+
+
+---------------------- ESERCIZIO USER DB JAVA EE ----------------------------
+USE testDB;
+CREATE TABLE users ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	email VARCHAR(255),
+	password VARCHAR(30),
+	PRIMARY KEY (id) );
+
+INSERT INTO users (email, password) VALUES ('cicciokiz@luca.com', 'fab');
+INSERT INTO users (email, password) VALUES ('abc@luca.com', 'fab');
+INSERT INTO users (email, password) VALUES ('wer@luca.com', 'fab');
+INSERT INTO users (email, password) VALUES ('qwerty@luca.com', 'fab');
+
+ALTER TABLE users ADD UNIQUE(email);
+-------------------------------- RIFACCIO LA TABELLA ----------------------------
+DROP TABLE users;
+
+CREATE TABLE users ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(30),
+	PRIMARY KEY (id),
+	UNIQUE (email));
+
+INSERT INTO users (email, password) VALUES ('cicciokiz@luca.com', 'fab');
+INSERT INTO users (email, password) VALUES ('abc@luca.com', 'fab');
+INSERT INTO users (email, password) VALUES ('wer@luca.com', 'fab');
+INSERT INTO users (email, password) VALUES ('qwerty@luca.com', 'fab');
