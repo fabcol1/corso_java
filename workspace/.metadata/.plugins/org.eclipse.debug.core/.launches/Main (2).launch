@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/01_Test/src/es/thread/Main.java"/>
+<listEntry value="/01_ESERCIZI_JAVA_SE/src/es/thread/Main.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="es.thread.Main"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="01_Test"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="01_ESERCIZI_JAVA_SE"/>
 </launchConfiguration>

@@ -1,7 +1,0 @@
-package esempiHash;
-
-public class esempiHashTable {
-	public static void main(String[] args) {
-		
-	}
-}

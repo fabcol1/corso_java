@@ -1,9 +1,0 @@
-package es.db;
-
-public class DBExamples {
-	public static void main(String[] args) {
-		// driver di tipo "bridge jdbc-odbc"
-		String driver = "com.mysql.jdbc.Driver";
-	}
-
-}

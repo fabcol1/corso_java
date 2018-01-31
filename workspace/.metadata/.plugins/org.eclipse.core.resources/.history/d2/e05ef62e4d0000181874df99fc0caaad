@@ -1,9 +1,0 @@
-package esempi;
-
-public class reteClient {
-
-	public static void main(String[] args) {
-
-	}
-
-}

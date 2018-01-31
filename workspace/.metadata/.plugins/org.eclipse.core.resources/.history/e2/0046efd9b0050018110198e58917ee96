@@ -1,8 +1,0 @@
-package es.db;
-
-public class DBExamples {
-	public static void main(String[] args) {
-		
-	}
-
-}
