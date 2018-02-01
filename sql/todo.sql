@@ -24,6 +24,11 @@ UPDATE testDBTable SET nome='LUCA' WHERE nome='LUCAKIZ';
 INSERT INTO testDBTable (nome,password) VALUES('CIAO','CIAO');
 DROP TABLE testDBTable;
 ALTER TABLE testDBTable UNIQUE (email);
+
+SELECT COUNT(*) AS ids from quest;
+
+SELECT * FROM quest ORDER BY RAND() LIMIT 1;
+
 --------------------------------------------------------
 
 
@@ -55,3 +60,14 @@ INSERT INTO users (email, password) VALUES ('cicciokiz@luca.com', 'fab');
 INSERT INTO users (email, password) VALUES ('abc@luca.com', 'fab');
 INSERT INTO users (email, password) VALUES ('wer@luca.com', 'fab');
 INSERT INTO users (email, password) VALUES ('qwerty@luca.com', 'fab');
+
+
+---------------------- CREO TABELLA PER DOMANDE -----------------------------
+CREATE TABLE quest ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	domanda VARCHAR(255),
+	risposte VARCHAR(255),
+	corrette VARCHAR(255),
+	PRIMARY KEY (id) );
+
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Quali animali hanno 4 zampe?', 'Gatto;Cane;Scimmia;Uccellino', '0;1');

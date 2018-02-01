@@ -1,6 +1,0 @@
-package clientServer;
-
-public class Message {
-	private String username;
-	private String textMessage;
-}

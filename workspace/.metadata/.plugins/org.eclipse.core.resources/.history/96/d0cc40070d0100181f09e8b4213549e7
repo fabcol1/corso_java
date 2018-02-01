@@ -1,9 +1,0 @@
-package esempi;
-
-public class CopyPasteDaTastiera {
-
-	public static void main(String[] args) {
-
-	}
-
-}
