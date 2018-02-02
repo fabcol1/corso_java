@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -59,9 +58,9 @@ public class Questions extends HttpServlet {
 	    out.println("<input type=\"submit\" value=\"Esegui\"/></br></br>");
 	    out.println("<input type=\"hidden\" name=\"id\" value=\""+q.id+"\"/></br></br>");
 	    out.println("</form>");
+	    out.println("<form action=\"questionario\"><input type=\"submit\" value=\"Altra Domanda\" /></form>");
 	    out.println("</body>");
 	    out.println("</html>");
-	    
 	}
 
 	/**

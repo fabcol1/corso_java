@@ -71,3 +71,26 @@ CREATE TABLE quest (
 	PRIMARY KEY (id) );
 
 INSERT INTO quest (domanda, risposte, corrette) VALUES ('Quali animali hanno 4 zampe?', 'Gatto;Cane;Scimmia;Uccellino', '0;1');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Which of the following are valid Java identifiers? (Choose all that apply)', 'A$B;_helloWorld;true;java.lang;Publi;1980_s', '0;1;4');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Which of the following are legal entry point methods that can be run from the command line? (Choose alla that apply)', 'private static void main(String[] args);public static final main(String[] args); public void main(String[] args)', '0');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Which of the following lines of code compile? (Choose all that apply)', 'int i1 = 1_234;double d1 = 1_234_.0;double d2 = 1_234._0', '0');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Cosa ha mangiato oggi Luca?', 'Panino;Pasta;Nulla;Pizza', '2');
+
+------------------------------------- RICREO TABELLA CON CORRETTE DIVERSO-------------------------------
+
+DROP TABLE quest;
+
+CREATE TABLE quest ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	domanda VARCHAR(255),
+	risposte VARCHAR(255),
+	corrette VARCHAR(255),
+	PRIMARY KEY (id) );
+
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Quali animali hanno 4 zampe?', 'Gatto;Cane;Scimmia;Uccellino', 'Gatto;Cane');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Which of the following are valid Java identifiers? (Choose all that apply)', 'A$B;_helloWorld;true;java.lang;Public;1980_s', 'A$B;_helloWorld;Public');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Which of the following are legal entry point methods that can be run from the command line? (Choose alla that apply)', 'public static void main(String[] args);public static final main(String[] args); public void main(String[] args)', 'public static void main(String[] args)');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Which of the following lines of code compile? (Choose all that apply)', 'int i1 = 1_234;double d1 = 1_234_.0;double d2 = 1_234._0', 'int i1 = 1_234');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Cosa ha mangiato ieri Luca?', 'Panino;Pasta;Nulla;Pizza', 'Nulla');
+INSERT INTO quest (domanda, risposte, corrette) VALUES ('Cosa ha mangiato oggi Luca?', 'Nulla;Cinese;Carciofi;Pizza', 'Cinese');
+

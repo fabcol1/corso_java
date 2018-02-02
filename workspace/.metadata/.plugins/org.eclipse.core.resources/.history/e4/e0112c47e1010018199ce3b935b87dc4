@@ -1,9 +1,0 @@
-package es.serializable;
-
-public class SerializeTest {
-	
-	private static void serializeMessage() {
-		
-	}
-
-}

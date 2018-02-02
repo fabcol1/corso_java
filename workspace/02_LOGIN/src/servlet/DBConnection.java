@@ -93,6 +93,7 @@ public class DBConnection {
 	}
 	
 	public void checkQuestion(String id, String[] answer) throws ClassNotFoundException, SQLException {
+		if(answer==null || answer.length==0) return;
 		String driver = "com.mysql.jdbc.Driver";
 		Class.forName(driver);
 		String url = "jdbc:mysql://127.0.0.1:3306/testDB";
