@@ -1,0 +1,36 @@
+body {
+	padding: 20px;
+	background-color: #80ff80;
+}
+
+.domanda {
+	background: #459836;
+	border-style: outset;
+	border-width: 2px;
+	border-color: green;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.domanda-testo {
+	text-align: left;
+	color: black;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.domanda-checkbox {
+	padding: 20px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+checkbox {
+	padding-left: 10px;
+}
+
+label {
+	padding-left: 10px;
+}

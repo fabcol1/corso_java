@@ -12,30 +12,39 @@
 %>
 
 <head>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/questionario.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
+<div>
 <form action="questionarioAnswer.jsp">
 <%
 	for(int i = 0; i<topicsSize; i++) {
 	%>
-	<div> 
+	<div class="domanda">
+	
+	<div class="domanda-testo">
 	<%
 		out.print(topics[i].getQuestion()+"</br>");
 		session.setAttribute("question"+String.valueOf(i), topics[i].getQuestion());
-		
+	%>
+	</div>
+	<div class="domanda-checkbox"> 
+	<%	
 		int availableRepliesLength = topics[i].getAvailableReplies().length;
 		String[] availableReplies = topics[i].getAvailableReplies();
 		String[] correctReplies = topics[i].getCorrectReplies();
 		session.setAttribute("correctReplies"+String.valueOf(i), correctReplies);
 		
 		for(int y=0; y < availableRepliesLength; y++) {
-			out.print("<input type='checkbox' name='question"+String.valueOf(i)+"' value='"+availableReplies[y]+"' >"+availableReplies[y]+"<br>");
+			out.print("<input type='checkbox' name='question"+String.valueOf(i)+"' value='"+availableReplies[y]+"' ><label>"+availableReplies[y]+"</label></br>");
 		}
 		
 		%>
-		</div></br></br> 
+	</div></div></br></br> 
 		<%
 
 	}
@@ -43,5 +52,6 @@
 %>
 <input type="submit" value="Verifica"/>
 </form>
+</div>
 </body>
 </html>

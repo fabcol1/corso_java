@@ -1,7 +1,0 @@
-package test;
-
-import java.io.Serializable;
-
-public class MessagesRequest implements Serializable {
-
-}
