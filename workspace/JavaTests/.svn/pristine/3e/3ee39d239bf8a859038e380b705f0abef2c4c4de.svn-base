@@ -1,0 +1,18 @@
+package com.exercises.years.francesco;
+
+public class NonRepeatingYears {
+
+	public int count(int range_min, int range_max) {
+		// TODO Auto-generated method stub
+		int risultato = 0;
+		
+		for (int i=range_min;i <= range_max; i++) {
+			
+			
+			
+		}
+		
+		return risultato;
+	}
+
+}

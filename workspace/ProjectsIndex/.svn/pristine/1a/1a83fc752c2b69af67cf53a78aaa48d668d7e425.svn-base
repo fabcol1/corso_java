@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Daniele Grizzi</title>
+</head>
+<body>
+<p>Daniele Grizzi</p>
+<ul>
+<li><a href="http://192.168.178.38:8080/DWP_Login/login_registration.html">Daniele Grizzi --> Login-Registrazione</a></li>
+<li><a href="http://192.168.178.38:8080/Questionario_2_JSP/allinone_jsp_2_css.jsp">Daniele Grizzi --> Questionario</a></li>
+<li><a href="http://192.168.178.38:8080/ProvaChatGrafica/login_registration.html">Daniele Grizzi --> Chat</a></li>
+</ul>
+</body>
+</html>

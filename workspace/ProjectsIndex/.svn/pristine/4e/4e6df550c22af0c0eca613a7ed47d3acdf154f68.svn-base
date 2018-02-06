@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+/*     body { */
+/*         background-color:red; */
+/*     } */
+</style>
+<meta charset="UTF-8">
+<title>Progetti di Marco</title>
+</head>
+<body>
+<ul>
+<li><a href="http://192.168.178.34:8080/ChatWP">marco --> login</a></li>
+<li><a href="http://192.168.178.34:8080/QuizCB/questionario.jsp">marco --> questionario</a></li>
+</ul>
+</body>
+</html>

@@ -13,22 +13,32 @@
 		<div class="text-read">
 		<%
 		MessagesRequest msgReq = new MessagesRequest();
-		if(request.getAttribute("last")!=null) {
-			msgReq.setLastMessageSendTime((String) request.getAttribute("last"));
+		
+		String last = (String) session.getAttribute("last");
+		String email = (String) session.getAttribute("email");
+		
+		if(last!=null) {
+			msgReq.setLastMessageSendTime(last);
 		}
+		
 		Request req = new Request(msgReq); 
 		String s = req.run();
-		out.print("<textarea rows='25' cols='50'> "+ s + " </textarea>");
-		request.setAttribute("last", msgReq.getLastMessageSendTime());
+		
+		System.out.println("last: " + last + " email: " + email);
+		
+		session.setAttribute("last", msgReq.getLastMessageSendTime());
+		out.print("<textarea rows='25' cols='75'> "+ s + " </textarea>");
 		%>
 		</div>
-
 		<div class="text-form">
 		<form action="SendMessage">
 			<label>Message: </label>
 			<input type="text" name="message"/>
-			<% out.print("<input type='hidden' name='email' value='"+request.getAttribute("email")+"' />"); %>
-			<input type="submit" value="Send"/></br></br>
+			<input type="submit" value="Send"/><br><br>
+		</form>
+		
+		<form action="chatFrontEnd.jsp">
+			<input type="submit" value="Download last messages"/><br><br>
 		</form>
 		</div>
 </body>

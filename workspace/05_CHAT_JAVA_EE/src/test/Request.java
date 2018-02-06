@@ -35,8 +35,15 @@ public class Request {
 				System.out.println("Log: eccezione in lettura da server");
 			}
 			
+			System.out.println(messages.length);
 			for(Message msg : messages) {
-				buffer.insert(0,  msg.getLastTimeActive() + " " + msg.getUsername() + " " + msg.getTextMessage()+"\n");
+				System.out.println(msg.getLastTimeActive());
+			}
+			
+			for(Message msg : messages) {
+				buffer.append(msg.getLastTimeActive()). append(" ")
+								.append(msg.getUsername()).append(" ")
+								.append(msg.getTextMessage()).append("\n");
 			}
 			
 			if(messages!=null && messages.length!=0) {

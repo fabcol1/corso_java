@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Link Daniele</title>
+</head>
+<body>
+
+ 
+  
+ <ul>
+  <li><a href="http://localhost:8080/TestDB/login2.html">LOGIN</a> </li>
+  <li><a href="http://localhost:8080/TestDB/signup.html">SIGNUP</a></li>
+  <li><a href="http://localhost:8080/testJSP/questionario.jsp">QUESTIONARIO (da finire)</a> </li>
+  <li><a href="http://localhost:8080/TestDB/chat.jsp">CHAT</a></li>
+</ul> 
+ 
+ 
+  
+  
+ 
+
+
+
+</body>
+</html>

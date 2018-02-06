@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- 
+<style type="text/css">
+ li { 
+ 	list-style-type: none; 
+     display: inline; 
+     padding: 20px; 
+     border: 20px; 
+     background-color: #80ff80; 
+ } 
+  a { 
+   text-decoration: none; 
+    	font-family: 'PT Sans Narrow', sans-serif; 
+ 	font-size: 21px; 
+ 	font-weight: bold; 
+ 	color: black; 
+ } 
+
+ a:hover { 
+ 	color: green; 
+ } 
+</style>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+ -->
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href="http://192.168.178.32:8080/02_LOGIN/login.html">Login</a></li>
+			<li><a href="http://192.168.178.32:8080/03_ESERCIZI_JAVA_EE/questionario.jsp">Questionario</a></li>
+			<li><a href="http://192.168.178.32:8080/05_CHAT_JAVA_EE/login.html">Chat Login</a></li>
+		</ul>
+	</div>
+</body>
+</html>

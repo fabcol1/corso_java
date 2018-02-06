@@ -1,7 +1,16 @@
 package com.exercises.years.fabcol;
 
-public class NonRepeatingYears {
+import java.util.HashSet;
+import java.util.Set;
 
+import com.exercises.years.DebugResultTest;
+
+public class NonRepeatingYears extends DebugResultTest {
+
+	public NonRepeatingYears() {
+		authorName = "FabCol";
+	}
+	
 	public int count(int range_min, int range_max) {
 		int nonRepeatingYears = 0;
 		
@@ -13,13 +22,14 @@ public class NonRepeatingYears {
 			} catch (Exception e) {
 				return -1;
 			}
-			
-			nonRepeatingYears += nonRepeatingYear(stringVal);
+			if(isNotRepeating(stringVal)) {
+				nonRepeatingYears++;
+			}
 		}
 		return nonRepeatingYears;
 	}
 	
-	private int nonRepeatingYear(String s) {
+	private int getRepeatingVal(String s) {
 		char[] charArray = s.toCharArray();
 		int size = charArray.length;
 		for(int i = 0; i < size-1; i++) {
@@ -29,5 +39,17 @@ public class NonRepeatingYears {
 		}}}
 //		System.out.println(s);
 		return 1;
+	}
+	
+	private boolean isNotRepeating(String s) {
+		char[] charArray = s.toCharArray();
+		int size = charArray.length;
+		Set<Character> caratteri = new HashSet<>();
+		
+		for(char c : charArray) {
+			caratteri.add(c);
+		}
+		
+		return (caratteri.size() == size);
 	}
 }

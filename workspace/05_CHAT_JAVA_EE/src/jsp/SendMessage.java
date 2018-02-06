@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import test.MessageThread;
 
@@ -30,10 +31,9 @@ public class SendMessage extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		new MessageThread(request.getParameter("email"), request.getParameter("message")).start();
-		
-		request.setAttribute("last", request.getAttribute("last"));
-		request.setAttribute("email", request.getParameter("email"));
+		HttpSession session = request.getSession();
+		new MessageThread((String) session.getAttribute("email"), request.getParameter("message")).start();
+
 		RequestDispatcher rDispatcher = getServletContext().getRequestDispatcher("/chatFrontEnd.jsp");
 		rDispatcher.forward(request, response);
 	}

@@ -3882,3 +3882,379 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 
 !ENTRY org.eclipse.jface.text 2 0 2018-02-05 14:55:16.560
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-02-05 16:37:08.546 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2018-02-05 16:37:17.841
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-02-05 16:37:17.841
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24455d50,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@bb160fb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-05 16:37:24.328
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\UTENTE9'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-06 10:10:20.075 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2018-02-06 10:10:42.454
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-02-06 10:10:42.454
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24455d50,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@bb160fb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-06 10:10:59.300
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\UTENTE9'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2018-02-06 10:14:25.470
+!MESSAGE Unable to read repository at http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139.
+!STACK 0
+java.io.IOException: http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 10:22:33.661
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 10:22:33.669
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2018-02-06 11:35:33.907
+!MESSAGE SVN: '0x00000107: Synchronizing' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2018-02-06 11:35:33.907
+!MESSAGE Synchronize operation failed.
+!STACK 0
+org.eclipse.team.svn.core.connector.SVNConnectorException: svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk'
+	at org.polarion.team.svn.connector.svnkit.SVNKitService.handleClientException(SVNKitService.java:59)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.status(SVNKitConnector.java:639)
+	at org.eclipse.team.svn.core.extension.factory.ThreadNameModifier.status(ThreadNameModifier.java:594)
+	at org.eclipse.team.svn.core.operation.local.RemoteStatusOperation$2.run(RemoteStatusOperation.java:162)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.RemoteStatusOperation.runImpl(RemoteStatusOperation.java:160)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber.findChanges(AbstractSVNSubscriber.java:386)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber$UpdateStatusOperation$2.run(AbstractSVNSubscriber.java:430)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber$UpdateStatusOperation.runImpl(AbstractSVNSubscriber.java:428)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:81)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber.refresh(AbstractSVNSubscriber.java:243)
+	at org.eclipse.team.svn.core.synchronize.UpdateSubscriber.refresh(UpdateSubscriber.java:75)
+	at org.eclipse.team.core.subscribers.Subscriber.refresh(Subscriber.java:466)
+	at org.eclipse.team.core.subscribers.SubscriberMergeContext.refresh(SubscriberMergeContext.java:85)
+	at org.eclipse.team.core.mapping.provider.SynchronizationContext.refresh(SynchronizationContext.java:109)
+	at org.eclipse.team.internal.ui.synchronize.RefreshModelParticipantJob.doRefresh(RefreshModelParticipantJob.java:73)
+	at org.eclipse.team.internal.ui.synchronize.RefreshParticipantJob.run(RefreshParticipantJob.java:321)
+	at org.eclipse.team.internal.ui.synchronize.RefreshModelParticipantJob.run(RefreshModelParticipantJob.java:128)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.apache.subversion.javahl.ClientException: svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk'
+	at org.apache.subversion.javahl.ClientException.fromException(ClientException.java:117)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.getClientException(SVNClientImpl.java:1539)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.status(SVNClientImpl.java:164)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.status(SVNClientImpl.java:136)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.status(SVNKitConnector.java:634)
+	... 33 more
+Caused by: org.tmatesoft.svn.core.SVNException: svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk'
+	at org.tmatesoft.svn.core.internal.wc.SVNErrorManager.error(SVNErrorManager.java:112)
+	at org.tmatesoft.svn.core.internal.wc.SVNErrorManager.error(SVNErrorManager.java:96)
+	at org.tmatesoft.svn.core.internal.io.dav.http.HTTPConnection.request(HTTPConnection.java:819)
+	at org.tmatesoft.svn.core.internal.io.dav.http.HTTPConnection.request(HTTPConnection.java:392)
+	at org.tmatesoft.svn.core.internal.io.dav.http.HTTPConnection.request(HTTPConnection.java:380)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVConnection.performHttpRequest(DAVConnection.java:862)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVConnection.exchangeCapabilities(DAVConnection.java:698)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVConnection.open(DAVConnection.java:118)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVRepository.openConnection(DAVRepository.java:1049)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVRepository.checkPath(DAVRepository.java:230)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgGetStatus.run(SvnNgGetStatus.java:82)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgGetStatus.run(SvnNgGetStatus.java:1)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgOperationRunner.run(SvnNgOperationRunner.java:20)
+	at org.tmatesoft.svn.core.internal.wc2.SvnOperationRunner.run(SvnOperationRunner.java:21)
+	at org.tmatesoft.svn.core.wc2.SvnOperationFactory.run(SvnOperationFactory.java:1235)
+	at org.tmatesoft.svn.core.wc2.SvnOperation.run(SvnOperation.java:294)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.status(SVNClientImpl.java:162)
+	... 35 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:673)
+	at org.tmatesoft.svn.core.internal.util.SVNSocketConnection.run(SVNSocketConnection.java:57)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2018-02-06 11:35:42.080
+!MESSAGE SVN: '0x00000114: Commit' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2018-02-06 11:35:42.080
+!MESSAGE Some of selected resources were not committed.
+!STACK 0
+org.eclipse.team.svn.core.connector.SVNConnectorException: svn: E175002: Commit failed (details follow):
+	at org.eclipse.team.svn.core.operation.SVNProgressMonitor.progress(SVNProgressMonitor.java:50)
+	at org.polarion.team.svn.connector.svnkit.SVNKitService$ProgressMonitorWrapper.notify(SVNKitService.java:139)
+	at org.eclipse.team.svn.core.utility.SVNNotificationComposite.notify(SVNNotificationComposite.java:51)
+	at org.polarion.team.svn.connector.svnkit.ConversionUtility$Notify2Wrapper.onNotify(ConversionUtility.java:926)
+	at org.tmatesoft.svn.core.javahl17.JavaHLEventHandler.handleEvent(JavaHLEventHandler.java:64)
+	at org.tmatesoft.svn.core.internal.wc2.SvnOperationRunner.handleEvent(SvnOperationRunner.java:67)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgCommit.doRun(SvnNgCommit.java:284)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgCommit.run(SvnNgCommit.java:145)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgCommit.run(SvnNgCommit.java:1)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgOperationRunner.run(SvnNgOperationRunner.java:20)
+	at org.tmatesoft.svn.core.internal.wc2.SvnOperationRunner.run(SvnOperationRunner.java:21)
+	at org.tmatesoft.svn.core.wc2.SvnOperationFactory.run(SvnOperationFactory.java:1235)
+	at org.tmatesoft.svn.core.wc2.SvnOperation.run(SvnOperation.java:294)
+	at org.tmatesoft.svn.core.wc2.SvnCommit.run(SvnCommit.java:198)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.commit(SVNClientImpl.java:502)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.commit(SVNKitConnector.java:494)
+	at org.eclipse.team.svn.core.extension.factory.ThreadNameModifier.commit(ThreadNameModifier.java:114)
+	at org.eclipse.team.svn.core.operation.local.CommitOperation$2.run(CommitOperation.java:130)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.CommitOperation.performCommit(CommitOperation.java:127)
+	at org.eclipse.team.svn.core.operation.local.CommitOperation.runImpl(CommitOperation.java:98)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:81)
+	at org.eclipse.team.svn.ui.synchronize.action.AbstractSynchronizeLogicalModelAction$2$1.run(AbstractSynchronizeLogicalModelAction.java:356)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2018-02-06 11:35:42.081
+!MESSAGE Some of selected resources were not committed.
+!STACK 0
+org.eclipse.team.svn.core.connector.SVNConnectorException: svn: E175002: Commit failed (details follow):
+svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk/WebContent/fabcol'
+	at org.polarion.team.svn.connector.svnkit.SVNKitService.handleClientException(SVNKitService.java:59)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.commit(SVNKitConnector.java:503)
+	at org.eclipse.team.svn.core.extension.factory.ThreadNameModifier.commit(ThreadNameModifier.java:114)
+	at org.eclipse.team.svn.core.operation.local.CommitOperation$2.run(CommitOperation.java:130)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.CommitOperation.performCommit(CommitOperation.java:127)
+	at org.eclipse.team.svn.core.operation.local.CommitOperation.runImpl(CommitOperation.java:98)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:81)
+	at org.eclipse.team.svn.ui.synchronize.action.AbstractSynchronizeLogicalModelAction$2$1.run(AbstractSynchronizeLogicalModelAction.java:356)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.subversion.javahl.ClientException: svn: E175002: Commit failed (details follow):
+svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk/WebContent/fabcol'
+	at org.apache.subversion.javahl.ClientException.fromException(ClientException.java:117)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.getClientException(SVNClientImpl.java:1539)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.commit(SVNClientImpl.java:504)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.commit(SVNKitConnector.java:494)
+	... 17 more
+Caused by: org.tmatesoft.svn.core.SVNException: svn: E175002: Commit failed (details follow):
+svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk/WebContent/fabcol'
+	at org.tmatesoft.svn.core.internal.wc.SVNErrorManager.error(SVNErrorManager.java:70)
+	at org.tmatesoft.svn.core.internal.wc.SVNErrorManager.error(SVNErrorManager.java:57)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgCommit.doRun(SvnNgCommit.java:286)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgCommit.run(SvnNgCommit.java:145)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgCommit.run(SvnNgCommit.java:1)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgOperationRunner.run(SvnNgOperationRunner.java:20)
+	at org.tmatesoft.svn.core.internal.wc2.SvnOperationRunner.run(SvnOperationRunner.java:21)
+	at org.tmatesoft.svn.core.wc2.SvnOperationFactory.run(SvnOperationFactory.java:1235)
+	at org.tmatesoft.svn.core.wc2.SvnOperation.run(SvnOperation.java:294)
+	at org.tmatesoft.svn.core.wc2.SvnCommit.run(SvnCommit.java:198)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.commit(SVNClientImpl.java:502)
+	... 18 more
+
+!ENTRY org.eclipse.team.svn.core.svnnature 4 0 2018-02-06 11:36:12.737
+!MESSAGE SVN: '0x00000107: Synchronizing' operation finished with error
+!SUBENTRY 1 org.eclipse.team.svn.core.svnnature 4 0 2018-02-06 11:36:12.737
+!MESSAGE Synchronize operation failed.
+!STACK 0
+org.eclipse.team.svn.core.connector.SVNConnectorException: svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk'
+	at org.polarion.team.svn.connector.svnkit.SVNKitService.handleClientException(SVNKitService.java:59)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.status(SVNKitConnector.java:639)
+	at org.eclipse.team.svn.core.extension.factory.ThreadNameModifier.status(ThreadNameModifier.java:594)
+	at org.eclipse.team.svn.core.operation.local.RemoteStatusOperation$2.run(RemoteStatusOperation.java:162)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.operation.local.RemoteStatusOperation.runImpl(RemoteStatusOperation.java:160)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.operation.CompositeOperation.runImpl(CompositeOperation.java:99)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber.findChanges(AbstractSVNSubscriber.java:386)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber$UpdateStatusOperation$2.run(AbstractSVNSubscriber.java:430)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doSubTask(ProgressMonitorUtility.java:118)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:156)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.protectStep(AbstractActionOperation.java:151)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber$UpdateStatusOperation.runImpl(AbstractSVNSubscriber.java:428)
+	at org.eclipse.team.svn.core.operation.AbstractActionOperation.run(AbstractActionOperation.java:82)
+	at org.eclipse.team.svn.core.operation.LoggedOperation.run(LoggedOperation.java:40)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTask(ProgressMonitorUtility.java:104)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:90)
+	at org.eclipse.team.svn.core.utility.ProgressMonitorUtility.doTaskExternal(ProgressMonitorUtility.java:81)
+	at org.eclipse.team.svn.core.synchronize.AbstractSVNSubscriber.refresh(AbstractSVNSubscriber.java:243)
+	at org.eclipse.team.svn.core.synchronize.UpdateSubscriber.refresh(UpdateSubscriber.java:75)
+	at org.eclipse.team.core.subscribers.Subscriber.refresh(Subscriber.java:466)
+	at org.eclipse.team.core.subscribers.SubscriberMergeContext.refresh(SubscriberMergeContext.java:85)
+	at org.eclipse.team.core.mapping.provider.SynchronizationContext.refresh(SynchronizationContext.java:109)
+	at org.eclipse.team.internal.ui.synchronize.RefreshModelParticipantJob.doRefresh(RefreshModelParticipantJob.java:73)
+	at org.eclipse.team.internal.ui.synchronize.RefreshParticipantJob.run(RefreshParticipantJob.java:321)
+	at org.eclipse.team.internal.ui.synchronize.RefreshModelParticipantJob.run(RefreshModelParticipantJob.java:128)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.apache.subversion.javahl.ClientException: svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk'
+	at org.apache.subversion.javahl.ClientException.fromException(ClientException.java:117)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.getClientException(SVNClientImpl.java:1539)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.status(SVNClientImpl.java:164)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.status(SVNClientImpl.java:136)
+	at org.polarion.team.svn.connector.svnkit.SVNKitConnector.status(SVNKitConnector.java:634)
+	... 33 more
+Caused by: org.tmatesoft.svn.core.SVNException: svn: E175002: connection refused by the server
+svn: E175002: OPTIONS request failed on '/p/testyourcourse/code/2018_01_Milano(via_Eraclito)_Proxima/ProjectsIndex/trunk'
+	at org.tmatesoft.svn.core.internal.wc.SVNErrorManager.error(SVNErrorManager.java:112)
+	at org.tmatesoft.svn.core.internal.wc.SVNErrorManager.error(SVNErrorManager.java:96)
+	at org.tmatesoft.svn.core.internal.io.dav.http.HTTPConnection.request(HTTPConnection.java:819)
+	at org.tmatesoft.svn.core.internal.io.dav.http.HTTPConnection.request(HTTPConnection.java:392)
+	at org.tmatesoft.svn.core.internal.io.dav.http.HTTPConnection.request(HTTPConnection.java:380)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVConnection.performHttpRequest(DAVConnection.java:862)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVConnection.exchangeCapabilities(DAVConnection.java:698)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVConnection.open(DAVConnection.java:118)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVRepository.openConnection(DAVRepository.java:1049)
+	at org.tmatesoft.svn.core.internal.io.dav.DAVRepository.checkPath(DAVRepository.java:230)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgGetStatus.run(SvnNgGetStatus.java:82)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgGetStatus.run(SvnNgGetStatus.java:1)
+	at org.tmatesoft.svn.core.internal.wc2.ng.SvnNgOperationRunner.run(SvnNgOperationRunner.java:20)
+	at org.tmatesoft.svn.core.internal.wc2.SvnOperationRunner.run(SvnOperationRunner.java:21)
+	at org.tmatesoft.svn.core.wc2.SvnOperationFactory.run(SvnOperationFactory.java:1235)
+	at org.tmatesoft.svn.core.wc2.SvnOperation.run(SvnOperation.java:294)
+	at org.tmatesoft.svn.core.javahl17.SVNClientImpl.status(SVNClientImpl.java:162)
+	... 35 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:673)
+	at org.tmatesoft.svn.core.internal.util.SVNSocketConnection.run(SVNSocketConnection.java:57)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 11:49:47.482
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 11:49:47.487
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 12:17:39.180
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 12:17:39.188
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 13:07:59.944
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-06 13:07:59.950
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

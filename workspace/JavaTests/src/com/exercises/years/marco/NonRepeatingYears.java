@@ -1,0 +1,62 @@
+package com.exercises.years.marco;
+
+import com.exercises.years.DebugResultTest;
+
+public class NonRepeatingYears extends DebugResultTest{
+	
+	
+	/*public static void main(String[] args) {
+		int range_min=1980,  range_max=1987;
+		int count=0;
+		for (int i = range_min; i <= range_max; i++) {
+			String min=Integer.toString(i);
+			String max=Integer.toString(range_max);
+			for (int j = 0; j < min.length(); j++) {
+				
+			}
+			String c0=String.valueOf(min.charAt(0));
+			String c1=String.valueOf(min.charAt(1));
+			String c2=String.valueOf(min.charAt(2));
+			String c3=String.valueOf(min.charAt(3));
+			
+			if(c0.equalsIgnoreCase(c1)||c0.equalsIgnoreCase(c2)||c0.equalsIgnoreCase(c3)||c1.equalsIgnoreCase(c2)||c1.equalsIgnoreCase(c3)||c2.equalsIgnoreCase(c3)) {
+				
+			}else {
+				count++;
+			}
+			
+			System.out.println(i);
+		}
+		System.out.println(count);
+	}*/
+	
+	public NonRepeatingYears() {
+		super();
+	authorName="Marco";
+	}
+
+	public int count(int range_min, int range_max) {		
+		int count=0;
+		//String [] nums=new String();
+		for (int i = range_min; i <= range_max; i++) {
+			String min=Integer.toString(i);
+			
+			String c0=String.valueOf(min.charAt(0));
+			String c1=String.valueOf(min.charAt(1));
+			String c2=String.valueOf(min.charAt(2));
+			String c3=String.valueOf(min.charAt(3));
+			
+			if(c0.equalsIgnoreCase(c1)||c0.equalsIgnoreCase(c2)||c0.equalsIgnoreCase(c3)||c1.equalsIgnoreCase(c2)||c1.equalsIgnoreCase(c3)||c2.equalsIgnoreCase(c3)) {
+				
+			}else {
+				count++;
+				System.out.println(i);
+			}
+			
+			
+		}
+		
+		return count;
+	}
+	
+}

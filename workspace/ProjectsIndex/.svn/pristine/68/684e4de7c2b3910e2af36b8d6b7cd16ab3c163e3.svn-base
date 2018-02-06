@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+/*     body { */
+/*         background-color:red; */
+/*     } */
+</style>
+<meta charset="UTF-8">
+<title>I Luca progetti</title>
+</head>
+<body>
+<ul>
+<li><a href="http://192.168.178.29:8080/ProgettoUtenti/index.html">mitico luca --> home</a></li>
+<li><a href="http://192.168.178.29:8080/ProgettoUtenti/newFile.jsp">super luca --> questionario</a></li>
+</ul>
+</body>
+</html>

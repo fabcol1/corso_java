@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.websocket.Session;
 
 /**
@@ -42,7 +43,8 @@ public class LoginServlet extends HttpServlet {
 		
 		if(val) {
 			destination = "/chatFrontEnd.jsp";
-			request.setAttribute("email", request.getParameter("email"));
+			HttpSession session = request.getSession();
+			session.setAttribute("email", request.getParameter("email"));
 		} else {
 			destination = "/loginKO.html";
 		}
