@@ -34,7 +34,6 @@ public class ResetPassword extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -63,21 +62,28 @@ public class ResetPassword extends HttpServlet {
 			String newPassword = RandomPassword.generate();
 
 			// Contatto il DB per aggiornare la password
+			Boolean checkUpdate = false;
 			try {
-				DBUpdateCredential.updatePassword(email, newPassword);
+				checkUpdate = DBUpdateCredential.updatePassword(email, newPassword);
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
 
-			// Invio email con la nuova password al client
-			try {
-				MailUtility.sendMail(email, "Proxima", "Reset Password",
-						"Questa è la tua nuova password: " + newPassword);
-			} catch (MessagingException e) {
-				e.printStackTrace();
-			}
-
-			// Invio pagina JSP di conferma cambio password
+//			if(checkUpdate) {
+//				// Invio email con la nuova password al client
+//				try {
+//					MailUtility.sendMail(email, "Proxima", "Reset Password",
+//							"Questa è la tua nuova password: " + newPassword);
+//				} catch (MessagingException e) {
+//					e.printStackTrace();
+//				}
+//
+//				// Invio pagina JSP di conferma cambio password
+//				outputJSP = "/outputJSP/resetPassword/okReset.jsp";
+//			} else {
+//				outputJSP = "/outputJSP/resetPassword/koReset.jsp";
+//			}
+			
 			outputJSP = "/outputJSP/resetPassword/okReset.jsp";
 
 		} else {
