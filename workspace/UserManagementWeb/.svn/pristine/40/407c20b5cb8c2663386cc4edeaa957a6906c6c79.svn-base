@@ -1,0 +1,88 @@
+package servlet;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.bean.User;
+import org.db.UserDBManager;
+
+/**
+ * Servlet implementation class Registration
+ */
+@WebServlet("/Registration")
+public class Registration extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Registration() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub 
+		String fname = request.getParameter("fname");
+	    String lname = request.getParameter("lname");
+	    String email = request.getParameter("email");
+	    String pwd = request.getParameter("pass");
+	    String pwdr = request.getParameter("passrep");
+	    String borndate = request.getParameter("borndate");
+	    HttpSession session = request.getSession();
+	    
+	    User user = new User();
+	    
+	    user.setFirstname(fname);
+	    user.setLastname(lname);
+	    user.setEmail(email);
+	    user.setPassword(pwd);
+	    user.setBorndate(borndate);
+	    user.setRegdate(LocalDateTime.now().toString());
+	    user.setRole(10);
+	     
+	    
+	    String destination = "";
+	    
+	    
+	    try {
+			int validate  = UserDBManager.insertUser(user);
+			
+			if (validate == 1) {
+				destination = ("registrationJSP/outputJSP/registrationok.jsp");
+			}
+			else {
+				destination  =("registrationJSP/outputJSP/registrationko.jsp");
+			}
+				
+			RequestDispatcher rDispatcher  = getServletContext().getRequestDispatcher(destination);
+			rDispatcher.forward(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+	    	
+	
+	}
+
+}

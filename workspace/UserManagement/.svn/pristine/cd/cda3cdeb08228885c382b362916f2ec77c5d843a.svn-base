@@ -1,8 +1,0 @@
-#
-#
-#
-database.hostname=mercurio
-database.port=3306
-database.schema=testDB
-database.username=test3
-database.password=test3
