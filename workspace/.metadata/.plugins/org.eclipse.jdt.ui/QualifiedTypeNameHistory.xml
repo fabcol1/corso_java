@@ -55,9 +55,9 @@
 <fullyQualifiedTypeName name="DBConnection"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="org.db.DBManager"/>
-<fullyQualifiedTypeName name="org.db.UserDBManager"/>
 <fullyQualifiedTypeName name="org.bean.User"/>
 <fullyQualifiedTypeName name="com.commons.PropertiesManager"/>
 <fullyQualifiedTypeName name="javax.naming.spi.ResolveResult"/>
 <fullyQualifiedTypeName name="resourceMan.ResourceMan"/>
+<fullyQualifiedTypeName name="org.db.UserDBManager"/>
 </qualifiedTypeNameHistroy>

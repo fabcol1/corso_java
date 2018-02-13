@@ -50,7 +50,7 @@ public class UserDBManager {
 	public static void openConnection() throws Exception {
 		Class.forName(connectorMainClass);
 		con = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
-		logger.error("Connection opened successfully...");
+		logger.info("Connection opened successfully...");
 	}
 
 	public static void closeConnection() throws Exception {

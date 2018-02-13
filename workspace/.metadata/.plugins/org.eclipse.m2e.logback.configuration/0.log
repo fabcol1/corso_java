@@ -2277,3 +2277,10 @@ org.eclipse.core.runtime.CoreException: Launch configuration MailTest (2) refere
 2018-02-12 16:31:32,624 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2018-02-12 16:31:32,639 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-02-12 16:31:32,639 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\UserManagementPersistence\src\test\resources
+2018-02-12 16:31:39,690 [Worker-167] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\UserManagementPersistence
+2018-02-12 16:31:39,690 [Worker-167] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install
+2018-02-13 09:59:53,452 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-02-13 11:31:24,871 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-02-13 11:31:24,902 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2018-02-13 11:31:24,918 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-02-13 11:31:24,918 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\UserManagementPersistence\src\test\resources
