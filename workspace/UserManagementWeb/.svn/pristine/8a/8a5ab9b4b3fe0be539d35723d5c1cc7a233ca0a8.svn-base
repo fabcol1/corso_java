@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+.divwidth {
+    width: 60%;    
+    /* padding:auto; */
+}
+.divdelete {
+    width: 60%;    
+    padding:auto;
+}
+.labelwidth {
+    width: 30%;    
+    /* padding:auto; */
+}
+
+.inputwidth {
+    width: 70%;    
+    /* padding:auto; */
+}
+
+.proximared{
+	background-color: #7f0000;
+}

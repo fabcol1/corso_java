@@ -10970,3 +10970,6 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-02-13 14:27:23.480
+!MESSAGE Could not delete C:/Users/UTENTE9/Desktop/corso_java/corso_java/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/UserManagementWeb/WEB-INF/lib/log4j-1.2-api-2.10.0.jar. May be locked by another process.

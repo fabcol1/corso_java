@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="test.CommunityMessageServer"/>
-<fullyQualifiedTypeName name="test.CommunityRequestServer"/>
-<fullyQualifiedTypeName name="test.ServerChat"/>
-<fullyQualifiedTypeName name="test.ClientChat"/>
-<fullyQualifiedTypeName name="test.RequestThread"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="DBchat.MessagesRequest"/>
-<fullyQualifiedTypeName name="DBchat.Message"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="db.DBConnectionClass"/>
 <fullyQualifiedTypeName name="servlet.DBConnection"/>
@@ -60,4 +47,17 @@
 <fullyQualifiedTypeName name="javax.naming.spi.ResolveResult"/>
 <fullyQualifiedTypeName name="resourceMan.ResourceMan"/>
 <fullyQualifiedTypeName name="org.db.UserDBManager"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="utils.RandomToken"/>
+<fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="utils.TokenSingleton"/>
+<fullyQualifiedTypeName name="org.apache.velocity.Template"/>
+<fullyQualifiedTypeName name="java.io.StringWriter"/>
+<fullyQualifiedTypeName name="org.apache.velocity.VelocityContext"/>
+<fullyQualifiedTypeName name="org.apache.velocity.app.VelocityEngine"/>
+<fullyQualifiedTypeName name="org.apache.velocity.runtime.RuntimeConstants"/>
+<fullyQualifiedTypeName name="org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader"/>
+<fullyQualifiedTypeName name="utils.MailUtility"/>
 </qualifiedTypeNameHistroy>

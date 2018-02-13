@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Reset password</title>
+<link
+	href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation"><a href="index.html">Login</a></li>
+			<li role="presentation"><a href="reg.jsp">Registration</a></li>
+			<li role="presentation"><a
+				href="passwordRecovery.jsp">Password Recovery</a></li>
+			<li role="presentation" class="active"><a
+				href="passwordRecovery.jsp">Reset Password</a></li>
+		</ul>
+
+		<div class="row" style="margin-top: 40px">
+			<div class="col-md-6 col-md-offset-3">
+				<form action="/UserManagementWeb/PasswordReset" method="POST">
+
+					<div class="form-group">
+						<label>Old Password</label> <input type="text"
+							class="form-control" name="oldPassword"
+							placeholder="Enter Old Password" required> <label>New
+							Password</label> <input type="text" class="form-control"
+							name="newPassword" placeholder="Enter New Password" required>
+						<label>New Password Check</label> <input type="text"
+							class="form-control" name="newPasswordCheck"
+							placeholder="Enter New Password Again" required>
+					</div>
+
+					<button type="submit" class="btn btn-primary">Send</button>
+				</form>
+			</div>
+		</div>
+		
+		<div class="row" style="margin-top: 40px">
+			<div class="col-md-6 col-md-offset-3">
+				<p style="color:green; background-color: font-size: 16px; font-weight: bold;">Nuova password aggiornata con successo. La password ti è stata inviata per email.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
