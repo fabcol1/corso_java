@@ -1,8 +1,0 @@
-#
-#
-#
-database.hostname=192.168.178.32
-database.port=3306
-database.schema=testDB
-database.username=test3
-database.password=test3
