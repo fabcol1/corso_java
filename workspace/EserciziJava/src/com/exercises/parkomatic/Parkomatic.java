@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.management.ImmutableDescriptor;
+import javax.swing.text.ChangedCharSetException;
 
 public class Parkomatic {
 
@@ -22,16 +23,14 @@ public class Parkomatic {
 	
 	public Parkomatic(int... num) {
 		int count = 0;
-		int size = num.length;
-		if(size>6) {
-			size = 6;
-		}
+		int size = checkSize(num.length, 6);
+		
 		for(int i = 0; i < size; i++) {
-			if(num[i]>200) {
-				num[i] = 200;
-			}
+			
+			num[i] = checkSize(num[i], 200);
+					
 			for(int j = 1; j <= num[i]; j++) {
-				mappa.put(count, new String[] { numeroLetteraMap.get(i), String.valueOf(j)});
+				mappa.put(count, new String[] { numeroLetteraMap.get(i), ""+j});
 				count++;
 			}
 		}
@@ -42,6 +41,13 @@ public class Parkomatic {
 		String[] s = mappa.get(i);
 		sb.append(s[0] + s[1]);
 		return sb.toString();
+	}
+	
+	private int checkSize(int size, int lim) {
+		if(size>lim) {
+			return lim;
+		}
+		return size;
 	}
 	
 }
