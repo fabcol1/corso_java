@@ -16,6 +16,7 @@ public class MainMenu extends HttpServlet {
 
 	public void service(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {		
+		
 		code = req.getParameter("code");
 		if (code == null || code.equals("")) {
 			throw new RuntimeException(
