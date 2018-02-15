@@ -1,7 +1,12 @@
 package linkedin;
 
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.net.URL;
+import java.util.Base64;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -49,12 +54,26 @@ public class LinkedinHome extends HttpServlet {
 
 	    out.println("<html>");
 	    out.println("<body>");
-	    out.println("<br> IO SO CHI SEI... LUCA...<br>");
+	    
+	    String image = generateEncodedPngImage(linkedInProfile.getPictureUrl());
+		   
+//	    <img src='" + encoding +"' alt=\"\" height=\"230\" width=\"390\">.
+
+	    out.println("<br><br>");
+	    out.println("<img src='"+image+"' alt=\"\" height=\"160\" width=\"160\" >");
+	    out.println("<br><br>");
+
+	    
+	    out.println("<br>");
 	    out.println("Fist Name : " + linkedInProfile.getFirstName() + "<br>");
 	    out.println("Last Name : " + linkedInProfile.getLastName() + "<br>");
 	    out.println("Head Line : " + linkedInProfile.getHeadline() + "<br>");
 	    out.println("Email	   : " + linkedInProfile.getEmail() + "<br>");
-	    out.println("ID        : " + linkedInProfile.getId() + "<br>");
+	    out.println("Position  : " + linkedInProfile.getPosition() + "<br>");
+
+//	    out.println("<br>");
+//	    out.println("PictureUrl  : " + linkedInProfile.getPictureUrl() + "<br>");
+//	    out.println("ID        : " + linkedInProfile.getId() + "<br>");
 
 	    out.println("</body>");
 	    out.println("</html>");
@@ -68,4 +87,26 @@ public class LinkedinHome extends HttpServlet {
 		doGet(request, response);
 	}
 
+	private String generateEncodedPngImage(String pictureUrl) throws IOException {
+		System.out.println(pictureUrl);
+		
+		URL url = new URL(pictureUrl);
+		InputStream in = new BufferedInputStream(url.openStream());
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		byte[] buf = new byte[1024];
+		int n = 0;
+		while (-1!=(n=in.read(buf)))
+		{
+		   out.write(buf, 0, n);
+		}
+		out.close();
+		in.close();
+		
+		byte[] imageBytes = out.toByteArray();
+
+		Base64.Encoder encoder = Base64.getEncoder();
+
+		String encoding = "data:image/png;base64," + encoder.encodeToString(imageBytes);
+		return encoding;
+	}
 }

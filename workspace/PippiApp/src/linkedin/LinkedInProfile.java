@@ -6,7 +6,21 @@ public class LinkedInProfile {
 	private String lastName;
 	private String id;
 	private String email;
+	private String pictureUrl;
+	private String position;
 
+	public String getPictureUrl() {
+		return pictureUrl;
+	}
+	public String getPosition() {
+		return position;
+	}
+	public void setPictureUrl(String pictureUrl) {
+		this.pictureUrl = pictureUrl;
+	}
+	public void setPosition(String position) {
+		this.position = position;
+	}
 	public String getFirstName() {
 		return firstName;
 	}

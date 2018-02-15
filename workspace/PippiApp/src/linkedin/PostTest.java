@@ -68,13 +68,18 @@ public class PostTest {
 		
 		LinkedInProfile obj_LinkedInProfile=new LinkedInProfile();
 //		GET /people/~/email-address
-		
-		String url = "https://api.linkedin.com/v1/people/~/email-address?format=json";
-		
-		String email = doGet(url, access_token).toString();
-		
-		url = "https://api.linkedin.com/v1/people/~?format=json";
+//		String url = "https://api.linkedin.com/v1/people/~/picture-url?format=json";
+//		String picture = doGet(url, access_token).toString();
+//		
+//		url = "https://api.linkedin.com/v1/people/~/email-address?format=json";
+//		String email = doGet(url, access_token).toString();
+//		
+//		url = "https://api.linkedin.com/v1/people/~?format=json";
 
+		String url = "https://api.linkedin.com/v1/people/~"
+				+ ":(id,location,email-address,first-name,last-name,formatted-name,picture-url,headline)"
+				+ "?format=json";
+		
 		StringBuffer response = doGet(url, access_token);
 		
 		JSONObject jsonObj = new JSONObject(response.toString());
@@ -82,7 +87,14 @@ public class PostTest {
 		obj_LinkedInProfile.setFirstName(jsonObj.getString("firstName"));
 		obj_LinkedInProfile.setLastName(jsonObj.getString("lastName"));
 		obj_LinkedInProfile.setHeadline(jsonObj.getString("headline"));
-		obj_LinkedInProfile.setEmail(email);
+		obj_LinkedInProfile.setEmail(jsonObj.getString("emailAddress"));
+		
+		obj_LinkedInProfile.setPictureUrl(jsonObj.getString("pictureUrl"));
+
+		JSONObject positionJsonObj = jsonObj.getJSONObject("location");
+
+		obj_LinkedInProfile.setPosition(positionJsonObj.getString("name"));
+
 		obj_LinkedInProfile.setId(jsonObj.getString("id"));
 		
 		System.out.println(access_token);
