@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="servlet.DBConnection"/>
-<fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
-<fullyQualifiedTypeName name="servlet.DBConnectionClass"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="servlet.Questions"/>
-<fullyQualifiedTypeName name="utils.Question"/>
-<fullyQualifiedTypeName name="servlet.DBManager"/>
-<fullyQualifiedTypeName name="servlet.Topic"/>
-<fullyQualifiedTypeName name="test.Message"/>
-<fullyQualifiedTypeName name="test.MessageThread"/>
-<fullyQualifiedTypeName name="javax.websocket.Session"/>
-<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="jsp.DBManager"/>
 <fullyQualifiedTypeName name="com.exercises.years.DebugResultTest"/>
@@ -60,4 +46,18 @@
 <fullyQualifiedTypeName name="utils.MailUtility"/>
 <fullyQualifiedTypeName name="javax.management.ImmutableDescriptor"/>
 <fullyQualifiedTypeName name="javax.swing.text.ChangedCharSetException"/>
+<fullyQualifiedTypeName name="linkedin.LinkedinConnection"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="com.sun.image.codec.jpeg.JPEGImageEncoder"/>
+<fullyQualifiedTypeName name="java.awt.Graphics2D"/>
+<fullyQualifiedTypeName name="com.sun.image.codec.jpeg.JPEGCodec"/>
+<fullyQualifiedTypeName name="java.nio.file.Files"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
 </qualifiedTypeNameHistroy>

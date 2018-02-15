@@ -60,7 +60,7 @@ public class LinkedinHome extends HttpServlet {
 //	    <img src='" + encoding +"' alt=\"\" height=\"230\" width=\"390\">.
 
 	    out.println("<br><br>");
-	    out.println("<img src='"+image+"' alt=\"\" height=\"160\" width=\"160\" >");
+	    out.println("<img src='"+image+"' alt=\"\" height=\"80\" width=\"80\" >");
 	    out.println("<br><br>");
 
 	    
