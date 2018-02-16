@@ -1,0 +1,3 @@
+org\db\UserDBManager.class
+com\commons\PropertiesManager.class
+org\bean\User.class

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	
+		<script type="text/javascript">
+		
+			var currentUser = {
+					firstName:"John",
+					lastName:"Doe",
+					age:50,
+					birthDate:"12-10-1979",
+					email: "johndoe@culokiz.com"
+			};
+			
+			var currentUser2 = {
+					firstName:"Luca",
+					lastName:"Il Re",
+					age:25,
+					birthDate:"25-12-1992",
+					email: "luca@culokiz.com"
+			};
+			
+			var currentUser3 = {
+					firstName:"Abc",
+					lastName:"Def",
+					age:50,
+					birthDate:"12-10-1979",
+					email: "abcdef@culokiz.com"
+			};
+			
+			var users = [currentUser, currentUser2, currentUser3];
+			
+			var listValues = "[{\"ComplianceTaskID\":75305,\"RequirementTypeID\":4,\"MissedRequirement\":\"Initial Photo Upload NRP\",\"TimeOverdueInMinutes\":null},"+
+			"{\"ComplianceTaskID\":75305,\"RequirementTypeID\":4,\"MissedRequirement\":\"Initial Photo Upload NRP\",\"TimeOverdueInMinutes\":null}]";
+
+			var array = JSON.parse("[" + listValues + "]");
+			
+			console.log(array);
+		</script>
+	
+	</head>
+	<body>
+		<form id="loginForm">
+			<div>
+				<script>
+				
+				document.write("<ul>");
+				for(var i = 0; i < users.length; i++) {
+					document.write("<li><input id='email' type='text' name='email' value='"+ users[i].email +"'/></li>")
+					document.write("<li><input id='firstName' type='text' name='firstName' value='"+ users[i].firstName +"' /></li>");
+					document.write("<li><input id='lastName' type='text' name='lastName' value='"+ users[i].lastName +"' /></li>");
+					document.write("<li><input id='birthDate' type='text' name='birthDate' value='"+ users[i].birthDate +"' /></li>");
+					document.write("<br><br>");
+				}
+				document.write("</ul>");
+				
+// 				document.write("<input id='email' type='text' name='email' value='"+ currentUser.email +"'/>");
+// 				document.write("<input id='firstName' type='text' name='firstName' value='"+ currentUser.firstName +"' />");
+// 				document.write("<input id='lastName' type='text' name='lastName' value='"+ currentUser.lastName +"' />");
+// 				document.write("<input id='birthDate' type='text' name='birthDate' value='"+ currentUser.birthDate +"' />");
+
+				</script>
+			</div>
+			
+			<br>
+			<div>
+				<input type="button" value="Carica Valori" onclick="submitForm();" /><br><br>
+				<a href="javascript:submitForm();">PREMI IL LINK</a><br><br>
+				<input type="reset" value="Reset" /><br><br>
+			</div>
+		</form>
+		
+	</body>
+</html>

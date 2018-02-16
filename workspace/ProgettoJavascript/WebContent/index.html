@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	
+		<script type="text/javascript">
+				
+			function printAlert () {
+				alert("La forza è con Luca");
+				return 10;
+			}
+			
+			function submitForm () {
+// 				alert("La forza è con Luca");
+				console.log("Hai cliccato");
+				var emailValue = document.getElementById("email").value;
+				console.log(emailValue);
+				
+				if((emailValue==null)||(emailValue.length==0)) {
+					document.getElementById("emailErrorMessage").style.display = 'block';
+					return;
+				} else {
+					document.getElementById("emailErrorMessage").style.display = 'none';
+				}
+				document.getElementById("loginForm").action = 'ok.html';
+				document.getElementById("loginForm").submit();
+			}
+			
+// 			var pippo = printAlert();
+// 			alert(pippo);
+// 			pippo = 'a';
+// 			alert(pippo);
+// 			pippo = "Luca c'è tuo padreee";
+// 			alert(pippo);
+// 			pippo = true;
+// 			alert(pippo);
+// 			pippo = 10.1;
+// 			alert(pippo);
+			
+		</script>
+	
+	</head>
+	<body>
+		<form action="">
+			<label>Email: </label>
+			<input type="text" name="email" onmousewheel="printAlert();"/><br><br>
+			<label>Password: </label>
+			<input type="password" name="password"/><br><br>
+			<input type="submit" value="Esegui"/><br><br>
+		</form>
+		
+		<form id="loginForm">
+			<label>Email: </label>
+			<input id="email" type="text" name="email"    
+				style="background: red"/><br><br>
+				
+			<label id="emailErrorMessage" style="color:red; display:none;">
+				ERRORE ERRORE ERRORE
+			</label>
+				
+			<input type="button" value="Premi" onclick="submitForm();" /><br><br>
+		</form>
+		
+	</body>
+	<script type="text/javascript">
+		// POSSO APRIRE UN TAG JAVASCRIPT DOVE VOGLIO
+		// E SCRIVERE CODICE JS IN OGNI POSIZIONE.
+// 		printAlert();
+	</script>
+</html>

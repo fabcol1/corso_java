@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	
+		<script type="text/javascript">
+			function submitForm () {
+				console.log("Hai cliccato");
+				var emailValue = document.getElementById("email").value;
+				console.log(emailValue);
+				
+				if((emailValue==null)||(emailValue==='')) {
+					document.getElementById("emailErrorMessage").style.display = 'block';
+					return;
+				} else {
+					document.getElementById("emailErrorMessage").style.display = 'none';
+				}
+				document.getElementById("loginForm").action = 'ok.html';
+				document.getElementById("loginForm").submit();
+			}
+		
+		</script>
+	
+	</head>
+	<body>
+		<form id="loginForm">
+			<label>Email: </label>
+			<input id="email" type="text" name="email"    
+				style="background: red"/><br><br>
+				
+			<label id="emailErrorMessage" style="color:red; display:none;">
+				ERRORE ERRORE ERRORE
+			</label>
+				
+			<input type="button" value="Premi" onclick="submitForm();" /><br><br>
+		</form>
+		
+	</body>
+</html>

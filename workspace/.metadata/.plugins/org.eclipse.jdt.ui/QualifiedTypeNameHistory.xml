@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="jsp.DBManager"/>
 <fullyQualifiedTypeName name="com.exercises.years.DebugResultTest"/>
 <fullyQualifiedTypeName name="com.exercises.years.fabcol.NonRepeatingYears"/>
@@ -30,7 +29,6 @@
 <fullyQualifiedTypeName name="com.commons.PropertiesManager"/>
 <fullyQualifiedTypeName name="javax.naming.spi.ResolveResult"/>
 <fullyQualifiedTypeName name="resourceMan.ResourceMan"/>
-<fullyQualifiedTypeName name="org.db.UserDBManager"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="utils.RandomToken"/>
 <fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="org.db.UserDBManager"/>
 </qualifiedTypeNameHistroy>

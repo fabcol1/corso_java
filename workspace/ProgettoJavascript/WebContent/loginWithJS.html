@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	
+		<script type="text/javascript">
+		
+			function submitForm () {
+				var emailValue = document.getElementById("email").value;
+				var passwordValue = document.getElementById("password").value;
+				
+				if(controlloEmail(emailValue) & controlloPassword(passwordValue)) {
+					document.getElementById("loginForm").action = 'ok.html';
+					document.getElementById("loginForm").submit();
+				}
+			}
+			
+			function controlloEmail(emailValue) {
+				console.log("email check");
+				var isEmailCorrect = false;
+				if((emailValue==null)||(emailValue==='')||(emailValue.length >= 100)) {
+					document.getElementById("emailErrorMessage").style.display = 'block';
+				} else {
+					document.getElementById("emailErrorMessage").style.display = 'none';
+					isEmailCorrect = true;
+				}
+				return isEmailCorrect;
+			}
+			
+			function controlloPassword(passwordValue) {
+				console.log("password check");
+				var isPasswordValue = false;
+				if((passwordValue==null)||(passwordValue==='')) {
+					document.getElementById("passwordErrorMessage").style.display = 'block';
+				} else {
+					document.getElementById("passwordErrorMessage").style.display = 'none';
+					isPasswordValue = true;
+				}
+				return passwordValue;
+			}
+		
+		</script>
+	
+	</head>
+	<body>
+		<form id="loginForm">
+			<div>
+				<label>Email: </label>
+				<input id="email" type="text" name="email">
+				<label id="emailErrorMessage" style="color:red; display:none;">
+					Inserire un campo email valido...
+				</label>
+			</div>
+			<br>
+			<div>
+				<label>Password: </label>
+				<input id="password" type="password" name="password">
+				<label id="passwordErrorMessage" style="color:red; display:none;">
+					Inserire un campo password valido...
+				</label>
+			</div>
+			<div>
+				<input type="button" value="Invia" onclick="submitForm();" /><br><br>
+			</div>
+		</form>
+		
+	</body>
+</html>
