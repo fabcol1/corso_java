@@ -12,38 +12,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Query;
+
 import org.apache.log4j.Logger;
 import org.bean.User;
-
-import com.commons.PropertiesManager;
+import org.hibernate.Session;
 
 /**
  * @author maurizio
  *
  */
-public class UserDBManager {
+public class UserDBManager extends DBManager {
 
 	final static Logger logger = Logger.getLogger(UserDBManager.class);
 	
 	protected static Connection con;
 
-	private static String dbUsername;
-	private static String dbPassword;
-//	private static String dbSchema;
-//	private static String dbHostName;
-//	private static String dbPort;
-	private static String connectorMainClass;
-	private static String dbUrl;
-	
 	static {
-		dbUsername = PropertiesManager.getPropertyAsString("database.username");
-		dbPassword = PropertiesManager.getPropertyAsString("database.password");
-//		dbHostName = PropertiesManager.getPropertyAsString("database.hostname");
-//		dbPort = PropertiesManager.getPropertyAsString("database.port");
-//		dbSchema = PropertiesManager.getPropertyAsString("database.schema");
-		dbUrl = PropertiesManager.getPropertyAsString("database.connection.url");
-		connectorMainClass = PropertiesManager.getPropertyAsString("database.connector.mainclass");
-		
 		logger.info("Properties loaded --> dbUsername: " + dbUsername + " - dbPassword: " + dbPassword + " - dbUrl: " + dbUrl + " - connectorMainClass: " + connectorMainClass);
 	}
 
@@ -62,7 +47,7 @@ public class UserDBManager {
 			logger.error(e.getStackTrace());
 		}
 	}
-	
+
 	public static List<User> getUsers() {
 		List<User> users = new ArrayList<User>();
 
@@ -248,30 +233,43 @@ public class UserDBManager {
 
 	// METODO DI INSERIMENTO UTENTE IN FASE DI REGISTRAZIONE
 
-	public static int insertUser(User user) throws Exception {
-
-		openConnection();
-		int rows = 0;
-		String query = "INSERT INTO users (email, password, firstname, lastname, borndate, regdate, role) VALUES (?,?,?,?,?,?,?)";
-		PreparedStatement pStatement = con.prepareStatement(query);
-
-		pStatement.setString(1, user.getEmail());
-		pStatement.setString(2, user.getPassword());
-		pStatement.setString(3, user.getFirstname());
-		pStatement.setString(4, user.getLastname());
-		pStatement.setString(5, user.getBorndate());
-		pStatement.setString(6, user.getRegdate());
-		pStatement.setInt(7, user.getRole());
-
-		try {
-			rows = pStatement.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		pStatement.close();
-		closeConnection();
-		return rows;
+//	public static int insertUser(User user) throws Exception {
+//
+//		openConnection();
+//		int rows = 0;
+//		String query = "INSERT INTO users (email, password, firstname, lastname, borndate, regdate, role) VALUES (?,?,?,?,?,?,?)";
+//		PreparedStatement pStatement = con.prepareStatement(query);
+//
+//		pStatement.setString(1, user.getEmail());
+//		pStatement.setString(2, user.getPassword());
+//		pStatement.setString(3, user.getFirstname());
+//		pStatement.setString(4, user.getLastname());
+//		pStatement.setString(5, user.getBorndate());
+//		pStatement.setString(6, user.getRegdate());
+//		pStatement.setInt(7, user.getRole());
+//
+//		try {
+//			rows = pStatement.executeUpdate();
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		pStatement.close();
+//		closeConnection();
+//		return rows;
+//	}
+	
+	public static void insertUser(org.entities.User user) throws Exception {
+//		Session session = HibernateUtil.getSessionFactory().openSession();
+		Session session = getSessionFactory().openSession();
+	    session.beginTransaction();	    
+	    session.save(user);
+	    session.getTransaction().commit();
+	    session.close();
+//	    logger.debug("Insert user returns: " + user.getId());
+//	    return user.getId();
 	}
+	
+	
 
 	/**
 	 * Metodo per aggiornare la password data un'email e la nuova password

@@ -1,0 +1,14 @@
+DROP TABLE userlogintoken;
+
+CREATE TABLE userlogintoken (
+	id int NOT NULL AUTO_INCREMENT, 
+	email VARCHAR(50) NOT NULL,
+	generated_token VARCHAR(50) NOT NULL,
+	token_expired BIT,
+	PRIMARY KEY(id),
+	CONSTRAINT uniqueToken UNIQUE (generated_token)
+);
+
+insert into userLoginToken (email, generated_token, token_expired) values ("emaildiprova@prova.com", "t0k3n!=23334292", TRUE) ;
+
+select * from userLoginToken;

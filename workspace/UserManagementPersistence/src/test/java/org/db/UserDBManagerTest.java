@@ -3,9 +3,10 @@
  */
 package org.db;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import java.util.Date;
 
 import org.bean.User;
 import org.db.UserDBManager;
@@ -67,7 +68,7 @@ public class UserDBManagerTest {
 		User u = UserDBManager.getUserByEmail("prova1@prova.it");
 		System.out.println("@Test --> password before: " + u.getPassword());
 
-		boolean val = false;
+		int val = 0;
 		try {
 			val = UserDBManager.updatePasswordByEmail("prova1@prova.it", "ciaociaociao");
 		} catch (Exception e) {
@@ -78,54 +79,69 @@ public class UserDBManagerTest {
 		u = UserDBManager.getUserByEmail("prova1@prova.it");
 		System.out.println("@Test --> password after: " + u.getPassword());
 
-		val &= u.getPassword().equals("ciaociaociao");
-		assertTrue(val);
+		assertTrue(val>0);
 	}
 
-	@Test
-	public void test5_insertUser() {
+//	@Test
+//	public void test5_insertUser() {
+//		try {
+//			org.entities.User user = new org.entities.User();
+//			user.setEmail("daniele@ciao.it");
+//			user.setPassword("ciao");
+//			user.setFirstname("daniele");
+//			user.setLastname("sprizzi");
+//			user.setBorndate(new Date());
+//			user.setRegdate(new Date());
+//			user.setRole(10);
+////		int rows = 0;
+//		
+//			rows = UserDBManager.insertUser(user);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println("@Before --> inserted rows number: " + rows);
+//		System.out.println("#########");
+//		System.out.println("TEST INSERT USER REGISRATION");
+//		System.out.println("#########");
+//		assertTrue(rows == 1);
+//	}
 
-		User user = new User();
-		user.setEmail("daniele@ciao.it");
-		user.setPassword("ciao");
-		user.setFirstname("daniele");
-		user.setLastname("sprizzi");
-		user.setBorndate("2018-01-28");
-		user.setRegdate("2018-01-25");
-		user.setRole(10);
-		int rows = 0;
-		try {
-			rows = UserDBManager.insertUser(user);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		System.out.println("@Before --> inserted rows number: " + rows);
-		System.out.println("#########");
-		System.out.println("TEST INSERT USER REGISRATION");
-		System.out.println("#########");
-		assertTrue(rows == 1);
-	}
-
-	
-	
 	private static int insertedNumber = 0;
 
+//	@Before
+//	public void insert() {
+//		org.entities.User user = new org.entities.User();
+//		user.setEmail("prova1@prova.it");
+//		user.setPassword("password1234");
+//		user.setFirstname("daniele");
+//		user.setLastname("sprizzi");
+//		user.setBorndate(new Date());
+//		user.setRegdate(new Date());
+//		user.setRole(10);
+//		try {
+//			insertedNumber = UserDBManager.insertUser(user);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println("@Before --> inserted rows number: " + insertedNumber);
+//	}
 	@Before
 	public void insert() {
-		User user = new User();
-		user.setEmail("prova1@prova.it");
-		user.setPassword("password1234");
-		user.setFirstname("daniele");
-		user.setLastname("sprizzi");
-		user.setBorndate("2018-01-28");
-		user.setRegdate("2018-01-25");
-		user.setRole(10);
 		try {
-			insertedNumber = UserDBManager.insertUser(user);
+			org.entities.User user = new org.entities.User();
+			user.setEmail("prova1@prova.it");
+			user.setPassword("password1234");
+			user.setFirstname("daniele");
+			user.setLastname("sprizzi");
+			user.setBorndate(new Date());
+			user.setRegdate(new Date());
+			user.setRole(10);
+			UserDBManager.insertUser(user);
+			System.out.println("@Before --> inserted user: " + user.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("@Before --> inserted rows number: " + insertedNumber);
+
 	}
 
 	@After
