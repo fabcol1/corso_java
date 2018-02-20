@@ -12,8 +12,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Query;
-
 import org.apache.log4j.Logger;
 import org.bean.User;
 import org.hibernate.Session;
@@ -268,7 +266,6 @@ public class UserDBManager extends DBManager {
 //	    logger.debug("Insert user returns: " + user.getId());
 //	    return user.getId();
 	}
-	
 	
 
 	/**

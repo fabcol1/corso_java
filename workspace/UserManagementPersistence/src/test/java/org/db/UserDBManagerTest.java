@@ -68,7 +68,7 @@ public class UserDBManagerTest {
 		User u = UserDBManager.getUserByEmail("prova1@prova.it");
 		System.out.println("@Test --> password before: " + u.getPassword());
 
-		int val = 0;
+		boolean val = false;
 		try {
 			val = UserDBManager.updatePasswordByEmail("prova1@prova.it", "ciaociaociao");
 		} catch (Exception e) {
@@ -79,7 +79,8 @@ public class UserDBManagerTest {
 		u = UserDBManager.getUserByEmail("prova1@prova.it");
 		System.out.println("@Test --> password after: " + u.getPassword());
 
-		assertTrue(val>0);
+		val &= u.getPassword().equals("ciaociaociao");
+		assertTrue(val);
 	}
 
 //	@Test
