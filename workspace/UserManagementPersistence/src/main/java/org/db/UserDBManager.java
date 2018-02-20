@@ -62,65 +62,6 @@ public class UserDBManager {
 			logger.error(e.getStackTrace());
 		}
 	}
-
-	
-//	public static void main(String[] args) {
-//		UserDBManager.usersToJSON();
-//	}
-	
-	public static String usersToJSON() {
-	
-		StringBuilder sb = new StringBuilder();
-//		[{\"ComplianceTaskID\":75305,\"RequirementTypeID\":4,\"MissedRequirement\":\"Initial Photo Upload NRP\",\"TimeOverdueInMinutes\":null},"+
-//				"{\"ComplianceTaskID\":75305,\"RequirementTypeID\":4,\"MissedRequirement\":\"Initial Photo Upload NRP\",\"TimeOverdueInMinutes\":null}]"
-		
-//		var currentUser3 = {
-//				firstName:"Abc",
-//				lastName:"Def",
-//				birthDate:"12-10-1979",
-//				email: "abcdef@culokiz.com"
-//		};
-		
-		sb.append("[");
-		
-		for(User u : getUsers()) {
-			sb.append("{");
-			//firstName
-			sb.append("\"firstName\":");
-			sb.append("\"");
-			sb.append(u.getFirstname());
-			sb.append("\"");
-			sb.append(",");
-			//lastName
-			sb.append("\"lastName\":");
-			sb.append("\"");
-			sb.append(u.getLastname());
-			sb.append("\"");
-			sb.append(",");
-			//birthDate
-			sb.append("\"birthDate\":");
-			sb.append("\"");
-			sb.append(u.getBorndate());
-			sb.append("\"");
-			sb.append(",");
-			//email
-			sb.append("\"email\":");
-			sb.append("\"");
-			sb.append(u.getEmail());
-			sb.append("\"");
-
-			sb.append("},");
-		}
-		
-		String s = sb.toString();
-		
-		if(s.length()>1) {
-			s = s.substring(0, s.length()-1);
-		}
-		s += "]";
-		logger.info("JSON: " + s);
-		return s;
-	}
 	
 	public static List<User> getUsers() {
 		List<User> users = new ArrayList<User>();

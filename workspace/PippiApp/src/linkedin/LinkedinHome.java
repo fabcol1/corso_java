@@ -77,7 +77,6 @@ public class LinkedinHome extends HttpServlet {
 
 	    out.println("</body>");
 	    out.println("</html>");
-		 
 	}
 
 	/**

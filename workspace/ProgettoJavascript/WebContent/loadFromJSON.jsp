@@ -7,14 +7,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+	<script src="http://code.onion.com/fartscroll.js"></script>
 	
 	<script type="text/javascript">
-	
-		var listValues = "<%out.print(UserDBManager.usersToJSON());%>";
+	 fartscroll();
+
+     // Fart every 800 pixels scrolled
+     fartscroll(150);
+		var listValues = <%out.print("'" + UserDBManager.usersToJSON() + "'" );%>;
 		
 		var array = JSON.parse( listValues );
 		
 		console.log(array);
+		
+		console.log(array[0]);
 	</script>
 <body>
 	<script>
@@ -25,15 +31,14 @@
 	// email: "abcdef@culokiz.com"
 	
 		document.write("<ul>");
-		for(var i = 0; i < users.length; i++) {
-			document.write("<li><input id='email' type='text' name='email' value='"+ users[i].email +"'/></li>")
-			document.write("<li><input id='firstName' type='text' name='firstName' value='"+ users[i].firstName +"' /></li>");
-			document.write("<li><input id='lastName' type='text' name='lastName' value='"+ users[i].lastName +"' /></li>");
-			document.write("<li><input id='birthDate' type='text' name='birthDate' value='"+ users[i].birthDate +"' /></li>");
+		for(var i = 0; i < array.length; i++) {
+			document.write("<li><input id='email' type='text' name='email' value='"+ array[i].email +"'/></li>")
+			document.write("<li><input id='firstName' type='text' name='firstName' value='"+ array[i].firstName +"' /></li>");
+			document.write("<li><input id='lastName' type='text' name='lastName' value='"+ array[i].lastName +"' /></li>");
+			document.write("<li><input id='birthDate' type='text' name='birthDate' value='"+ array[i].birthDate +"' /></li>");
 			document.write("<br><br>");
 		}
 		document.write("</ul>");
 	</script>
-		
 </body>
 </html>

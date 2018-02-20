@@ -3,6 +3,7 @@
  */
 package org.db;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -104,7 +105,40 @@ public class UserDBManagerTest {
 		System.out.println("#########");
 		assertTrue(rows == 1);
 	}
-
+	
+	@Test
+	public void test6_toJSON() {
+		String s = "";
+		try {
+			s  = UserDBManager.usersToJSON();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("#########");
+		System.out.println("TEST USERS TO JSON");
+		System.out.println("#########");
+		System.out.println(s);
+		String correctVal = "[{\"firstName\":\"daniele\",\"lastName\":\"sprizzi\",\"birthDate\":\"2018-01-28\",\"email\":\"prova1@prova.it\"}]";
+		assertEquals(correctVal, s);
+	}
+	
+	@Test
+	public void test7_toJSON_EMPTY() {
+		UserDBManager.deleteAll();
+		String s = "";
+		try {
+			s  = UserDBManager.usersToJSON();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("#########");
+		System.out.println("TEST USERS TO JSON WITH EMPTY DB");
+		System.out.println("#########");
+		System.out.println(s);
+		String correctVal = "[]";
+		assertEquals(correctVal, s);
+	}
+	
 	private static int insertedNumber = 0;
 
 	@Before
