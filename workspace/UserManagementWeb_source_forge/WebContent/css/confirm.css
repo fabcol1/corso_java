@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+body{
+    background:#eee;    
+}
+.main-box.no-header {
+    padding-top: 20px;
+}
+.main-box {
+    background: #FFFFFF;
+    opacity: 0.7;
+    -webkit-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    -moz-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    -o-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    -ms-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    box-shadow: 1px 1px 2px 0 #CCCCCC;
+    margin-bottom: 30px;
+    -webikt-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    left: 50%;
+    top: 100%;
+    margin-left: -30%;
+    position: absolute;
+    margin-top: -25%;
+    font-size: 20px;
+}

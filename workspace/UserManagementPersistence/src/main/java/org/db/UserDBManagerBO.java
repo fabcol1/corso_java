@@ -8,6 +8,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -86,7 +89,7 @@ public class UserDBManagerBO extends UserDBManager {
 		openConnection();
 //		Connection con = DriverManager.getConnection(url, "testme", "testme");
 		Statement cmd = con.createStatement();
-		String query = "INSERT INTO Users ( firstName,lastName,email,password,Borndate,Regdate,role) VALUES" 
+		String query = "INSERT INTO users ( firstName,lastName,email,password,dateOfBirth,Regdate,role) VALUES" 
 		+ "('" + firstName + "', '"
 				+ lastName + "','" + email + "','" + password + "','"+ Borndate +"','"+ Regdate + "','"+ role+ "')";
 		System.out.println(query);
@@ -109,8 +112,8 @@ public class UserDBManagerBO extends UserDBManager {
 		openConnection();
 		Statement cmd = con.createStatement();
 
-		String query = "UPDATE Users SET firstName ='" + firstNamePar + "', lastName='" + lastNamePar + "',email='"
-				+ emailPar + "',password='" + PasswordPar + "',Borndate='" + BorndatePar + "' ,Regdate='" + RegdatePar +
+		String query = "UPDATE users SET firstName ='" + firstNamePar + "', lastName='" + lastNamePar + "',email='"
+				+ emailPar + "',password='" + PasswordPar + "',dateOfBirth='" + BorndatePar + "' ,Regdate='" + RegdatePar +
 						 "' WHERE id=" + id;
 		System.out.println("Update query: "+query);
 		int rowsUpdated = cmd.executeUpdate(query);
@@ -130,7 +133,7 @@ public class UserDBManagerBO extends UserDBManager {
 				//Connection c
                  openConnection();
 				Statement cmd = con.createStatement ();
-				String query = "SELECT * FROM Users WHERE id="+id;
+				String query = "SELECT * FROM users WHERE id="+id;
 				ResultSet res = cmd.executeQuery(query);
 				
 //				    System.out.println(res);
@@ -166,7 +169,7 @@ public class UserDBManagerBO extends UserDBManager {
 			
 		}
 
-	public static List<User> getAllUsers () throws Exception{
+	public static List<User> getAllUsersBO () throws Exception{
 		System.out.println("Executing getAllUsers method...");
 		 List<User> users = new ArrayList<User>();
 		
@@ -180,7 +183,7 @@ public class UserDBManagerBO extends UserDBManager {
 		 //Connection con = DriverManager.getConnection (url, "testme",
 		// "testme");
 		 Statement cmd = con.createStatement ();
-		 String query = "SELECT * FROM Users";
+		 String query = "SELECT * FROM users";
 
 		 ResultSet res = cmd.executeQuery(query);
 
@@ -193,7 +196,7 @@ public class UserDBManagerBO extends UserDBManager {
 		 	apuser.setFirstname(res.getString("firstname"));
 		 	apuser.setLastname(res.getString("lastName"));
 		 	apuser.setPassword(res.getString("password"));
-		 	apuser.setBorndate(res.getString("Borndate"));
+		 	apuser.setBorndate(res.getString("dateOfBirth"));
 		 	apuser.setRegdate(res.getString("Regdate"));
 		 	apuser.setRole(res.getInt("role"));
 		 	int userId = res.getInt("id");
@@ -202,17 +205,14 @@ public class UserDBManagerBO extends UserDBManager {
 		 }
 			res.close();
 			closeConnection();
-		 		
-		  
-		 	
-		  
 
-		 return users ;
+
+			return users ;
 	}
 	
 	public static void main (String []args)throws Exception {
 		List<User>user1 ;
-				user1 =getAllUsers();
+				user1 =getAllUsersBO();
 				System.out.println(user1.size());
 		
 //	 int r=  executeUpdateStmt( "tinny","tictac","tinny@prox.com","tpass123","1987-12-08", "2018-02-08",5);

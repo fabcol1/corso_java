@@ -1,0 +1,14 @@
+<html>
+<body>
+	
+	<p> Hai richiesto il cambio della password.
+		Clicca sul link per avviare al procedura di ripristino password. </p>
+	
+	<a href="http://localhost:8080/UserManagementWeb/PasswordRecoveryWithToken?t=$token" >
+	
+	http://localhost:8080/UserManagementWeb/PasswordRecoveryWithToken?t=$token
+	
+	</a>
+	
+</body>
+</html>

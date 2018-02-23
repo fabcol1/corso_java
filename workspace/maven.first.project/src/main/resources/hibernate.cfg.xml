@@ -10,7 +10,7 @@
     <property name="hibernate.connection.username">test3</property>
     <property name="hibernate.connection.password">test3</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <mapping class="org.entities.User"/>
+<!--     <mapping class="org.entities.User"/> -->
     
   </session-factory>
   

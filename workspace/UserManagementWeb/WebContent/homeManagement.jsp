@@ -1,5 +1,11 @@
+<%@page import="org.apache.log4j.Logger"%>
+<%@page import="sun.font.Script"%>
+<%@page import="com.google.gson.GsonBuilder"%>
+<%@page import="jdk.nashorn.internal.parser.JSONParser"%>
+<%@page import="com.google.gson.Gson"%>
+
 <%@page import="org.db.UserDBManager"%>
-<%@page import="org.bean.User"%>
+<%@page import="org.entities.User"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -8,65 +14,122 @@
 <html>
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>USER SELECTION</title>
+<title> Users Management </title>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css">
+
+
+<script>
+
+    function getImgPath (currentUser) {
+    	
+    	
+    	var defaultImg = "./default_image.jpg";
+    	
+    	
+    	if (currentUser.imgPath != undefined) {
+    		
+    		defaultImg = currentUser.imgPath;
+    		
+    	}
+    	
+    	console.log (currentUser.imgPath);
+    	
+    	return defaultImg;
+    	
+    	
+   }
+
 
 <%
 
+ 
 
- List <User> users = UserDBManager.getUsers();
+ List <User> users = UserDBManager.getAllUsers();
+ Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
-
+ String usersJ = gson.toJson(users);
+ 
+ 
+ 
+ 
 %>
+
+
+var Jusers = <%=usersJ%>
+
+
+console.log (Jusers);
+ 
+
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/userManStyle.css">
+
 
 
 </head>
 
-<link rel="stylesheet" type="text/css" href="css/userManStyle.css">
-
-<hr>
-<div class="container bootstrap snippet">
+<body>
 
 
-<div align="center">
-    <div class="row">
-        <div class="col-lg-12">
-        
-            <div class="main-box no-header clearfix">
-                <div class="main-box-body clearfix">
-                    <div class="table-responsive">
-                    <div style="overflow-x:auto; overflow-y: auto;">
-                        <table class="table user-list">
-                            <thead>
+<%@ include file="topBar.jsp" %>  <%--  includo topBar da un altro JSP --%>
+
+
+   
+
+    <div class="container bootstrap snippet">
+<!--     <hr> -->
+
+    <div align="center">
+        <div class="row">
+            <div class="col-lg-12">
+               <div class="main-box no-header clearfix">
+                    <div class="main-box-body clearfix">
+                        <div class="table-responsive">
+                        <div style= "overflow-x:auto; overflow y: auto">
+                            <table class="table user-list">
+                                <thead>
                                 <tr>
-                                <th width= 40%><span>User</span></th>
-                                <th width= 20%><span>Created</span></th>
-                                <th width= 40%><span>Email</span></th>
+                                <th width= 40%><div align="center"><span>User</span></div></th>
+                                <th width= 20%><div align="center"><span>Created</span></div></th>
+                                <th width= 40%><div align="center"><span>Email</span></div></th>
                                
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                 
-                                  
-                        <%         for (int i = 0; i < users.size(); i++) {
+                          <script> 
+                          
+                          
+                                 for (var i = 0; i < Jusers.length; i++) {
                         	
+
                         	
-                        	
-                        out.print ("<form action= 'userDetails.jsp'><td><img src='./default_image.jpg' style='width:100'> <class='user-link'><a href='mailto:"+users.get(i).getEmail()+"' class='user-link'>"+users.get(i).getFirstname()+"</a>");
-                        out.print ("<td>"+users.get(i).getRegdate()+"</td>");	
-                        out.print ("<td><a href= 'mailto: "+users.get(i).getEmail()+"'>"+users.get(i).getEmail()+"</a></td>");           
-                        out.print ("<td><Button type = 'submit' class = 'qualityButton' name = 'button' value = '"+users.get(i).getId()+"'>Edit </Button></td></a>");      
-                        out.print ("</tr></form> ");            
+                        document.write ("<form action= 'userDetails.jsp'method ='post'><td><img src='");
+                        document.write (getImgPath(Jusers[i]));
+                        document.write ("' style='width:100'> <class='user-link'><a href='mailto:"+ Jusers[i].email +"' class='user-link'>"+ Jusers[i].firstname +"</a>");
+                        document.write ("<div class='dropdown'><a href='#' data-toggle='dropdown' class='dropdown-toggle'><b class='caret'></b></a>");
+                        document.write ("<ul class='dropdown-menu'><li><a href='mailto:"+ Jusers[i].email +"'>Invia e-mail</a></li><li><a href='userDetails.jsp?button=" + Jusers[i].id + "'>Edit User</a></li></ul></div>");    
+                        document.write ("<td>"+ Jusers[i].regdate +"</td>");	
+                        document.write ("<td><a href= 'mailto: "+ Jusers[i].email +"'>"+ Jusers[i].email +"</a></td>");           
+                        document.write ("<td><Button type = 'submit' class = 'qualityButton' name = 'button' value = '"+ Jusers[i].id +"'>Edit </Button></td></a>");      
+                        document.write ("</tr></form> ");            
                                    
                                        
-                        }                   
-                   %>                                            
+                        } 
+                                 
+                        </script>
+                                                            
                                    
                                 
                             </tbody>
@@ -79,4 +142,5 @@
     </div>
 </div>
 </div>
+</body>
 </html>

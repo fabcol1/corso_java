@@ -43,24 +43,16 @@ public class PasswordRecoveryWithToken extends HttpServlet {
 		if (email != null) {
 			String newPassword = RandomPassword.generate();
 
-			Boolean checkUpdate = false;
-			try {
-				checkUpdate = UserDBManager.updatePasswordByEmail(email, newPassword);
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
+			UserDBManager.updatePasswordByEmail(email, newPassword);
 
-			if (checkUpdate) {
-				try {
-					MailUtility.sendMailPassword(email, newPassword);
-//					MailUtility.sendMail(email, newPassword);
-				} catch (MessagingException e) {
-					e.printStackTrace();
-				}
-				outputJSP = "/outputJSP/passwordRecovery/okPasswordRecovery2.jsp";
-			} else {
-				outputJSP = "/outputJSP/passwordRecovery/koPasswordRecovery2.jsp";
+			try {
+				MailUtility.sendMailPassword(email, newPassword);
+				// MailUtility.sendMail(email, newPassword);
+			} catch (MessagingException e) {
+				e.printStackTrace();
 			}
+			outputJSP = "/outputJSP/passwordRecovery/okPasswordRecovery2.jsp";
+
 		} else {
 			outputJSP = "/outputJSP/passwordRecovery/koPasswordRecovery3.jsp";
 		}

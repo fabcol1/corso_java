@@ -10,11 +10,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import org.apache.log4j.Logger;
 import org.bean.User;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 /**
  * @author maurizio
@@ -46,43 +52,67 @@ public class UserDBManager extends DBManager {
 		}
 	}
 
-	public static List<User> getUsers() {
-		List<User> users = new ArrayList<User>();
+//	public static List<User> getUsers() {
+//		List<User> users = new ArrayList<User>();
+//
+//		try {
+//			openConnection();
+//			// creo oggetto statement
+//			Statement cmd = con.createStatement();
+//			// creo la query string
+//			String query = "SELECT * FROM users;";
+//			// interrogo il db e ottendo il risultato
+//			ResultSet res = cmd.executeQuery(query);
+//			User appoUser;
+//			while (res.next()) {
+//				appoUser = new User();
+//				appoUser.setId(res.getLong(1));
+//				appoUser.setEmail(res.getString("email"));
+//				appoUser.setPassword(res.getString("password"));
+//				appoUser.setFirstname(res.getString("firstname"));
+//				appoUser.setLastname(res.getString("lastname"));
+//				appoUser.setBorndate(res.getString("borndate"));
+//				appoUser.setRegdate(res.getString("regdate"));
+//				appoUser.setRole(res.getInt("role"));
+//				System.out.println(res.getString(1));
+//				System.out.println(res.getString(2));
+//				users.add(appoUser);
+//			}
+//			res.close();
+//			closeConnection();
+//			System.out.println("users.size(): " + users.size());
+//		} catch (Exception e) {
+//			System.out.println(e.getMessage());
+//			e.printStackTrace();
+//		}
+//
+//		return users;
+//	}
 
-		try {
-			openConnection();
-			// creo oggetto statement
-			Statement cmd = con.createStatement();
-			// creo la query string
-			String query = "SELECT * FROM users;";
-			// interrogo il db e ottendo il risultato
-			ResultSet res = cmd.executeQuery(query);
-			User appoUser;
-			while (res.next()) {
-				appoUser = new User();
-				appoUser.setId(res.getLong(1));
-				appoUser.setEmail(res.getString("email"));
-				appoUser.setPassword(res.getString("password"));
-				appoUser.setFirstname(res.getString("firstname"));
-				appoUser.setLastname(res.getString("lastname"));
-				appoUser.setBorndate(res.getString("borndate"));
-				appoUser.setRegdate(res.getString("regdate"));
-				appoUser.setRole(res.getInt("role"));
-				System.out.println(res.getString(1));
-				System.out.println(res.getString(2));
-				users.add(appoUser);
-			}
-			res.close();
-			closeConnection();
-			System.out.println("users.size(): " + users.size());
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
+    public static List<org.entities.User>  getAllUsers() {
+		
+		List <org.entities.User>users=null;
+		 
+		 try {
+			 
+		    Session session = getSessionFactory().openSession();
+		        session.beginTransaction();
+		            users = (List <org.entities.User>) session.createQuery("from org.entities.User").list();
+		                
+		            session.getTransaction().commit();
+		
+		
+		
+		    }catch (Exception e) {
+			    System.out.println(e.getMessage());
+			
 		}
-
 		return users;
 	}
-
+	
+	
+	
+	
 	public static User getUserByEmail(String email) {
 		System.out.println("email: " + email);
 		User user = null;
@@ -119,7 +149,7 @@ public class UserDBManager extends DBManager {
 		return user;
 	}
 
-	public static User getUserById(int id) {
+	/*public static User getUserById(int id) {
 
 		User appoUser = new User();
 
@@ -163,9 +193,27 @@ public class UserDBManager extends DBManager {
 		}
 		return appoUser;
 
-	}
+	}*/
 
-	public static int updateUserById(int id, String email, String password, String firstName, String lastName,
+	
+	public static org.entities.User getUserById(int id) {
+		org.entities.User user = null;
+		Session session = getSessionFactory().openSession();
+		try {
+			session.beginTransaction();
+			user = session.get(org.entities.User.class, id);
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			session.getTransaction().rollback();
+		}
+
+		session.close();
+		return user;
+
+	}
+	
+	/*public static int updateUserById(int id, String email, String password, String firstName, String lastName,
 			String bornDate) {
 
 		int rows = 0;
@@ -197,9 +245,28 @@ public class UserDBManager extends DBManager {
 		}
 		return rows;
 
+	}*/
+	
+	public static void updateUserById(int id, String email, String password, String firstName, String lastName,
+			Date dateOfBirth) {
+
+		Session session = getSessionFactory().openSession();
+	    session.beginTransaction();	    
+	
+	    org.entities.User user = session.get(org.entities.User.class, id);
+	    user.setEmail(email);
+	    user.setPassword(password);
+	    user.setFirstname(firstName);
+	    user.setLastname(lastName);
+	    user.setDateOfBirth(dateOfBirth);	    
+	    session.update(user);
+	    session.getTransaction().commit();
+	    session.disconnect();
+	    session.close();		
+
 	}
 
-	public static int deleteUserById(int id) {
+	/*public static int deleteUserById(int id) {
 
 		int rows = 0;
 
@@ -227,9 +294,21 @@ public class UserDBManager extends DBManager {
 		}
 
 		return rows;
-	}
+	}*/
 
-	// METODO DI INSERIMENTO UTENTE IN FASE DI REGISTRAZIONE
+	public static void deleteUserById(int id) {
+		Session session = getSessionFactory().openSession();
+	    session.beginTransaction();	    
+	
+	    org.entities.User user = session.get(org.entities.User.class, id);
+	    	    
+	    session.delete(user);
+	    session.getTransaction().commit();
+	    session.disconnect();
+	    session.close();
+	}
+	
+	/*// METODO DI INSERIMENTO UTENTE IN FASE DI REGISTRAZIONE
 
 //	public static int insertUser(User user) throws Exception {
 //
@@ -255,6 +334,7 @@ public class UserDBManager extends DBManager {
 //		closeConnection();
 //		return rows;
 //	}
+*/	
 	
 	public static void insertUser(org.entities.User user) throws Exception {
 //		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -267,61 +347,119 @@ public class UserDBManager extends DBManager {
 //	    return user.getId();
 	}
 	
-
+//	public static int updatePasswordByEmail(String email, String newPassword) throws Exception {
+//		Session session = getSessionFactory().openSession();
+//	    session.beginTransaction();	    
+//	    session.g
+//	    session.save(user);
+//	    session.getTransaction().commit();
+//	    session.close();
+//		
+//	}
+	
 	/**
 	 * Metodo per aggiornare la password data un'email e la nuova password
 	 * 
 	 * @throws Exception
 	 */
-	public static boolean updatePasswordByEmail(String email, String newPassword) throws Exception {
-		try {
-			boolean val = false;
-
-			// create db connection
-			openConnection();
-
-			String query = "UPDATE users SET password=? WHERE email=?";
-			PreparedStatement pStatement = con.prepareStatement(query);
-
-			pStatement.setString(1, newPassword);
-			pStatement.setString(2, email);
-
-			try {
-				pStatement.executeUpdate();
-				val = true;
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			pStatement.close();
-			closeConnection();
-			return val;
-		} catch (Exception e) {
-			e.printStackTrace();
-			closeConnection();
-			return false;
-		}
+	public static void updatePasswordByEmail(String email, String newPassword) {
+		Session session = getSessionFactory().openSession();
+	    session.beginTransaction();	    
+	
+	    org.entities.User user = UserDBManager.getByStringField("email", email);
+	    user.setPassword(newPassword);
+	    session.update(user);
+	    session.getTransaction().commit();
+	    session.disconnect();
+	    session.close();
 	}
 
-	public static int deleteAll() {
+	/**
+	 *  METODO GENERICO PER AVERE UN RECORD DELLA TABELLA PASSANDOGLI IL NOME DEL CAMPO E IL 
+	 *  VALORE DEL CAMPO.
+	 *  ESEMPIO DI CHIAMATA è getByStringField("email", "emailchece@gmail.com");
+	 *  ESTRAE L'OGGETTO USER DA DB CHE HA L'EMAIL "emailchece@gmail.com" NELLA COLONNA email.
+	 */
+	public static org.entities.User getByStringField(String field, String value) {
+		Session session = getSessionFactory().openSession();
+	    CriteriaBuilder builder = session.getCriteriaBuilder();
+	    CriteriaQuery<org.entities.User> query = builder.createQuery(org.entities.User.class);
+	    Root<org.entities.User> root = query.from(org.entities.User.class);
+	    query.select(root).where(builder.equal(root.get(field), value));
+	    Query<org.entities.User> q = session.createQuery(query);
+	    org.entities.User user = q.getSingleResult();
+	    session.disconnect();
+	    session.close();
+	    return user;
+	}
+	
+	
+//	public static boolean updatePasswordByEmail(String email, String newPassword) throws Exception {
+//		try {
+//			boolean val = false;
+//
+//			// create db connection
+//			openConnection();
+//
+//			String query = "UPDATE users SET password=? WHERE email=?";
+//			PreparedStatement pStatement = con.prepareStatement(query);
+//
+//			pStatement.setString(1, newPassword);
+//			pStatement.setString(2, email);
+//
+//			try {
+//				pStatement.executeUpdate();
+//				val = true;
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//			}
+//			pStatement.close();
+//			closeConnection();
+//			return val;
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			closeConnection();
+//			return false;
+//		}
+//	}
+
+//	public static int deleteAll() {
+//		int rows = 0;
+//
+//		try {
+//			openConnection();
+//			// creo oggetto statement
+//			String query = "delete from users ;";
+//			Statement cmd = con.createStatement();
+//
+//			// interrogo il db e ottendo il risultato
+//			rows = cmd.executeUpdate(query);
+//			cmd.close();
+//			closeConnection();
+//			System.out.println("Deleted rows: " + rows);
+//		} catch (Exception e) {
+//			System.out.println(e.getMessage());
+//			e.printStackTrace();
+//		}
+//
+//		return rows;
+//	}
+	
+public static int deleteAll() {
+		
+		
 		int rows = 0;
-
-		try {
-			openConnection();
-			// creo oggetto statement
-			String query = "delete from users ;";
-			Statement cmd = con.createStatement();
-
-			// interrogo il db e ottendo il risultato
-			rows = cmd.executeUpdate(query);
-			cmd.close();
-			closeConnection();
-			System.out.println("Deleted rows: " + rows);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-		}
-
+		Session session = getSessionFactory().openSession();
+		session.beginTransaction();
+		rows = session.createQuery("delete from org.entities.User").executeUpdate();
+		session.getTransaction().commit();
+		
+		session.close();
 		return rows;
-	}
+
+	        }
+	
+
+		
 
 }

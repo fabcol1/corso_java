@@ -1,3 +1,5 @@
+
+<%@page import="java.time.LocalDateTime"%>
 <%@page import="org.db.UserDBManager"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -7,12 +9,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MOD CONFIRMATION PAGE</title>
 
-<meta http-equiv="refresh" content="5; url=http://localhost:8080/UserManagementWeb/homeManagement.jsp" />
+<meta http-equiv="refresh" content="5; url=homeManagement.jsp" />
+<link rel="stylesheet" type="text/css" href="css/confirm.css">
+
 
 </head>
 <body>
-
-
+	   <div class = "main-box.no-header">
+       <div class="main-box">
 
 <%
 	
@@ -21,21 +25,24 @@
     int id = Integer.parseInt(idUser);
 	String email = request.getParameter("email");
 	String password = request.getParameter("password");
-	String firstName = request.getParameter("first");
-	String lastName = request.getParameter("last");
+	String firstName = request.getParameter("firstname");
+	String lastName = request.getParameter("lastname");
 	String bornDate = request.getParameter("borndate");
-
-	UserDBManager.updateuserById(id, email, password, firstName, lastName, bornDate);
+	
+	DateFormat format = new SimpleDateFormat("MMMM d, yyyy");
+	Date date = format.parse(bornDate);
+	
+	UserDBManager.updateUserById(id, email, password, firstName, lastName, date);
 
     out.print ("Modifiche effettuate. Sarai reindirizzato entro 5 secondi alla pagina principale, ");
-    out.print ("oppure clicca <a href='http://localhost:8080/GestioneUtenze/homeManagement.jsp'>QUI</a> per non attendere.");
+    out.print ("oppure clicca <a href='homeManagement.jsp'>QUI</a> per non attendere.");
     
     
 
 
 
 %>
-
-
+</div>
+</div>
 </body>
 </html>

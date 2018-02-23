@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.bean.User;
+import org.entities.User;
 import org.db.UserDBManager;
 
 import utils.MailUtility;

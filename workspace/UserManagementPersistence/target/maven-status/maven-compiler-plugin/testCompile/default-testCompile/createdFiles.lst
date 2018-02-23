@@ -1,0 +1,4 @@
+org\db\UserDBManagerBOUpdateTest.class
+org\db\UserDBManagerBOSelectAllTest.class
+org\db\UserLoginTokenDBManagerTest.class
+org\db\UserDBManagerTest.class

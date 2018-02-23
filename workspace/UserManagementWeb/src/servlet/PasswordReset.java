@@ -1,15 +1,22 @@
 package servlet;
 
 import java.io.IOException;
-import javax.mail.MessagingException;
-import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import java.sql.SQLException;
 
-import org.bean.User;
+import javax.mail.MessagingException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.entities.User;
 import org.db.UserDBManager;
 
 import utils.MailUtility;
+import utils.RandomPassword;
 
 /**
  * Servlet implementation class ResetEmail
@@ -63,27 +70,18 @@ public class PasswordReset extends HttpServlet {
 				// Controllo che le 2 newPassword siano corrette
 				if (newPassword.equals(newPasswordCheck)) {
 					// Contatto il DB per aggiornare la password
-					Boolean checkUpdate = false;
+					UserDBManager.updatePasswordByEmail(email, newPassword);
+					// Invio email con la nuova password al client
 					try {
-						checkUpdate = UserDBManager.updatePasswordByEmail(email, newPassword);
-					} catch (Exception e1) {
-						e1.printStackTrace();
+						// MailUtility.sendMail(email, newPassword);
+						MailUtility.sendMailPassword(email, newPassword);
+					} catch (MessagingException e) {
+						e.printStackTrace();
 					}
 
-					if (checkUpdate) {
-						// Invio email con la nuova password al client
-						try {
-							// MailUtility.sendMail(email, newPassword);
-							MailUtility.sendMailPassword(email, newPassword);
-						} catch (MessagingException e) {
-							e.printStackTrace();
-						}
+					// Invio pagina JSP di conferma cambio password
+					outputJSP = "/outputJSP/passwordReset/okPasswordReset.jsp";
 
-						// Invio pagina JSP di conferma cambio password
-						outputJSP = "/outputJSP/passwordReset/okPasswordReset.jsp";
-					} else {
-						outputJSP = "/outputJSP/passwordReset/koPasswordReset1.jsp";
-					}
 				} else {
 					// KO - la nuova password non coincide con la checkpassword
 					outputJSP = "/outputJSP/passwordReset/koPasswordReset3.jsp";

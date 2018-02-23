@@ -1,0 +1,8 @@
+org\db\DBManager.class
+org\db\UserDBManager.class
+org\entities\User.class
+com\commons\PropertiesManager.class
+org\db\UserDBManagerBO.class
+org\db\UserLoginTokenDBManager.class
+org\bean\UserLoginToken.class
+org\bean\User.class
