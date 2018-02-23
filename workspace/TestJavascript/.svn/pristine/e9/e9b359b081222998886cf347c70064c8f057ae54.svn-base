@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+    
+
+    function printAlert () {
+    	alert ("I am here") ;
+    	return 10;
+    }
+    function submitForm () {
+//     	alert ("I am here") ;
+    	console.log("hi all....");
+    	var emailValue = document.getElementById("email").value;
+    	console.log(emailValue);
+//     	var validateForm(emailValue);
+    	if (!validateForm(emailValue)) {    		
+    		return ;
+    	}
+    	document.getElementById("loginForm").action="ko.html";
+    	document.getElementById("loginForm").submit();
+    }
+    function validateForm(emailValue) {
+    	var validationCheck = false ;
+		if ((emailValue==null)||(emailValue.lenght==0)) {
+			document.getElementById("emailErrorMessage").style.display = 'block';
+			validationCheck = false ;
+		} else {
+			document.getElementById("emailErrorMessage").style.display = 'none';
+			validationCheck = true ;
+		}
+		return validationCheck ;
+    }
+//     var pippo = printAlert();
+//     alert (pippo) ;
+//     pippo = 'a';
+//     alert (pippo) ;
+//     pippo = "b";
+//     alert (pippo) ;
+//     pippo = true;
+//     alert (pippo) ;
+//     pippo = 10.1;
+//     alert (pippo) ;
+</script>
+</head>
+<body>
+YES 
+<form action="home.html" id="loginForm">
+    <input type="text" name="email" value="" id="email"   >
+    <label id="emailErrorMessage" style="color:red;display:none">Il campo email non è corretto!!!</label>
+    <input type="button" onclick="submitForm();" value="PREMI">
+</form>
+</body>
+<script>
+//     printAlert();
+</script>
+</html>

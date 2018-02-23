@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.entities.User;
 import org.db.UserDBManager;
+import org.entities.User;
 
 import utils.MailUtility;
 import utils.RandomPassword;
@@ -23,7 +23,7 @@ import utils.RandomPassword;
  */
 @WebServlet("/PasswordReset")
 public class PasswordReset extends HttpServlet {
-
+	
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -53,7 +53,7 @@ public class PasswordReset extends HttpServlet {
 
 		String outputJSP = "";
 		// String email = (String) session.getAttribute("user");
-		String email = "daniele.grizzi@gmail.com";
+		String email = "testproxima2018@gmail.com";
 		String oldPassword = (String) request.getParameter("oldPassword");
 		String newPassword = (String) request.getParameter("newPassword");
 		String newPasswordCheck = (String) request.getParameter("newPasswordCheck");
@@ -61,7 +61,7 @@ public class PasswordReset extends HttpServlet {
 
 		try {
 			u = UserDBManager.getUserByEmail(email);
-			// Controllo se oldPassword inserita è uguale a Password on DB
+			// Controllo se oldPassword inserita ï¿½ uguale a Password on DB
 			System.out.println(u.getPassword());
 			System.out.println(oldPassword);
 			System.out.println(newPassword);
@@ -70,25 +70,35 @@ public class PasswordReset extends HttpServlet {
 				// Controllo che le 2 newPassword siano corrette
 				if (newPassword.equals(newPasswordCheck)) {
 					// Contatto il DB per aggiornare la password
-					UserDBManager.updatePasswordByEmail(email, newPassword);
-					// Invio email con la nuova password al client
+					Boolean checkUpdate = false;
 					try {
-						// MailUtility.sendMail(email, newPassword);
-						MailUtility.sendMailPassword(email, newPassword);
-					} catch (MessagingException e) {
-						e.printStackTrace();
+						UserDBManager.updatePasswordByEmail(email, newPassword);
+						checkUpdate = true ;
+					} catch (Exception e1) {
+						e1.printStackTrace();
 					}
 
-					// Invio pagina JSP di conferma cambio password
-					outputJSP = "/outputJSP/passwordReset/okPasswordReset.jsp";
+					if (checkUpdate) {
+						// Invio email con la nuova password al client
+						try {
+//							MailUtility.sendMail(email, newPassword);
+							MailUtility.sendMailPassword(email, newPassword);
+						} catch (MessagingException e) {
+							e.printStackTrace();
+						}
 
+						// Invio pagina JSP di conferma cambio password
+						outputJSP = "/outputJSP/passwordReset/okPasswordReset.jsp";
+					} else {
+						outputJSP = "/outputJSP/passwordReset/koPasswordReset1.jsp";
+					}
 				} else {
 					// KO - la nuova password non coincide con la checkpassword
 					outputJSP = "/outputJSP/passwordReset/koPasswordReset3.jsp";
 				}
 
 			} else {
-				// KO - la old password non è corretta
+				// KO - la old password non ï¿½ corretta
 				outputJSP = "/outputJSP/passwordReset/koPasswordReset2.jsp";
 
 			}

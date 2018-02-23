@@ -8,9 +8,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -205,9 +202,12 @@ public class UserDBManagerBO extends UserDBManager {
 		 }
 			res.close();
 			closeConnection();
+		 		
+		  
+		 	
+		  
 
-
-			return users ;
+		 return users ;
 	}
 	
 	public static void main (String []args)throws Exception {

@@ -1,4 +1,6 @@
 org\db\UserDBManagerBOUpdateTest.class
 org\db\UserDBManagerBOSelectAllTest.class
 org\db\UserLoginTokenDBManagerTest.class
+org\db\UserDBManagerSelectByEmailTest.class
+org\db\UserDBManagerSelectAllTest.class
 org\db\UserDBManagerTest.class

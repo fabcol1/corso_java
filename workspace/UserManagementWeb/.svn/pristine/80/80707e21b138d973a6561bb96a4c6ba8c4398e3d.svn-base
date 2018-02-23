@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>LUCA CHAT</title>
+<link rel="stylesheet" type="text/css" href="NewFile.css" />
+<style type="text/css">
+</style>
+<head>
+<title>FORM JAVASCRIPT LOGIN</title>
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="css/submit_javascript.css" />
+<!-- Include JS File Here -->
+<script>
+	//Submit form con la funzione id.
+	function submit_by_id() {
+		var nome = document.getElementById("nomeutente").value;
+		var pass = document.getElementById("password").value;
+
+		console.log(nome + pass);
+
+		if (validation()) // Calling validation function
+		{
+
+			alert(" Nome Utente : " + nome + " \n Password : " + pass
+					+ " \n FORM : "
+					+ document.getElementById("form_id").getAttribute("id")
+					+ "\n\n BRAVOH! HAI SUBMITTATO CON SUCCESSO!");
+
+		}
+
+	}
+
+	//Submit form con la funzione name.
+	function submit_by_name() {
+		var nome = document.getElementById("nomeutente").value;
+		var pass = document.getElementById("password").value;
+
+		if (validation()) // CHIAMATA DELLA FUNZIONE validation()
+		{
+			alert(" Nome Utente : "
+					+ nome
+					+ " \n Password : "
+					+ pass
+					+ " \n FORM : "
+					+ document.getElementById("form_id").getAttribute("name")
+					+ "\n\n OOOOOH! HAI PROVATO IL FORM PER form_name. CAZZO SEI UN GENIO!");
+
+			var x = document.getElementsByName('form_name');
+			x[0].submit(); // FORM DI SUBMISSION
+
+		}
+	}
+
+	//Submit form con la funzione class.
+	function submit_by_class() {
+		var nome = document.getElementById("nomeutente").value;
+		var pass = document.getElementById("password").value;
+		if (validation()) // CHIAMATA DELLA FUNZIONE validation()
+		{
+
+			alert(" Nome Utente : "
+					+ nome
+					+ " \n Password : "
+					+ pass
+					+ " \n FORM : "
+					+ document.getElementById("form_id").getAttribute("class")
+					+ "\n\n MEH, VABBEH! TI DOVREBBERO DARE DIRETTAMENTE LA LAUREA. COMPLIMENTI. MI TI CI FAREI TUTTO!");
+
+			var x = document.getElementsByClassName("form_class");
+			x[0].submit(); //FORM DI SUBMISSION
+
+		}
+	}
+
+	//Submit form con html <form> tag.
+	function submit_by_tag() {
+		var nome = document.getElementById("nomeutente").value;
+		var pass = document.getElementById("password").value;
+		if (validation()) // CHIAMATA DELLA FUNZIONE validation()
+		{
+
+			alert(" Nome Utente : " + nome + " \n Password : " + pass
+					+ " \n NIENTE DA DIRE... TI AMO!");
+
+			var x = document.getElementsByTagName("form");
+			x[0].submit(); //FORM DI SUBMISSION
+
+		}
+	}
+
+	//Funzione di Validazione Email e Password
+	function validation() {
+
+		var nome = document.getElementById("nomeutente").value;
+		var pass = document.getElementById("password").value;
+
+		if (nomeutente == '' || pass == '') {
+			alert("RIEMPICI TUTTI! MASCHIACCIO!");
+			return false;
+		} else if (nome.length > 50 || pass.length > 50) {
+			
+			alert("CE L'HAI TROPPO LUNGO... LO STRINGONE INTENDO!");
+			return false;
+		} else {	
+			return true;		
+		}	
+	}
+</script>
+</head>
+<body>
+	<form action="ok.html" method="post" name="form_name" id="form_id"
+		class="form_class">
+		<h2>Loggati NOW!</h2>
+		<label>Email :</label> <input type="text" name="nomeutente"
+			id="nomeutente" placeholder="Es. Luca_Speed" /> <label>Password
+			:</label> <input type="text" name="password" id="password"
+			placeholder="Es. pAssw0rd" /> <input type="button" name="submit_id"
+			id="btn_id" value="PROVA LA SUBMIT PER ID" onclick="submit_by_id()" />
+		<input type="button" name="submit_name" id="btn_name"
+			value="PROVA LA SUBMIT PER NAME" onclick="submit_by_name()" /> <input
+			type="button" name="submit_class" id="btn_class"
+			value="PROVA LA SUBMIT PER CLASS" onclick="submit_by_class()" /> <input
+			type="button" name="submit_tag" id="btn_tag"
+			value="PROVA LA SUBMIT PER TAG" onclick="submit_by_tag()" />
+	</form>
+	
+	<h2>MANDA UN SMS CON SCRITTO "TUO NOME" + "SUO NOME" AL 48010... SERVIZIO IN ABBONAMENTO</h2>
+	
+	<h6>L'abbonamento vuole che tu possa giocare online divertendoti e ti fornisce le seguenti linee guida: 
+
+    fissa dei limiti all'importo massimo che vuoi regalare in beneficenza e puntare e anche il massimo che puoi perdere prima di iniziare ad abbonarti.
+    cerca di evitare che il gioco interferisca con le tue responsabilità quotidiane;
+    il gioco non è consigliabile qualora tu stia recuperando da qualsiasi forma di dipendenza o sia sotto l'influenza dell'alcool o di qualsiasi altra sostanza;
+    non utilizzare il gioco come forma alternativa di suicidio o come un modo per litigare con la tua ragazza ti prego;
+    per avere informazioni su come giocare responsabilmente e per ottenere informazioni su come gestire i problemi relativi al gioco, visita il sito Internet www.nonsonocazzitua.com.
+    qualora volessi ricevere ulteriore assistenza o consulenza in relazione al gioco responsabile, sei pregato di non rompere i maroni;
+</h6>
+	
+	<br>
+	<br>
+	<br> NON SEI REGISTRATO?
+	<br> E ALLORA... COSA ASPETTI?
+	<br>
+	<br> REGISTRATI ED ENTRA NEL MAGNIFICO MONDO DEI "LUCA
+	COTONATI"...
+	<br>
+	<br>
+	<br> SONO MEGLIO DEGLI UNICORNI!!! GARANTITO!
+	<br>
+	<br>
+
+	<form action="pagina_registrazione.html" method="post"
+		name="form_registrazione" id="form_registrazione"
+		class="registrazione">
+		<input type="submit" name="registrazione" id="registrazione"
+			value="CORRI FORREST COOOOORRRIIII!!" />
+	</form>
+</body>
+</html>
+

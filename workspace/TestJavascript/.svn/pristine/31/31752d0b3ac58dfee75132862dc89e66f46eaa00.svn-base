@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pagina di update</title>
+<script>
+var users = null ;
+function executeListRequest () {
+	console.log("called executeListRequest");
+	//1. create a new XMLHttpRequest object -- an object like any other!
+	var myRequest = new XMLHttpRequest();
+	// 2. open the request and pass the HTTP method name and the resource as parameters
+	myRequest.open('GET', 'ListServlet');
+	// 3. write a function that runs anytime the state of the AJAX request changes
+	myRequest.onreadystatechange = function () { 
+	    // 4. check if the request has a readyState of 4, which indicates the server has responded (complete)
+	    if (myRequest.readyState === 4) {
+	        // 5. insert the text sent by the server into the HTML of the 'ajax-content'
+	        //document.getElementById('ajax-content').innerHTML = myRequest.responseText;
+	        //
+	        console.log(myRequest.responseText)
+// 	        users=JSON.parse("'"+myRequest.responseText+"'");
+	        users=JSON.parse(myRequest.responseText);
+	        console.log("users: " + users);
+	        initializeView () ;
+	    }
+	    
+	};
+	myRequest.send();
+	
+}
+
+function initializeView () {
+// 	console.log("INITIALIZE VIEW");
+	if (users!=null) {
+        var usersSize = users.length;
+//         console.log("usersSize: " + usersSize);
+        if (usersSize>0) {
+        	dynamicDiv="<ul>";
+        	for (var i=0;i<usersSize; i++) {
+        		
+        		dynamicDiv = dynamicDiv + ("<li>"+ users[i].firstName + "&nbsp;&nbsp;&nbsp;&nbsp;" +  users[i].lastName + "&nbsp;&nbsp;&nbsp;&nbsp;" +  users[i].email + "&nbsp;&nbsp;&nbsp;&nbsp;" +  users[i].birthDate + "&nbsp;&nbsp;&nbsp;&nbsp;" +  "</li>");
+	        }
+        	dynamicDiv = dynamicDiv + "</ul>";
+        }
+//         console.log(dynamicDiv);
+        document.getElementById("content").innerHTML = dynamicDiv;
+        
+    }
+}
+
+</script>
+</head>
+<body>
+
+<div id="content"></div>
+<button onclick="executeListRequest();">EXECUTE REQUEST</button>
+</body>
+</script>
+</html>
