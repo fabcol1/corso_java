@@ -63,9 +63,9 @@
 
 				<div class="modal-body">
 
-					<label>Vecchia password</label> <input type="text"
+					<label>Vecchia password</label> <input type="password"
 						class="form-control" id="oldPass" placeholder="Enter old password" required>
-					<label>Nuova password</label> <input type="text"
+					<label>Nuova password</label> <input type="password"
 						class="form-control" id="newPass" placeholder="Enter new password" required>
 				
 				</div>
@@ -80,7 +80,8 @@
 
 	<script type="text/javascript">
 	function recoveryPassword() {
-		var emailVal = document.getElementById("email").value;
+		var emailVal = [];
+		emailVal[0] = document.getElementById("email").value;
 
 		if(emailVal != null && emailVal.length > 0) {
 			var myRequest = new XMLHttpRequest();
@@ -90,9 +91,9 @@
 				var res;
 				var s;
 			    if (myRequest.readyState === 4) {
-			        console.log(myRequest.responseText)
+// 			        console.log(myRequest.responseText)
 			        res=JSON.parse(myRequest.responseText);
-			       	if(res.value === "ok") {
+			       	if(res.value[0] === "ok") {
 			       		s = 
 						'<div class="alert alert-success alert-dismissable">'+
 						'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
@@ -123,7 +124,7 @@
 	function resetPassword() {
 		var oldPass = document.getElementById("oldPass").value;
 		var newPass = document.getElementById("newPass").value;
-
+		
 		console.log(oldPass + " " + newPass);
 		if(oldPass != null && newPass != null && oldPass.length > 0 &&  newPass.length > 0) {
 			var myRequest = new XMLHttpRequest();
@@ -133,26 +134,27 @@
 				var res;
 				var s;
 			    if (myRequest.readyState === 4) {
-			        console.log(myRequest.responseText)
-// 			        res=JSON.parse(myRequest.responseText);
-// 			       	if(res.value === "ok") {
-// 			       		s = 
-// 						'<div class="alert alert-success alert-dismissable">'+
-// 						'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
-// 			           + '<p>Complimenti! la tua richiesta ha avuto successo.</p><p>Hai ricevuto una email per generare la nuova password.</p></div>'
-// 			       		document.getElementById("content").innerHTML = s;
-// // 			           '<div class="alert alert-success alert-dismissible fade in">BRAVOOOOO</div>';
-// 			       	} else {
-// 			       		s = 
-// 						'<div class="alert alert-danger alert-dismissable">'+
-// 						'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
-// 			           + 'Attenzione! ci sono stati problemi con la tua richiesta.</div>'
-// 			       		document.getElementById("content").innerHTML = s;
-// 			       	}
+// 			        console.log(myRequest.responseText)
+			        res=JSON.parse(myRequest.responseText);
+			       	if(res.value[0] === "ok") {
+			       		s = 
+						'<div class="alert alert-success alert-dismissable">'+
+						'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			           + '<p>Complimenti! la tua richiesta ha avuto successo.</p><p>Hai ricevuto una email contenente la nuova password.</p></div>'
+			       		document.getElementById("content").innerHTML = s;
+// 			           '<div class="alert alert-success alert-dismissible fade in">BRAVOOOOO</div>';
+			       	} else {
+			       		s = 
+						'<div class="alert alert-danger alert-dismissable">'+
+						'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			           + 'Attenzione! ci sono stati problemi con la tua richiesta.</div>'
+			       		document.getElementById("content").innerHTML = s;
+			       	}
 			    }
 			};
-			myRequest.send(JSON.stringify({value: oldPass+","+newPass}));
 			
+			var oldAndNewPassword = [oldPass, newPass];
+			myRequest.send(JSON.stringify({value: oldAndNewPassword}));
 		} else {
 			s = 
 				'<div class="alert alert-danger alert-dismissable">'+

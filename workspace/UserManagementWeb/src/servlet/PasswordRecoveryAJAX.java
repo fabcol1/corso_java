@@ -53,9 +53,9 @@ public class PasswordRecoveryAJAX extends HttpServlet {
 		User u=null;
 		boolean checkEmail = false;
 		StringWrapper outValue = new StringWrapper();
-		outValue.setValue("ko");
+		outValue.setValue(new String[] {"ko"});
 		try {
-			u = UserDBManager.getUserByEmail(w.getValue());
+			u = UserDBManager.getUserByEmail(w.getValue()[0]);
 			if(u != null) {
 				checkEmail = true;
 			}
@@ -66,10 +66,10 @@ public class PasswordRecoveryAJAX extends HttpServlet {
 		if (checkEmail) {
 			String token = RandomToken.generate();
 			TokenSingleton.getTokenSingleton()
-							.getTokenMail().put(token, w.getValue());
+							.getTokenMail().put(token, w.getValue()[0]);
 			try {
-				MailUtility.sendMailToken(w.getValue(), token);
-				outValue.setValue("ok");
+				MailUtility.sendMailToken(w.getValue()[0], token);
+				outValue.setValue(new String[] {"ok"});
 			} catch (MessagingException e) {
 				e.printStackTrace();
 			}

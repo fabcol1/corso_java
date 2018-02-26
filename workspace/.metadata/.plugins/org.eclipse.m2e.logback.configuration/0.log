@@ -5984,3 +5984,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration UserDBManager (1) r
 2018-02-23 14:36:29,982 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
 2018-02-23 14:36:29,997 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-02-23 14:36:29,997 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\maven.first.project\src\test\resources
+2018-02-26 10:18:20,517 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
