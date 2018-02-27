@@ -1,0 +1,12 @@
+org\db\DBManager.class
+org\proxima\survey\entities\Survey.class
+org\db\UserDBManager.class
+com\commons\PropertiesManager.class
+org\db\UserLoginTokenDBManager.class
+org\bean\User.class
+org\entities\User.class
+org\proxima\survey\db\HibernateUtil.class
+org\db\UserDBManagerBO.class
+org\entities\UserLoginToken.class
+org\bean\UserLoginToken.class
+org\proxima\survey\db\SurveyUtils.class

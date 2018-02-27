@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+body {
+	font-family: monospace;
+}
+
+div {
+	width: 40%;
+	align-content: center;
+	background-color: #bbbbbb;
+	margin: 0 auto;
+	text-align: center;}
+
+h2 {
+	font-size: 3em;
+	color: #2196F3;
+}
+
+h4 {
+	font-size: 1.5em;
+	color: black;
+}
+

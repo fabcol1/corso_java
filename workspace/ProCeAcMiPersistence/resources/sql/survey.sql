@@ -1,0 +1,32 @@
+DROP TABLE survey;
+CREATE TABLE survey(
+	ID INT NOT NULL AUTO_INCREMENT,
+	QUESTION VARCHAR(255),
+	ANSA VARCHAR(255) NOT NULL DEFAULT "",
+	ANSB VARCHAR(255) NOT NULL DEFAULT "",
+	ANSC VARCHAR(255) NOT NULL DEFAULT "",
+	ANSD VARCHAR(255) NOT NULL DEFAULT "",
+	ANSE VARCHAR(255) NOT NULL DEFAULT "",
+	ANSF VARCHAR(255) NOT NULL DEFAULT "",
+	CANSA BIT(1) DEFAULT 0,
+	CANSB BIT(1) DEFAULT 0,
+	CANSC BIT(1) DEFAULT 0,
+	CANSD BIT(1) DEFAULT 0,
+	CANSE BIT(1) DEFAULT 0,
+	CANSF BIT(1) DEFAULT 0,
+	PRIMARY KEY(ID)
+);
+INSERT INTO survey(QUESTION, ANSA, ANSB, ANSC, ANSD, ANSE, ANSF, CANSA, CANSD) 
+VALUES('Which of the following Java operators can be used with boolean variables? (Choose all that apply)',
+'==',
+'+', 
+'--', 
+'!', 
+'%', 
+'<=',
+1,
+1);
+SELECT * FROM survey WHERE ID = 1;
+--UPDATE SURVEY SET QUESTION = 'Which of the following Java operators can be used with boolean variables? (Choose all that apply) MODIFIED' WHERE ID = 1;
+--DELETE FROM SURVEY WHERE ID = 1;
+
