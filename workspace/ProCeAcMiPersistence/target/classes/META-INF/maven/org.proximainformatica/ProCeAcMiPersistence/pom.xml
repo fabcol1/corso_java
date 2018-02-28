@@ -88,6 +88,7 @@
 					                   <copy file="src/main/resources/hibernate.dev.properties"
 					                         tofile="${project.build.outputDirectory}/hibernate.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.stage.properties"/>
+					                    <delete file="${project.build.outputDirectory}/hibernate.test.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.dev.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.prod.properties"/>
 										<echo>Using hibernate.dev.properties</echo>
@@ -122,6 +123,7 @@
 					                   <copy file="src/main/resources/hibernate.stage.properties"
 					                         tofile="${project.build.outputDirectory}/hibernate.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.stage.properties"/>
+					                    <delete file="${project.build.outputDirectory}/hibernate.test.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.dev.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.prod.properties"/>
 										<echo>Using hibernate.stage.properties</echo>
@@ -156,6 +158,7 @@
 					                   <copy file="src/main/resources/hibernate.prod.properties"
 					                         tofile="${project.build.outputDirectory}/hibernate.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.stage.properties"/>
+					                    <delete file="${project.build.outputDirectory}/hibernate.test.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.dev.properties"/>
 					                    <delete file="${project.build.outputDirectory}/hibernate.prod.properties"/>
 										<echo>Using hibernate.prod.properties</echo>

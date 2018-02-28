@@ -8,6 +8,8 @@
     <mapping class="org.entities.User"/>
     <mapping class="org.entities.UserLoginToken"/>
     <mapping class="org.proxima.survey.entities.Survey"/>
+    <mapping class="org.proxima.spendtime.entities.SpendTime"/>
+    <mapping class="org.proxima.spendtime.entities.SpendTimeTip"/>
     
   </session-factory>
   

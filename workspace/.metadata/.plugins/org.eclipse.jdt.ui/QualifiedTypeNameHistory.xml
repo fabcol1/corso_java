@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
-<fullyQualifiedTypeName name="com.sun.image.codec.jpeg.JPEGImageEncoder"/>
-<fullyQualifiedTypeName name="java.awt.Graphics2D"/>
-<fullyQualifiedTypeName name="com.sun.image.codec.jpeg.JPEGCodec"/>
-<fullyQualifiedTypeName name="java.nio.file.Files"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
-<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
-<fullyQualifiedTypeName name="java.util.Base64"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="assertion.TestAssertion"/>
-<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 <fullyQualifiedTypeName name="assertion.DaCompletare"/>
 <fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
@@ -35,8 +21,6 @@
 <fullyQualifiedTypeName name="javax.persistence.NoResultException"/>
 <fullyQualifiedTypeName name="org.entities.User"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="com.google.gson.Gson"/>
 <fullyQualifiedTypeName name="gson.EmailWrapper"/>
 <fullyQualifiedTypeName name="gson.StringWrapper"/>
@@ -49,15 +33,31 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.html.HtmlAnchor"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
-<fullyQualifiedTypeName name="java.math.BigDecimal"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.html.HtmlElement"/>
 <fullyQualifiedTypeName name="org.apache.http.cookie.ClientCookie"/>
 <fullyQualifiedTypeName name="org.apache.http.cookie.Cookie"/>
 <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.WebRequest"/>
-<fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.util.Cookie"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="org.proxima.cryptocurrency.utils.GetRequestUtil"/>
+<fullyQualifiedTypeName name="org.apache.log4j.spi.LoggingEvent"/>
+<fullyQualifiedTypeName name="org.proxima.cryptocurrency.okex.Okex"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="org.proxima.cryptocurrency.json.JSON_NameValue"/>
+<fullyQualifiedTypeName name="org.proxima.cryptocurrency.json.JSON_Okex"/>
+<fullyQualifiedTypeName name="org.proxima.cryptocurrency.json.FutureNameValue"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="org.db.DBManager"/>
+<fullyQualifiedTypeName name="model.CryptoValute"/>
+<fullyQualifiedTypeName name="org.junit.After"/>
+<fullyQualifiedTypeName name="org.proxima.cryptocurrency.CryptoDBManagerTest"/>
+<fullyQualifiedTypeName name="org.db.CryptoDBManager"/>
+<fullyQualifiedTypeName name="java.security.CryptoPrimitive"/>
+<fullyQualifiedTypeName name="model.CryptoFrom"/>
 </qualifiedTypeNameHistroy>

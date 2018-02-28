@@ -30,9 +30,9 @@ public class HtmlunitTestOncoinmarketcap {
 		try {
 			String searchUrl = "https://coinmarketcap.com/";
 
-			WebRequest secondLoginPage = new WebRequest(new URL(searchUrl));
-	        secondLoginPage.setAdditionalHeader("Cookie", " currencies='USD'");
-	        HtmlPage loginPage2 = webClient.getPage(secondLoginPage);
+//			WebRequest secondLoginPage = new WebRequest(new URL(searchUrl));
+//	        secondLoginPage.setAdditionalHeader("Cookie", " currencies='USD'");
+//	        HtmlPage loginPage2 = webClient.getPage(secondLoginPage);
 	        
 //			Set<Cookie> cookies = client.getCookies(new URL(searchUrl));
 //			System.out.println(Arrays.toString(cookies.toArray()));
