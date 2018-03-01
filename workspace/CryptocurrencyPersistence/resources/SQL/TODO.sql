@@ -41,3 +41,31 @@ CREATE TABLE bitcoin (
 );
 
 INSERT INTO bitcoin(cambio_valore, data_valore, id_from, id_valuta) VALUES(10299.23, '2012-06-18 10:34:09', 1, 2);
+
+CREATE TABLE litecoin ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	cambio_valore DEC(20,2) NOT NULL,
+	data_valore DATETIME NOT NULL,
+	id_from INT NOT NULL,
+	id_valuta INT NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (id_from) REFERENCES from_where(id),
+    FOREIGN KEY (id_valuta) REFERENCES tipo_valuta(id)
+);
+
+INSERT INTO litecoin(cambio_valore, data_valore, id_from, id_valuta) VALUES(199.23, '2012-06-18 10:34:09', 1, 2);
+
+
+CREATE TABLE ethereum ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	cambio_valore DEC(20,2) NOT NULL,
+	data_valore DATETIME NOT NULL,
+	id_from INT NOT NULL,
+	id_valuta INT NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (id_from) REFERENCES from_where(id),
+    FOREIGN KEY (id_valuta) REFERENCES tipo_valuta(id)
+);
+
+INSERT INTO ethereum(cambio_valore, data_valore, id_from, id_valuta) VALUES(10299.23, '2012-06-18 10:34:09', 1, 2);
+

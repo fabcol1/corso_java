@@ -10548,3 +10548,729 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2018-03-01 14:50:08,684 [Worker-144] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ptest -B test
 2018-03-01 14:51:03,906 [Worker-149] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence
 2018-03-01 14:51:03,922 [Worker-149] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Pdev -B clean install
+2018-03-01 14:52:34,447 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:52:34,448 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:52:34,469 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:52:34,475 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:53:13,648 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:13,648 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:53:13,663 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:13,663 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:53:16,320 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:16,335 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:53:16,351 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:16,351 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:53:20,706 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:20,721 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:53:20,737 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:20,737 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:53:24,847 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:24,862 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:53:24,878 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:24,894 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:53:31,638 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:31,653 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:53:31,669 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:53:31,669 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:54:00,861 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:00,876 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:54:00,876 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:00,892 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:54:04,868 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:04,868 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:54:04,868 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:04,884 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:54:23,783 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:23,798 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:54:23,814 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:23,814 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:54:27,202 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:27,218 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 14:54:27,233 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:54:27,233 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:56:17,748 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:17,748 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:56:17,780 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:17,780 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:56:40,807 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:40,807 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:56:40,822 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:40,822 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:56:42,109 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:42,109 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:56:42,124 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:42,124 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:56:44,208 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:44,223 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:56:44,239 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:44,239 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:56:47,195 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:47,195 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:56:47,227 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:47,227 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:56:54,087 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:54,103 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:56:54,118 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:54,118 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:56:59,713 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:59,713 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:56:59,729 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:56:59,729 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:57:07,010 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:07,010 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:57:07,025 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:07,041 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:57:08,084 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:08,084 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:57:08,100 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:08,100 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:57:12,331 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:12,331 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:57:12,346 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:12,346 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 14:57:17,668 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:17,668 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 14:57:17,684 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 14:57:17,684 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:00:56,579 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:00:56,579 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:00:56,595 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:00:56,611 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:01:15,917 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:01:15,917 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:01:15,933 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:01:15,948 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:01:38,949 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:01:38,949 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:01:38,965 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:01:38,980 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:03,813 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:03,813 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:03,828 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:03,828 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:06,488 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:06,496 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:06,514 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:06,520 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:11,422 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:11,422 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:11,449 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:11,452 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:22,923 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:22,923 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:22,938 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:22,954 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:25,387 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:25,402 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:25,418 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:25,434 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:32,016 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:32,032 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:32,047 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:32,047 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:38,460 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:38,465 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:38,478 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:38,483 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:43,549 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:43,549 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:43,564 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:43,564 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:51,117 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:51,117 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:51,132 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:51,148 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:02:54,760 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:54,760 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:02:54,775 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:02:54,775 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:03:00,280 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:00,280 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:03:00,295 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:00,295 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:03:06,601 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:06,601 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:03:06,616 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:06,632 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:03:09,485 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:09,485 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:03:09,500 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:09,516 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:03:18,323 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:18,323 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:03:18,339 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:18,339 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:03:41,521 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:41,521 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:03:41,537 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:41,553 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:03:51,778 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:51,778 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:03:51,794 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:51,810 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:03:55,908 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:55,908 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:03:55,924 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:03:55,939 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:04:14,540 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:14,540 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:04:14,555 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:14,571 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:04:22,128 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:22,144 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:04:22,144 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:22,159 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:04:27,361 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:27,361 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:04:27,377 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:27,377 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:04:38,167 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:38,167 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:04:38,199 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:38,214 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:04:49,253 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:49,268 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:04:49,268 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:49,284 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:04:59,519 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:59,519 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:04:59,535 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:04:59,535 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:05:05,707 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:05:05,707 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:05:05,723 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:05:05,723 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:05:26,260 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:05:26,260 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:05:26,276 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:05:26,291 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:05:48,429 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:05:48,449 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:05:48,465 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:05:48,467 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:06:05,853 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:05,868 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:06:05,884 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:05,884 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:06:30,719 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:30,735 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:06:30,735 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:30,735 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:06:51,071 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:51,071 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:06:51,071 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:51,086 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:06:56,375 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:56,375 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:06:56,391 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:06:56,391 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:07:09,689 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:09,705 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:07:09,705 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:09,705 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:07:16,498 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:16,514 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:07:16,529 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:16,529 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:07:27,940 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:27,940 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:07:27,956 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:27,956 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:07:54,731 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:54,746 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:07:54,762 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:07:54,762 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:08:33,105 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:08:33,105 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:08:33,121 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:08:33,137 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:08:47,216 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:08:47,231 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:08:47,247 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:08:47,247 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:09:00,008 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:00,024 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:09:00,039 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:00,039 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:09:02,603 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:02,603 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:09:02,619 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:02,634 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:09:08,024 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:08,040 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:09:08,055 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:08,055 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:09:13,056 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:13,056 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:09:13,072 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:13,087 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:09:29,275 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:29,275 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:09:29,291 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:29,291 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:09:32,647 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:32,647 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:09:32,663 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:32,678 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:09:37,710 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:37,725 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:09:37,741 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:09:37,741 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:10:10,104 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:10:10,104 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:10:10,119 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:10:10,119 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:10:42,177 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:10:42,177 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:10:42,193 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:10:42,193 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:11:19,554 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:19,569 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:11:19,569 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:19,569 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:11:26,047 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:26,063 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:11:26,063 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:26,078 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:11:29,383 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:29,383 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:11:29,399 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:29,399 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:11:50,086 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:50,117 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:11:50,133 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:50,133 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:11:55,742 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:55,742 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:11:55,758 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:11:55,758 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:11:56,098 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:11:56,137 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:11:56,138 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:11:56,146 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:12:02,294 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:02,309 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:12:02,325 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:02,325 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:12:08,503 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:08,518 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:12:08,534 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:08,534 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:12:23,659 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:23,675 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:12:23,675 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:23,675 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:12:38,961 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:38,961 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:12:38,977 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:38,977 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:12:43,292 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:43,292 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:12:43,292 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:43,307 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:12:59,306 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:59,306 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:12:59,321 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:12:59,321 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:04,217 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:04,217 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:13:04,232 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:04,248 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:06,753 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:06,769 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:13:06,769 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:06,785 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:11,353 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:11,353 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:13:11,369 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:11,369 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:16,736 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:16,736 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:13:16,767 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:16,767 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:16,924 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:13:16,924 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:13:16,924 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:13:16,939 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:13:21,575 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:21,575 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:13:21,590 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:21,590 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:24,933 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:24,964 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:13:24,964 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:24,964 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:27,202 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:27,218 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:13:27,234 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:27,249 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:13:34,867 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:34,882 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:13:34,882 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:13:34,882 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:15:10,998 [Worker-158] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence
+2018-03-01 15:15:10,998 [Worker-158] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ptest -B test
+2018-03-01 15:17:34,450 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:17:34,469 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:17:34,487 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:17:34,491 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:18:13,136 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:13,136 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:18:13,136 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:13,151 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:18:26,500 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:26,505 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:18:26,518 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:26,518 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:18:33,644 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:33,644 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:18:33,644 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:33,659 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:18:49,058 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:49,074 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:18:49,089 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:49,089 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:18:52,714 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:52,714 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:18:52,761 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:52,761 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:18:56,033 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:56,033 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:18:56,049 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:56,049 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:18:59,490 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:59,506 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:18:59,506 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:18:59,522 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:19:10,385 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:10,385 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:19:10,401 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:10,401 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:19:29,720 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:29,720 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:19:29,720 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:29,736 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:19:37,174 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:37,185 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:19:37,200 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:37,203 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:19:58,324 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:58,324 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:19:58,324 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:19:58,339 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:20:04,881 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:04,881 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:20:04,897 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:04,897 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:20:11,241 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:11,241 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:20:11,241 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:11,257 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:20:34,611 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:34,611 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:20:34,627 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:34,627 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:20:53,646 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:53,646 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:20:53,646 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:20:53,662 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:03,123 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:03,138 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:03,138 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:03,138 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:05,474 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:05,474 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:05,475 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:05,479 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:08,305 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:08,321 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:08,321 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:08,321 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:18,736 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:18,736 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:18,736 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:18,736 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:22,713 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:22,713 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:22,728 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:22,728 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:30,487 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:30,487 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:30,488 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:30,493 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:37,479 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:37,494 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:37,494 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:37,494 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:21:46,288 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:46,288 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:21:46,288 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:21:46,303 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:22:49,447 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:22:49,460 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:22:49,478 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:22:49,484 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:22:49,646 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:22:49,646 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:22:49,646 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:22:49,662 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:22:58,924 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:22:58,924 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:22:58,924 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:22:58,924 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:22:59,127 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:22:59,127 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:22:59,127 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:22:59,143 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:23:20,488 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:20,488 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:23:20,488 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:20,503 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:23:43,326 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:43,342 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:23:43,342 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:43,357 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:23:47,791 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:47,791 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:23:47,807 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:47,807 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:23:53,862 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:53,877 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:23:53,893 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:53,893 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:23:54,065 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:23:54,081 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:23:54,081 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:23:54,096 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:23:58,415 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:58,431 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:23:58,450 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:23:58,456 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:04,495 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:04,495 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:04,518 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:04,524 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:09,015 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:09,015 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:09,015 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:09,030 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:13,278 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:13,278 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:13,294 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:13,310 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:17,647 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:17,647 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:17,663 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:17,663 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:18,839 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:18,854 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:18,870 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:18,886 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:26,424 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:26,424 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:26,424 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:26,424 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:28,640 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:28,640 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:28,655 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:28,655 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:29,967 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:29,967 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:29,999 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:29,999 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:33,175 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:33,175 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:33,190 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:33,190 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:24:37,229 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:37,229 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:24:37,244 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:24:37,244 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:25:25,921 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:25:25,921 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:25:25,921 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:25:25,936 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:25:50,643 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:25:50,643 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:25:50,643 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:25:50,643 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:26:01,711 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:01,726 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:26:01,726 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:01,726 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:26:10,418 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:10,418 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:26:10,418 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:10,418 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:26:45,836 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:45,836 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:26:45,852 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:45,852 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:26:49,464 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:49,464 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:26:49,466 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:26:49,472 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:27:16,046 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:16,061 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:27:16,061 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:16,061 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:27:19,164 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:19,164 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:27:19,164 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:19,180 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:27:32,689 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:32,705 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:27:32,705 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:32,721 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:27:44,308 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:44,308 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:27:44,308 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:27:44,308 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:28:02,180 [Worker-164] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence
+2018-03-01 15:28:02,180 [Worker-164] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ptest -B test
+2018-03-01 15:29:00,499 [Worker-163] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-03-01 15:29:00,841 [Worker-163] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.proxima:CryptocurrencyPersistence:0.0.1-SNAPSHOT @ C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\pom.xml.
+2018-03-01 15:29:01,373 [Worker-163] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptocurrencyPersistence/src/main/java
+2018-03-01 15:29:01,373 [Worker-163] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /CryptocurrencyPersistence/src/main/resources
+2018-03-01 15:29:01,388 [Worker-163] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptocurrencyPersistence/src/test/java
+2018-03-01 15:29:01,518 [Worker-163] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2018-03-01 15:29:02,240 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:29:02,240 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:29:02,255 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:29:02,255 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:29:47,425 [Worker-159] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence
+2018-03-01 15:29:47,425 [Worker-159] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ptest -B test
+2018-03-01 15:30:41,705 [Worker-160] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence
+2018-03-01 15:30:41,705 [Worker-160] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ptest -B test
+2018-03-01 15:32:49,330 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:32:49,330 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:32:49,346 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:32:49,346 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:32:57,548 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:32:57,548 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:32:57,548 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:32:57,548 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:33:02,374 [Worker-160] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-03-01 15:33:02,604 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.proxima:CryptocurrencyPersistence:0.0.1-SNAPSHOT @ C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\pom.xml.
+2018-03-01 15:33:02,776 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptocurrencyPersistence/src/main/java
+2018-03-01 15:33:02,776 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /CryptocurrencyPersistence/src/main/resources
+2018-03-01 15:33:02,792 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptocurrencyPersistence/src/test/java
+2018-03-01 15:33:02,964 [Worker-160] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2018-03-01 15:33:03,698 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:33:03,713 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:33:03,729 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:33:03,729 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:33:12,752 [Worker-168] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-03-01 15:33:13,047 [Worker-168] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.proxima:CryptocurrencyPersistence:0.0.1-SNAPSHOT @ C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\pom.xml.
+2018-03-01 15:33:13,219 [Worker-168] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptocurrencyPersistence/src/main/java
+2018-03-01 15:33:13,234 [Worker-168] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /CryptocurrencyPersistence/src/main/resources
+2018-03-01 15:33:13,234 [Worker-168] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptocurrencyPersistence/src/test/java
+2018-03-01 15:33:13,375 [Worker-168] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2018-03-01 15:33:13,918 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:33:13,918 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:33:13,933 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:33:13,933 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:33:21,615 [Worker-167] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence
+2018-03-01 15:33:21,615 [Worker-167] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ptest -B test
+2018-03-01 15:33:56,340 [Worker-171] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence
+2018-03-01 15:33:56,340 [Worker-171] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Pdev -B clean install
+2018-03-01 15:34:26,582 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:26,582 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:34:26,598 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:26,614 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:34:27,625 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:34:27,640 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:34:27,656 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:34:27,672 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:34:31,703 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:31,719 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:34:31,734 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:31,734 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:34:38,182 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:38,198 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:34:38,198 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:38,198 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:34:46,037 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:46,037 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:34:46,052 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:46,052 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:34:47,055 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:34:47,055 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:34:47,070 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:34:47,070 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:34:52,722 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:52,738 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:34:52,738 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:52,753 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:34:57,060 [Worker-168] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:57,076 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:34:57,076 [Worker-168] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:34:57,076 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:35:15,480 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:15,487 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:35:15,492 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:15,500 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:35:27,703 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:27,703 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:35:27,703 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:27,719 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:35:28,750 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:35:28,766 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2018-03-01 15:35:28,797 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-01 15:35:28,797 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\src\test\resources
+2018-03-01 15:35:29,886 [Worker-169] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:29,886 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:35:29,886 [Worker-169] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:29,902 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:35:41,185 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:41,200 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:35:41,200 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:41,216 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:35:54,691 [Worker-171] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:54,691 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:35:54,691 [Worker-171] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:35:54,706 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:36:23,859 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:36:23,875 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:36:23,875 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:36:23,875 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:36:38,084 [Worker-170] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:36:38,099 [Worker-170] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:36:38,099 [Worker-170] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:36:38,099 [Worker-170] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:36:41,839 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:36:41,855 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:36:41,855 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:36:41,870 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:37:06,157 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:06,173 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:37:06,173 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:06,188 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:37:19,899 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:19,915 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:37:19,915 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:19,931 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:37:26,494 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:26,501 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:37:26,502 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:26,515 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:37:30,099 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:30,115 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:37:30,131 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:30,131 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:37:37,834 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:37,850 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:37:37,850 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:37,865 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:37:39,962 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:39,977 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:37:39,977 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:37:39,993 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:46:11,329 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:46:11,337 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:46:11,338 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:46:11,346 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources
+2018-03-01 15:46:26,668 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:46:26,679 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-01 15:46:26,684 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:46:26,693 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyValues\src\test\resources

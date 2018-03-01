@@ -26,6 +26,14 @@ public class TipoValuta implements Serializable {
 	@OneToMany(mappedBy="tipoValuta")
 	private List<Bitcoin> bitcoins;
 
+	//bi-directional many-to-one association to Ethereum
+	@OneToMany(mappedBy="tipoValuta")
+	private List<Ethereum> ethereums;
+
+	//bi-directional many-to-one association to Litecoin
+	@OneToMany(mappedBy="tipoValuta")
+	private List<Litecoin> litecoins;
+
 	public TipoValuta() {
 	}
 
@@ -73,6 +81,50 @@ public class TipoValuta implements Serializable {
 		bitcoin.setTipoValuta(null);
 
 		return bitcoin;
+	}
+
+	public List<Ethereum> getEthereums() {
+		return this.ethereums;
+	}
+
+	public void setEthereums(List<Ethereum> ethereums) {
+		this.ethereums = ethereums;
+	}
+
+	public Ethereum addEthereum(Ethereum ethereum) {
+		getEthereums().add(ethereum);
+		ethereum.setTipoValuta(this);
+
+		return ethereum;
+	}
+
+	public Ethereum removeEthereum(Ethereum ethereum) {
+		getEthereums().remove(ethereum);
+		ethereum.setTipoValuta(null);
+
+		return ethereum;
+	}
+
+	public List<Litecoin> getLitecoins() {
+		return this.litecoins;
+	}
+
+	public void setLitecoins(List<Litecoin> litecoins) {
+		this.litecoins = litecoins;
+	}
+
+	public Litecoin addLitecoin(Litecoin litecoin) {
+		getLitecoins().add(litecoin);
+		litecoin.setTipoValuta(this);
+
+		return litecoin;
+	}
+
+	public Litecoin removeLitecoin(Litecoin litecoin) {
+		getLitecoins().remove(litecoin);
+		litecoin.setTipoValuta(null);
+
+		return litecoin;
 	}
 
 }

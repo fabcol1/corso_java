@@ -8,11 +8,13 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 import org.db.BitcoinDBManager;
+import org.db.LitecoinDBManager;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import model.Bitcoin;
 import model.FromWhere;
+import model.Litecoin;
 import model.TipoValuta;
 import utils.GETRequestUtil;
 
@@ -103,5 +105,44 @@ public class Okex {
 		
 		BitcoinDBManager.insert(b);
 //		BitcoinDBManager.closeSessionFactory();
+	}
+	
+	public static void insertLTCtoDB() throws Exception {
+		JSON_Okex obj = getFutureValue("ltc_usd");
+		String timeStamp = obj.getDate();
+		logger.info("TIMESTAMP: " + timeStamp);
+		int timeStampInt = Integer.parseInt(timeStamp);
+		logger.info("TIMESTAMP int: " + timeStampInt);
+		BigDecimal last = obj.getTicker().get("last");
+		logger.info("LAST LITECOIN VAL: " + last);
+
+//		INSERT INTO litecoin(cambio_valore, data_valore, id_from, id_valuta) 
+//		VALUES(10299.23, '2012-06-18 10:34:09', 1, 2);
+		Litecoin l  = new Litecoin();
+
+		FromWhere fw = new FromWhere();
+		fw.setId(1); // okex
+		TipoValuta tv = new TipoValuta();
+		tv.setId(2); // dollari
+	
+		l.setCambioValore(last);
+//		LocalDateTime epoch = LocalDateTime.ofEpochSecond(1519905678, 0, ZoneOffset.UTC);
+//		System.out.println(epoch);
+//		System.out.println(LocalDateTime.ofInstant(epoch.toInstant(ZoneOffset.UTC), ZoneId.systemDefault()));
+		LocalDateTime epoch = LocalDateTime.ofEpochSecond(timeStampInt, 0, ZoneOffset.UTC);
+		epoch = LocalDateTime.ofInstant(epoch.toInstant(ZoneOffset.UTC), ZoneId.systemDefault());
+		logger.info("EPOCH: " + epoch);
+
+		l.setDataValore(epoch);
+		l.setFromWhere(fw);
+		l.setTipoValuta(tv);
+		
+		LitecoinDBManager.insert(l);
+//		LitecoinDBManager.closeSessionFactory();
+	}
+	
+	public static void insertToDBfromOKEX() throws Exception {
+		insertBTCtoDB();
+		insertLTCtoDB();
 	}
 }

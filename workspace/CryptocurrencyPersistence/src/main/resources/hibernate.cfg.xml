@@ -8,6 +8,8 @@
     <mapping class="model.FromWhere"/>
   	<mapping class="model.TipoValuta"/>
   	<mapping class="model.Bitcoin"/>
+  	<mapping class="model.Litecoin"/>
+  	<mapping class="model.Ethereum"/>
   </session-factory>
   
 </hibernate-configuration>

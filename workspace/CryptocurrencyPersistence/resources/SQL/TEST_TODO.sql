@@ -28,8 +28,29 @@ CREATE TABLE tipo_valuta (
 INSERT INTO tipo_valuta(label, simbolo) VALUES ('Euro', '€');
 INSERT INTO tipo_valuta(label, simbolo) VALUES ('USD', '$');
 
-
 CREATE TABLE bitcoin ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	cambio_valore DEC(20,2) NOT NULL,
+	data_valore DATETIME NOT NULL,
+	id_from INT NOT NULL,
+	id_valuta INT NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (id_from) REFERENCES from_where(id),
+    FOREIGN KEY (id_valuta) REFERENCES tipo_valuta(id)
+);
+
+CREATE TABLE litecoin ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	cambio_valore DEC(20,2) NOT NULL,
+	data_valore DATETIME NOT NULL,
+	id_from INT NOT NULL,
+	id_valuta INT NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (id_from) REFERENCES from_where(id),
+    FOREIGN KEY (id_valuta) REFERENCES tipo_valuta(id)
+);
+
+CREATE TABLE ethereum ( 
 	id INT NOT NULL AUTO_INCREMENT,
 	cambio_valore DEC(20,2) NOT NULL,
 	data_valore DATETIME NOT NULL,

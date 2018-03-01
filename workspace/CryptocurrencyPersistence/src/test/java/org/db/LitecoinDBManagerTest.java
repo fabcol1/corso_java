@@ -11,21 +11,21 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import model.Bitcoin;
 import model.FromWhere;
+import model.Litecoin;
 import model.TipoValuta;
 
-public class BitcoinDBManagerTest {
-	final static Logger logger = Logger.getLogger(BitcoinDBManagerTest.class);	
+public class LitecoinDBManagerTest {
+	final static Logger logger = Logger.getLogger(LitecoinDBManagerTest.class);	
 
 	@Test
-	public void insertBitcoinTest() {
+	public void insertLitecoinTest() {
 		logger.info("###################################################################");
-		logger.info("#################		TEST insertBitcoinTest     ################");
+		logger.info("#################		TEST insertLitecoinTest     ################");
 		logger.info("###################################################################");
 	
-		int size = BitcoinDBManager.selectAll().size();
-		logger.info("@TEST insertBitcoinTest --> size: " + size);
+		int size = LitecoinDBManager.selectAll().size();
+		logger.info("@TEST insertLitecoinTest --> size: " + size);
 		assertTrue(size > 0);
 	}
 	
@@ -35,9 +35,9 @@ public class BitcoinDBManagerTest {
 		logger.info("################	 TEST testTipoValuta            ################");
 		logger.info("###################################################################");
 	
-		List<Bitcoin> btcLista = BitcoinDBManager.selectAll();
-		logger.info("@TEST caricato lista: " + btcLista);
-		TipoValuta tipov = btcLista.get(0).getTipoValuta();
+		List<Litecoin> ltcLista = LitecoinDBManager.selectAll();
+		logger.info("@TEST caricato lista: " + ltcLista);
+		TipoValuta tipov = ltcLista.get(0).getTipoValuta();
 		logger.info("@TEST TipoValuta tipov: " + tipov);
 		logger.info("@TEST TipoValuta LABEL: " + tipov.getLabel());
 		logger.info("@TEST TipoValuta SYMBOL: " + tipov.getSimbolo());
@@ -51,9 +51,9 @@ public class BitcoinDBManagerTest {
 		logger.info("################	 TEST testFromWhere             ################");
 		logger.info("###################################################################");
 	
-		List<Bitcoin> btcLista = BitcoinDBManager.selectAll();
-		logger.info("@TEST caricato lista: " + btcLista);
-		FromWhere fromw = btcLista.get(0).getFromWhere();
+		List<Litecoin> ltcLista = LitecoinDBManager.selectAll();
+		logger.info("@TEST caricato lista: " + ltcLista);
+		FromWhere fromw = ltcLista.get(0).getFromWhere();
 		logger.info("@TEST FromWhere fromw: " + fromw);
 		logger.info("@TEST FromWhere LABEL : " + fromw.getLabel());
 		logger.info("@TEST TipoValuta WEB URL: " + fromw.getWeburl());
@@ -64,8 +64,8 @@ public class BitcoinDBManagerTest {
 	@Before
 	public void insert() {
 		try {
-			Bitcoin b = new Bitcoin();
-//			INSERT INTO bitcoin(cambio_valore, data_valore, id_from, id_valuta) 
+			Litecoin l = new Litecoin();
+//			INSERT INTO litecoin(cambio_valore, data_valore, id_from, id_valuta) 
 //				VALUES(10299.23, '2012-06-18 10:34:09', 1, 2);
 			FromWhere fw = new FromWhere();
 			fw.setId(1);
@@ -73,13 +73,13 @@ public class BitcoinDBManagerTest {
 			TipoValuta tv = new TipoValuta();
 			tv.setId(2);
 			
-			b.setCambioValore(new BigDecimal(10299.23));
-			b.setDataValore(LocalDateTime.now());
-			b.setFromWhere(fw);
-			b.setTipoValuta(tv);
+			l.setCambioValore(new BigDecimal(10299.23));
+			l.setDataValore(LocalDateTime.now());
+			l.setFromWhere(fw);
+			l.setTipoValuta(tv);
 			
-			BitcoinDBManager.insert(b);
-			logger.info("@Before --> inserted bitcoin: " + b);
+			LitecoinDBManager.insert(l);
+			logger.info("@Before --> inserted litecoin: " + l);
 		} catch (Exception e) {
 			logger.error(e.getStackTrace());
 		}
@@ -87,7 +87,7 @@ public class BitcoinDBManagerTest {
 	
 	@After
 	public void deleteAll() {
-		int rows = BitcoinDBManager.deleteAll();
+		int rows = LitecoinDBManager.deleteAll();
 		logger.info("@After -->	Database cleaned.... deleted rows number: " + rows);
 	}
 }
