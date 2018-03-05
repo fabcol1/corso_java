@@ -1,7 +1,9 @@
 package org.db;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -10,6 +12,8 @@ import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import model.Bitcoin;
 import model.FromWhere;
@@ -61,6 +65,40 @@ public class BitcoinDBManagerTest {
 		assertTrue(fromw.getLabel().equals("Okex") && fromw.getWeburl().equals("https://www.okex.com/"));
 	}
 	
+	@Test
+	public void testSelectLast() {
+		logger.info("###################################################################");
+		logger.info("################	 TEST testselectLast            ################");
+		logger.info("###################################################################");
+	
+		try {
+			Bitcoin b = new Bitcoin();
+//			INSERT INTO bitcoin(cambio_valore, data_valore, id_from, id_valuta) 
+//				VALUES(10299.23, '2012-06-18 10:34:09', 1, 2);
+			FromWhere fw = new FromWhere();
+			fw.setId(1);
+			
+			TipoValuta tv = new TipoValuta();
+			tv.setId(2);
+			
+			b.setId(75);
+			b.setCambioValore(new BigDecimal(10299.23));
+			b.setDataValore(LocalDateTime.of(1, 1, 1, 1, 1));
+			b.setFromWhere(fw);
+			b.setTipoValuta(tv);
+			
+			BitcoinDBManager.insert(b);
+			logger.info("@Before --> inserted bitcoin: " + b);
+		} catch (Exception e) {
+			logger.error(e.getStackTrace());
+		}
+		
+		List<Bitcoin> btcLista = BitcoinDBManager.selectLast();
+		logger.info("@TEST caricato lista: " + btcLista);
+
+		assertTrue(btcLista.get(0).getId() == 75 && btcLista.size()==1);
+	}
+		
 	@Before
 	public void insert() {
 		try {
@@ -73,8 +111,9 @@ public class BitcoinDBManagerTest {
 			TipoValuta tv = new TipoValuta();
 			tv.setId(2);
 			
+			b.setId(64);
 			b.setCambioValore(new BigDecimal(10299.23));
-			b.setDataValore(LocalDateTime.now());
+			b.setDataValore(LocalDateTime.of(1, 1, 1, 1, 1));
 			b.setFromWhere(fw);
 			b.setTipoValuta(tv);
 			

@@ -1,5 +1,7 @@
 package org.db;
 
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -11,6 +13,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import model.Bitcoin;
 import model.Litecoin;
 
 public class LitecoinDBManager extends DBManager {
@@ -62,5 +68,16 @@ public class LitecoinDBManager extends DBManager {
 			session.close();
 			logger.debug("RETURN ROWS OF LTC DELETED: " + rows);
 			return rows;
+	}
+	
+	public static String selectAllToJSON() throws IOException {
+		List<Litecoin> litecoinFutures = selectAll();
+		logger.info("selectAllToJSON() - litecoinFutures : " + Arrays.toString(litecoinFutures.toArray()));
+
+		 Gson gson = new Gson();
+		 String jsonString = gson.toJson(litecoinFutures, new TypeToken<List<Litecoin>>(){}.getType());
+
+		logger.info("selectAllToJSON() - :\n" + jsonString);
+		return jsonString;
 	}
 }

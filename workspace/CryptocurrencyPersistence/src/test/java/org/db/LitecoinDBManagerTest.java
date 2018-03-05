@@ -1,7 +1,9 @@
 package org.db;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -61,6 +63,7 @@ public class LitecoinDBManagerTest {
 		assertTrue(fromw.getLabel().equals("Okex") && fromw.getWeburl().equals("https://www.okex.com/"));
 	}
 	
+		
 	@Before
 	public void insert() {
 		try {
@@ -73,8 +76,9 @@ public class LitecoinDBManagerTest {
 			TipoValuta tv = new TipoValuta();
 			tv.setId(2);
 			
+			l.setId(68);
 			l.setCambioValore(new BigDecimal(10299.23));
-			l.setDataValore(LocalDateTime.now());
+			l.setDataValore(LocalDateTime.of(1, 1, 1, 1, 1));
 			l.setFromWhere(fw);
 			l.setTipoValuta(tv);
 			

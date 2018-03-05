@@ -1,8 +1,11 @@
 package model;
 
 import java.io.Serializable;
-import javax.persistence.*;
-import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 
 /**
@@ -23,18 +26,6 @@ public class FromWhere implements Serializable {
 	private String label;
 
 	private String weburl;
-
-	//bi-directional many-to-one association to Bitcoin
-	@OneToMany(mappedBy="fromWhere")
-	private List<Bitcoin> bitcoins;
-
-	//bi-directional many-to-one association to Ethereum
-	@OneToMany(mappedBy="fromWhere")
-	private List<Ethereum> ethereums;
-
-	//bi-directional many-to-one association to Litecoin
-	@OneToMany(mappedBy="fromWhere")
-	private List<Litecoin> litecoins;
 
 	public FromWhere() {
 	}
@@ -70,71 +61,4 @@ public class FromWhere implements Serializable {
 	public void setWeburl(String weburl) {
 		this.weburl = weburl;
 	}
-
-	public List<Bitcoin> getBitcoins() {
-		return this.bitcoins;
-	}
-
-	public void setBitcoins(List<Bitcoin> bitcoins) {
-		this.bitcoins = bitcoins;
-	}
-
-	public Bitcoin addBitcoin(Bitcoin bitcoin) {
-		getBitcoins().add(bitcoin);
-		bitcoin.setFromWhere(this);
-
-		return bitcoin;
-	}
-
-	public Bitcoin removeBitcoin(Bitcoin bitcoin) {
-		getBitcoins().remove(bitcoin);
-		bitcoin.setFromWhere(null);
-
-		return bitcoin;
-	}
-
-	public List<Ethereum> getEthereums() {
-		return this.ethereums;
-	}
-
-	public void setEthereums(List<Ethereum> ethereums) {
-		this.ethereums = ethereums;
-	}
-
-	public Ethereum addEthereum(Ethereum ethereum) {
-		getEthereums().add(ethereum);
-		ethereum.setFromWhere(this);
-
-		return ethereum;
-	}
-
-	public Ethereum removeEthereum(Ethereum ethereum) {
-		getEthereums().remove(ethereum);
-		ethereum.setFromWhere(null);
-
-		return ethereum;
-	}
-
-	public List<Litecoin> getLitecoins() {
-		return this.litecoins;
-	}
-
-	public void setLitecoins(List<Litecoin> litecoins) {
-		this.litecoins = litecoins;
-	}
-
-	public Litecoin addLitecoin(Litecoin litecoin) {
-		getLitecoins().add(litecoin);
-		litecoin.setFromWhere(this);
-
-		return litecoin;
-	}
-
-	public Litecoin removeLitecoin(Litecoin litecoin) {
-		getLitecoins().remove(litecoin);
-		litecoin.setFromWhere(null);
-
-		return litecoin;
-	}
-
 }

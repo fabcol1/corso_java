@@ -2,6 +2,9 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -78,4 +81,7 @@ public class Bitcoin implements Serializable {
 		this.tipoValuta = tipoValuta;
 	}
 
+	public String toString() {
+		return getId() + " - " + getCambioValore();
+	}
 }
