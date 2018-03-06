@@ -5227,3 +5227,841 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-05 16:50:13.740
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-03-05 17:09:56.456 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2018-03-05 17:10:01.837
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-03-05 17:10:01.837
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47a90d2a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34907a49,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-03-05 17:10:10.106
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\UTENTE9'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-05 17:10:25.945
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-05 17:10:25.948
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2018-03-05 17:36:50.099
+!MESSAGE Unable to read repository at http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139.
+!STACK 0
+java.io.IOException: http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.core.resources 4 368 2018-03-06 10:16:46.175
+!MESSAGE File not found: C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\target\classes\META-INF\maven\org.proxima\CryptocurrencyPersistence\pom.properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:25.704
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:25.782
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:29.095
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:29.111
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:29.173
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:29.783
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:29.798
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:17:29.861
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 4 368 2018-03-06 10:17:48.349
+!MESSAGE File not found: C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\target\classes\META-INF\maven\org.proxima\CryptocurrencyPersistence\pom.xml.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:30.469
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:30.494
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:32.948
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:32.995
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:33.057
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:33.654
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:33.670
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:33.717
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 4 368 2018-03-06 10:18:37.159
+!MESSAGE File not found: C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\target\classes\META-INF\maven\org.proxima\CryptocurrencyPersistence\pom.properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:50.413
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:50.428
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:50.850
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:18:50.866
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:01.450
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:01.466
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:01.700
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:01.716
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:51.958
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:51.974
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:52.818
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:52.833
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:52.849
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:55.693
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:55.756
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:55.756
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:56.912
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:56.928
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:19:56.943
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 4 368 2018-03-06 10:20:22.163
+!MESSAGE File not found: C:\Users\UTENTE9\Desktop\corso_java\corso_java\workspace\CryptocurrencyPersistence\target\classes\META-INF\maven\org.proxima\CryptocurrencyPersistence\pom.properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:20:58.113
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-03-06 10:22:23.752 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2018-03-06 10:22:35.000
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-03-06 10:22:35.000
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d9cac6e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f510929,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-03-06 10:22:45.698
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\UTENTE9'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:23:34.046
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:23:34.093
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:23:37.458
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:23:37.661
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:24:05.605
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:24:05.621
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:24:16.905
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:24:16.952
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:07.613
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:07.628
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:11.957
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:11.973
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:32.825
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:32.841
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:42.938
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:25:43.000
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:28:26.720
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:28:26.751
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:28:40.290
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:28:40.306
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:29:06.962
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:29:06.977
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:29:21.808
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:29:21.823
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 10:29:21.839
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-03-06 10:38:39.961 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2018-03-06 10:38:55.362
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-03-06 10:38:55.362
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.lsp4e', id='org.eclipse.lsp4e.togglehighlight'
+
+!ENTRY org.eclipse.jface 2 0 2018-03-06 10:39:01.768
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-03-06 10:39:01.768
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1cd38f55,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4d183abc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-03-06 10:39:01.768
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77a9c7f1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c436ed1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-06 10:39:19.824
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-06 10:39:19.824
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-03-06 10:39:31.399
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\UTENTE9'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2018-03-06 11:10:50.637
+!MESSAGE Unable to read repository at http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139.
+!STACK 0
+java.io.IOException: http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor161.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 11:56:14.193
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 11:56:14.225
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 14:46:36.136
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-03-06 14:46:36.167
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 2 2018-03-06 14:46:37.884
+!MESSAGE Problems occurred when invoking code from plug-in: "org.springframework.ide.eclipse.beans.core".
+!STACK 0
+java.lang.NoSuchMethodError: org.springframework.util.Assert.state(ZLjava/util/function/Supplier;)V
+	at org.springframework.boot.autoconfigure.cache.CacheConfigurations.getConfigurationClass(CacheConfigurations.java:55)
+	at org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheConfigurationImportSelector.selectImports(CacheAutoConfiguration.java:169)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:517)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:286)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:237)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:536)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:481)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:191)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:332)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 2 0 2018-03-06 14:46:37.900
+!MESSAGE Error occured while running bean post processors
+!STACK 0
+java.lang.NoSuchMethodError: org.springframework.util.Assert.state(ZLjava/util/function/Supplier;)V
+	at org.springframework.boot.autoconfigure.cache.CacheConfigurations.getConfigurationClass(CacheConfigurations.java:55)
+	at org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheConfigurationImportSelector.selectImports(CacheAutoConfiguration.java:169)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:517)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:286)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:237)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:536)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:481)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:191)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:332)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-03-06 14:46:47.571
+!MESSAGE Port 8080 required by Tomcat v8.5 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.springframework.ide.eclipse.beans.core 4 2 2018-03-06 14:51:26.440
+!MESSAGE Problems occurred when invoking code from plug-in: "org.springframework.ide.eclipse.beans.core".
+!STACK 0
+java.lang.NoSuchMethodError: org.springframework.util.Assert.state(ZLjava/util/function/Supplier;)V
+	at org.springframework.boot.autoconfigure.cache.CacheConfigurations.getConfigurationClass(CacheConfigurations.java:55)
+	at org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheConfigurationImportSelector.selectImports(CacheAutoConfiguration.java:169)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:517)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:286)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:237)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:536)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:481)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:191)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:332)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 2 0 2018-03-06 14:51:26.440
+!MESSAGE Error occured while running bean post processors
+!STACK 0
+java.lang.NoSuchMethodError: org.springframework.util.Assert.state(ZLjava/util/function/Supplier;)V
+	at org.springframework.boot.autoconfigure.cache.CacheConfigurations.getConfigurationClass(CacheConfigurations.java:55)
+	at org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheConfigurationImportSelector.selectImports(CacheAutoConfiguration.java:169)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:517)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:286)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:237)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:536)
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:481)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:191)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:321)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:332)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-06 15:04:17.897
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-06 15:04:17.930
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 11 2018-03-06 15:12:13.284
+!MESSAGE The model index service was accessed either before it started or after it finished running.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:211)
+	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
+	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:65)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
+	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:12:14.619
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:12:29.905
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:12:45.200
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:13:00.488
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:13:15.776
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:13:31.086
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:13:46.381
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:14:01.667
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:14:16.975
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:14:32.261
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:14:47.545
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:15:02.818
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:15:18.101
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:15:33.403
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:15:48.682
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:16:03.980
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:16:19.263
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:16:34.558
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:16:49.846
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 4 0 2018-03-06 15:17:05.132
+!MESSAGE Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY Activator 4 0 2018-03-06 15:17:05.160
+!MESSAGE IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://aetherial.cfapps.io/boot/typegraph/2.0.0.RELEASE
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1894)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.SimpleDownloadService.fetch(SimpleDownloadService.java:57)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.downloadFile(DownloadManager.java:143)
+	at org.springsource.ide.eclipse.commons.frameworks.core.downloadmanager.DownloadManager.doWithDownload(DownloadManager.java:194)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.createGraph(SpringBootTypeDiscovery.java:445)
+	at org.springframework.ide.eclipse.boot.completions.SpringBootTypeDiscovery.getTypes(SpringBootTypeDiscovery.java:340)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.indexing.SimpleExternalTypeIndexer.addFrom(SimpleExternalTypeIndexer.java:73)
+	at org.springsource.ide.eclipse.commons.completions.externaltype.ExternalTypeIndexManager$1.run(ExternalTypeIndexManager.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)

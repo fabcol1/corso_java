@@ -19,9 +19,10 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.jst.servlet.ui.internal.wizard.AddServletWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.wst.web.ui"/>
+			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
 	</section>
 	<section name="InstallationDialogSettings">

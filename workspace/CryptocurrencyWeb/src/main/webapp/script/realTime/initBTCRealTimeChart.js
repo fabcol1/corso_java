@@ -37,7 +37,7 @@ console.log(diff);
 			},
 			plugins : {
 				streaming : {
-					duration : 300000, // display data for the latest 300000ms (5 mins)
+					duration : diff, // display data for the latest 300000ms (5 mins)
 					onRefresh : function(chart) { // callback on chart update interval
 console.log("buf: " + buf[id]);
 						Array.prototype.push.apply(chart.data.datasets[0].data,
