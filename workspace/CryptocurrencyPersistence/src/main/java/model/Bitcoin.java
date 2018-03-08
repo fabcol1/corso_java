@@ -82,6 +82,6 @@ public class Bitcoin implements Serializable {
 	}
 
 	public String toString() {
-		return getId() + " - " + getCambioValore();
+		return getId() + " - " + getCambioValore() + " - " + getDataValore();
 	}
 }

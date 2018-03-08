@@ -41,7 +41,7 @@ public class GetBitcoin extends HttpServlet {
 			Gson gson = new Gson();
 			JSONResponseMessage w = gson.fromJson(json, JSONResponseMessage.class);
 			if(w.getMessage().equals("first")) {
-				response.getWriter().append(BitcoinDBManager.selectAllToJSON());
+				response.getWriter().append(BitcoinDBManager.listToJSON(BitcoinDBManager.getLastDay()));
 			}
 		} else {
 			response.getWriter().append(BitcoinDBManager.listToJSON(BitcoinDBManager.selectLast()));

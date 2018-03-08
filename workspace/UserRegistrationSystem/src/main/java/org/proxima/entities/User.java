@@ -2,6 +2,12 @@ package org.proxima.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
+
 import java.util.Date;
 
 
@@ -22,14 +28,27 @@ public class User implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date dateofbirth;
 
+	@Email(message = "error.email.email")
+	@NotNull(message = "error.email.null")
+	@NotEmpty(message = "error.email.empty")
+	@Length(max = 50, message = "error.email.length")
 	private String email;
 
+	@NotNull(message = "error.firstname.null")
+	@NotEmpty(message = "error.firstname.empty")
+	@Length(max = 50, message = "error.firstname.length")
 	private String firstname;
 
 	private String imgpath;
 
+	@NotNull(message = "error.lastname.null")
+	@NotEmpty(message = "error.lastname.empty")
+	@Length(max = 50, message = "error.lastname.length")
 	private String lastname;
 
+	@NotNull(message = "error.password.null")
+	@NotEmpty(message = "error.password.empty")
+	@Length(max = 11, message = "error.password.length")
 	private String password;
 
 	@Temporal(TemporalType.DATE)

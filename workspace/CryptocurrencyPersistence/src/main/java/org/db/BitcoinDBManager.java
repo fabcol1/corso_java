@@ -155,10 +155,57 @@ public class BitcoinDBManager extends DBManager {
 	    List<Bitcoin> list = query.getResultList();
 	
 	    return list;
-}	
-
-	public static void main(String[] args) {
-		System.out.println(Arrays.toString(getOlderThanNDays(0).toArray()));
+	}	
+	
+	public static List<Bitcoin> getLastDay() {
+		return getYoungerThanNDays(1);
 	}
+	
+	public static List<Bitcoin> getLastMonth() {
+		return getYoungerThanNDays(30);
+	}
+	
+	public static List<Bitcoin> getLastYear() {
+		return getYoungerThanNDays(365);
+	}
+	
+	public static List<Bitcoin> getYoungerThanNDays( int days )
+	{
+		SessionFactory factory = getSessionFactory();
+		Session session = factory.openSession();
+		CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+		
+	    CriteriaQuery<Bitcoin> criteriaQuery = criteriaBuilder.createQuery( Bitcoin.class );
+	    Root<Bitcoin> root = criteriaQuery.from( Bitcoin.class );
+
+	    long today = System.currentTimeMillis();
+	    long nDaysAgo = today;
+	    for(int i = 0; i < days; i++) {
+	    	nDaysAgo -= 24 * 60 * 60 * 1000;
+	    }
+//	    long ndays = days * 24 * 60 * 60 * 1000;
+//	    long nDaysAgo = today - nDays;
+	    
+	    logger.info("today: " + today);
+	    logger.info("nDaysAgo: " + nDaysAgo); //1520350630354
+
+	    LocalDateTime nDaysAgoDate =
+	    	    LocalDateTime.ofInstant(Instant.ofEpochMilli(nDaysAgo), ZoneId.systemDefault());
+	    logger.info("data: " + root.get("dataValore"));
+	    logger.info(" >= diff: " + nDaysAgoDate);
+	    criteriaQuery.where( criteriaBuilder.and(criteriaBuilder.greaterThanOrEqualTo( root.get("dataValore"), nDaysAgoDate )));
+
+	    Query<Bitcoin> query = session.createQuery(criteriaQuery);
+	    List<Bitcoin> list = query.getResultList();
+	
+	    return list;
+	}	
+
+//	public static void main(String[] args) {
+////		System.out.println(Arrays.toString(getYoungerThanNDays(1).toArray()));
+////		getYoungerThanNDays(365);
+////		System.out.println(Arrays.toString(getYoungerThanNDays(30).toArray()));
+////		System.out.println(Arrays.toString(getYoungerThanNDays(365).toArray()));
+//	}
 
 }
