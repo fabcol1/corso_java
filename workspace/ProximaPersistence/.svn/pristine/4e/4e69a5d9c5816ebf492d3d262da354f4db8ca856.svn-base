@@ -1,0 +1,56 @@
+package org.proxima.survey.entities;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the questiontag database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="QuestionTag.findAll", query="SELECT q FROM QuestionTag q")
+public class QuestionTag implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="question_tag_map_id")
+	private Long questionTagMapId;
+
+	//bi-directional many-to-one association to Question
+	@ManyToOne
+	private Question question;
+
+	//bi-directional many-to-one association to QuestionCategory
+	@ManyToOne
+	private QuestionCategory questioncategory;
+
+	public QuestionTag() {
+	}
+
+	public Long getQuestionTagMapId() {
+		return this.questionTagMapId;
+	}
+
+	public void setQuestionTagMapId(Long questionTagMapId) {
+		this.questionTagMapId = questionTagMapId;
+	}
+
+	public Question getQuestion() {
+		return this.question;
+	}
+
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+
+	public QuestionCategory getQuestioncategory() {
+		return this.questioncategory;
+	}
+
+	public void setQuestioncategory(QuestionCategory questioncategory) {
+		this.questioncategory = questioncategory;
+	}
+
+}

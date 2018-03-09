@@ -24,7 +24,6 @@ public class Bitcoin implements Serializable {
 	@Column(name="cambio_valore")
 	private BigDecimal cambioValore;
 
-//	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="data_valore")
 	private LocalDateTime dataValore;
 
