@@ -1,0 +1,69 @@
+drop table bitcoinhistorical;
+drop table cryptoexchangevaluesprovider;
+drop table currencyregistry;
+
+CREATE TABLE cryptoexchangevaluesprovider (
+	id bigint NOT NULL AUTO_INCREMENT,
+	label VARCHAR(255),
+	site VARCHAR(255),
+	imgpath VARCHAR(255),
+	PRIMARY KEY (id)
+);
+INSERT INTO cryptoexchangevaluesprovider(label, site) VALUES ('Okex', 'https://www.okex.com/');
+
+
+CREATE TABLE currencyregistry (
+	id bigint NOT NULL AUTO_INCREMENT,
+	label VARCHAR(255),
+	symbol CHAR(1),
+	PRIMARY KEY (id)
+);
+INSERT INTO currencyregistry(label, symbol) VALUES ('Euro', '€');
+INSERT INTO currencyregistry(label, symbol) VALUES ('USD', '$');
+
+
+CREATE TABLE bitcoinhistorical ( 
+	id bigint NOT NULL AUTO_INCREMENT,
+	exchangevalue DEC(20,2) NOT NULL,
+	exchangetime DATETIME NOT NULL,
+	cryptoexchangevaluesproviderid bigint NOT NULL,
+	currencyregistryid bigint NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (cryptoexchangevaluesproviderid) REFERENCES cryptoexchangevaluesprovider(id),
+    FOREIGN KEY (currencyregistryid) REFERENCES currencyregistry(id)
+);
+
+CREATE TABLE litecoinhistorical ( 
+	id bigint NOT NULL AUTO_INCREMENT,
+	exchangevalue DEC(20,2) NOT NULL,
+	exchangetime DATETIME NOT NULL,
+	cryptoexchangevaluesproviderid bigint NOT NULL,
+	currencyregistryid bigint NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (cryptoexchangevaluesproviderid) REFERENCES cryptoexchangevaluesprovider(id),
+    FOREIGN KEY (currencyregistryid) REFERENCES currencyregistry(id)
+);
+
+/*
+CREATE TABLE litecoinhistorical ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	cambio_valore DEC(20,2) NOT NULL,
+	data_valore DATETIME NOT NULL,
+	id_from INT NOT NULL,
+	id_valuta INT NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (id_from) REFERENCES from_where(id),
+    FOREIGN KEY (id_valuta) REFERENCES tipo_valuta(id)
+);
+
+CREATE TABLE ethereumhistorical ( 
+	id INT NOT NULL AUTO_INCREMENT,
+	cambio_valore DEC(20,2) NOT NULL,
+	data_valore DATETIME NOT NULL,
+	id_from INT NOT NULL,
+	id_valuta INT NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (id_from) REFERENCES from_where(id),
+    FOREIGN KEY (id_valuta) REFERENCES tipo_valuta(id)
+);
+*/

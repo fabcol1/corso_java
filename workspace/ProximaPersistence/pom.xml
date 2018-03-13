@@ -6,7 +6,7 @@
 	<groupId>org.proxima</groupId>
 	<artifactId>UserRegistrationSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>ejb</packaging>
+	<packaging>jar</packaging>
 
 	<name>UserRegistrationSystem</name>
 	<description>User Registration System - Spring Boot Project</description>
@@ -79,6 +79,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

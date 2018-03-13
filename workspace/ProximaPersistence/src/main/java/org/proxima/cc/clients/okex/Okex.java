@@ -8,7 +8,11 @@ import java.time.ZoneOffset;
 import java.util.Arrays;
 
 import org.proxima.cc.entities.BitcoinHistorical;
+import org.proxima.cc.entities.EthereumHistorical;
+import org.proxima.cc.entities.LitecoinHistorical;
 import org.proxima.cc.repository.BitcoinHistoricalRepository;
+import org.proxima.cc.repository.EthereumHistoricalRepository;
+import org.proxima.cc.repository.LitecoinHistoricalRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +26,12 @@ public class Okex {
 	final static Logger logger = LoggerFactory.getLogger(Okex.class);
 
 	@Autowired
-	private BitcoinHistoricalRepository bitcoinJpaRepository;
-
+	private BitcoinHistoricalRepository bitcoinHistoricalRepository;
+	@Autowired
+	private LitecoinHistoricalRepository litecoinHistoricalRepository;
+	@Autowired
+	private EthereumHistoricalRepository ethereumHistoricalRepository;
+	
 	private JSON_Okex getFutureValue(String future) throws Exception {
 		// https://www.okex.com/api/v1/future_ticker.do?symbol=btc_usd&contract_type=this_week
 		String json = org.proxima.cc.clients.GETRequestUtil.sendGet(
@@ -57,12 +65,59 @@ public class Okex {
 		b.setCryptoexchangevaluesproviderid(new BigInteger("1"));
 		b.setCurrencyregistryid(new BigInteger("2"));
 		
-		bitcoinJpaRepository.save(b);
-		
+		bitcoinHistoricalRepository.save(b);
 	}
 	
-//	@Scheduled(fixedRate = 60000)
+	public void insertLTCtoDB() throws Exception {
+		JSON_Okex obj = getFutureValue("ltc_usd");
+		String timeStamp = obj.getDate();
+		logger.info("TIMESTAMP: " + timeStamp);
+		int timeStampInt = Integer.parseInt(timeStamp);
+		logger.info("TIMESTAMP int: " + timeStampInt);
+		BigDecimal last = obj.getTicker().get("last");
+		logger.info("LAST LITECOIN VAL: " + last);
+
+		LitecoinHistorical l  = new LitecoinHistorical();
+		
+		LocalDateTime epoch = LocalDateTime.ofEpochSecond(timeStampInt, 0, ZoneOffset.UTC);
+		epoch = LocalDateTime.ofInstant(epoch.toInstant(ZoneOffset.UTC), ZoneId.systemDefault());
+		logger.info("EPOCH: " + epoch);
+
+		l.setExchangevalue(last);
+		l.setExchangetime(epoch);
+		l.setCryptoexchangevaluesproviderid(new BigInteger("1"));
+		l.setCurrencyregistryid(new BigInteger("2"));
+		
+		litecoinHistoricalRepository.save(l);
+	}
+	
+	public void insertETHtoDB() throws Exception {
+		JSON_Okex obj = getFutureValue("eth_usd");
+		String timeStamp = obj.getDate();
+		logger.info("TIMESTAMP: " + timeStamp);
+		int timeStampInt = Integer.parseInt(timeStamp);
+		logger.info("TIMESTAMP int: " + timeStampInt);
+		BigDecimal last = obj.getTicker().get("last");
+		logger.info("LAST ETHEREUM VAL: " + last);
+
+		EthereumHistorical e  = new EthereumHistorical();
+		
+		LocalDateTime epoch = LocalDateTime.ofEpochSecond(timeStampInt, 0, ZoneOffset.UTC);
+		epoch = LocalDateTime.ofInstant(epoch.toInstant(ZoneOffset.UTC), ZoneId.systemDefault());
+		logger.info("EPOCH: " + epoch);
+
+		e.setExchangevalue(last);
+		e.setExchangetime(epoch);
+		e.setCryptoexchangevaluesproviderid(new BigInteger("1"));
+		e.setCurrencyregistryid(new BigInteger("2"));
+		
+		ethereumHistoricalRepository.save(e);
+	}
+	
+	@Scheduled(fixedRate = 60000)
 	public void insertToDBfromOKEX() throws Exception {
-		insertBTCtoDB();
+//		insertBTCtoDB();
+		insertLTCtoDB();
+		insertETHtoDB();
 	}
 }

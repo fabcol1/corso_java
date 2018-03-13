@@ -1,0 +1,284 @@
+app.controller('chartsController', function($scope, $http, $location, $route,
+		$log, $q) {
+	// HANDLE MULTIPE HTTP REQUEST WITH ANGULARJS
+	$q.all([ $http.get('/api/bitcoin/lastDay'), $http.get("/api/litecoin/lastDay") ]).then(function(arrayOfResults) {
+		var btc = arrayOfResults[0].data;
+		var ltc = arrayOfResults[1].data;
+
+		$scope.chart = {};
+		$scope.buf = {};
+		$scope.buf['dailyBufferBTC'] = [];
+		$scope.buf['dailyBufferLTC'] = [];
+
+		for (var i = 0; i < btc.length; i++) {
+			var bitcoin = btc[i];
+			//				console.log(bitcoin);
+			var bitcoinDate = bitcoin["exchangetime"];
+			var date = new Date(bitcoinDate);
+			$scope.buf['dailyBufferBTC'].push({
+				x : ((date.getTime()) + 3600),
+				y : bitcoin["exchangevalue"]
+			});
+		}
+		for (var i = 0; i < ltc.length; i++) {
+			var litecoin = ltc[i];
+			var litecoinDate = litecoin["exchangetime"];
+			var date = new Date(litecoinDate);
+			$scope.buf['dailyBufferLTC'].push({
+				x : ((date.getTime()) + 3600),
+				y : litecoin["exchangevalue"]
+			});
+		}
+
+		$scope.canvas = document.getElementById("daily");
+		$scope.ctx = $scope.canvas.getContext("2d");
+		$scope.chart = new Chart($scope.ctx, {
+			type : 'line',
+			data : {
+				datasets : [ {
+					data : $scope.buf['dailyBufferBTC'],
+					label : 'BTC', // 'buy' price data
+					borderColor : 'rgb(65, 65, 65)', // line color
+					backgroundColor : 'rgba(0,0,0,0.1)', // fill color
+					fill : false, // no fill
+					lineTension : 0.3
+				// straight line
+				},
+				{
+					data : $scope.buf['dailyBufferLTC'],
+					label : 'LTC', // 'buy' price data
+					borderColor : 'rgb(65, 65, 150)', // line color
+					backgroundColor : 'rgba(0,0,0,0.1)', // fill color
+					fill : false, // no fill
+					lineTension : 0.3
+				// straight line
+				}]
+			},
+			options : {
+				tooltips : {
+					enabled : false
+				},
+				hover : {
+					mode : null
+				},
+				showAllTooltips : false,
+				legend : {
+					display : true
+				},
+				legend : {
+					display : true
+				},
+				title : {
+					text : 'BTC/USD ( Bitcoin )', // chart title
+					display : false
+				},
+				scales : {
+					xAxes : [ {
+						type : "time",
+						time : {
+							unit : 'minute',
+							unitStepSize : 1,
+							round : 'minute',
+							tooltipFormat : "h:mm:ss a",
+							displayFormats : {
+								hour : 'MMM D, h:mm A'
+							}
+						}
+					} ],
+					yAxes : [ {
+						gridLines : {
+							color : "black",
+							borderDash : [ 2, 5 ],
+						}
+					} ]
+				}
+			}
+		});
+
+	}, function(errResponse) {
+		$scope.errorMessage = errResponse.data.errorMessage;
+	});
+
+	$q.all([ $http.get('/api/bitcoin/lastMonth'), $http.get("/api/litecoin/lastMonth") ]).then(function(arrayOfResults) {
+		var btc = arrayOfResults[0].data;
+		var ltc = arrayOfResults[1].data;
+	
+		$scope.chart = {};
+		$scope.buf = {};
+		$scope.buf['monthlyBufferBTC'] = [];
+		$scope.buf['monthlyBufferLTC'] = [];
+
+		for (var i = 0; i < btc.length; i++) {
+			var bitcoin = btc[i];
+			var bitcoinDate = bitcoin["exchangetime"];
+			var date = new Date(bitcoinDate);
+			$scope.buf['monthlyBufferBTC'].push({
+				x : ((date.getTime()) + 3600),
+				y : bitcoin["exchangevalue"]
+			});
+		}
+		for (var i = 0; i < ltc.length; i++) {
+			var litecoin = ltc[i];
+			var litecoinDate = litecoin["exchangetime"];
+			var date = new Date(litecoinDate);
+			$scope.buf['monthlyBufferLTC'].push({
+				x : ((date.getTime()) + 3600),
+				y : litecoin["exchangevalue"]
+			});
+		}
+		$scope.canvas = document.getElementById("monthly");
+		$scope.ctx = $scope.canvas.getContext("2d");
+		$scope.chart = new Chart($scope.ctx, {
+			type : 'line',
+			data : {
+				datasets : [ {
+					data : $scope.buf['monthlyBufferBTC'],
+					label : 'BTC', // 'buy' price data
+					borderColor : 'rgb(65, 65, 65)', // line color
+					backgroundColor : 'rgba(0,0,0,0.1)', // fill color
+					fill : false, // no fill
+					lineTension : 0.3
+				// straight line
+				}, 
+				{
+					data : $scope.buf['monthlyBufferLTC'],
+					label : 'LTC', // 'buy' price data
+					borderColor : 'rgb(65, 65, 150)', // line color
+					backgroundColor : 'rgba(0,0,0,0.1)', // fill color
+					fill : false, // no fill
+					lineTension : 0.3
+				// straight line
+				} ]
+			},
+			options : {
+				tooltips : {
+					enabled : false
+				},
+				hover : {
+					mode : null
+				},
+				showAllTooltips : false,
+				legend : {
+					display : true
+				},
+				legend : {
+					display : true
+				},
+				title : {
+					text : 'BTC/USD ( Bitcoin )', // chart title
+					display : false
+				},
+				scales : {
+					xAxes : [ {
+						type : "time",
+						time : {
+							unit : 'day',
+							unitStepSize : 1,
+							round : 'day',
+							tooltipFormat : "h:mm:ss a",
+							displayFormats : {
+								hour : 'MMM D, h:mm A'
+							}
+						}
+					} ],
+					yAxes : [ {
+						gridLines : {
+							color : "black",
+							borderDash : [ 2, 5 ],
+						}
+					} ]
+				}
+			}
+		});
+	}, function(errResponse) {
+		$scope.errorMessage = errResponse.data.errorMessage;
+	});
+	
+
+	$q.all([ $http.get('/api/bitcoin/lastYear'), $http.get("/api/litecoin/lastYear") ]).then(function(arrayOfResults) {
+		var btc = arrayOfResults[0].data;
+		var ltc = arrayOfResults[1].data;
+	
+		$scope.chart = {};
+		$scope.buf = {};
+		$scope.buf['yearlyBufferBTC'] = [];
+		$scope.buf['yearlyBufferLTC'] = [];
+
+		for (var i = 0; i < btc.length; i++) {
+			var bitcoin = btc[i];
+			var bitcoinDate = bitcoin["exchangetime"];
+			var date = new Date(bitcoinDate);
+			$scope.buf['yearlyBufferBTC'].push({
+				x : ((date.getTime()) + 3600),
+				y : bitcoin["exchangevalue"]
+			});
+		}
+		for (var i = 0; i < ltc.length; i++) {
+			var litecoin = ltc[i];
+			var litecoinDate = litecoin["exchangetime"];
+			var date = new Date(litecoinDate);
+			$scope.buf['yearlyBufferLTC'].push({
+				x : ((date.getTime()) + 3600),
+				y : litecoin["exchangevalue"]
+			});
+		}
+		$scope.canvas = document.getElementById("yearly");
+		$scope.ctx = $scope.canvas.getContext("2d");
+		$scope.chart = new Chart($scope.ctx, {
+			type : 'line',
+			data : {
+				datasets : [ {
+					data : $scope.buf['yearlyBufferBTC'],
+					label : 'BTC', // 'buy' price data
+					borderColor : 'rgb(65, 65, 65)', // line color
+					backgroundColor : 'rgba(0,0,0,0.1)', // fill color
+					fill : false, // no fill
+					lineTension : 0.3
+				// straight line
+				}, 
+				{
+					data : $scope.buf['yearlyBufferLTC'],
+					label : 'LTC', // 'buy' price data
+					borderColor : 'rgb(65, 65, 150)', // line color
+					backgroundColor : 'rgba(0,0,0,0.1)', // fill color
+					fill : false, // no fill
+					lineTension : 0.3
+				// straight line
+				}]
+			},
+			options : {
+				tooltips : {
+					enabled : false
+				},
+				hover : {
+					mode : null
+				},
+				showAllTooltips : false,
+				legend : {
+					display : true
+				},
+				title : {
+					text : 'BTC/USD ( Bitcoin )', // chart title
+					display : false
+				},
+				scales : {
+					xAxes : [ {
+						type : "time",
+						time : {
+							unit : 'month',
+							unitStepSize : 2
+						}
+					} ],
+					yAxes : [ {
+						gridLines : {
+							color : "black",
+							borderDash : [ 2, 5 ],
+						}
+					} ]
+				}
+			}
+		});
+	}, function(errResponse) {
+		$scope.errorMessage = errResponse.data.errorMessage;
+	});
+});

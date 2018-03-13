@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="panel panel-default ">
+		<div class="alert alert-success">
+			<span class="lead"> Proxima Crypto Charts </span>
+		</div>
+
+		<div>
+			<div class="container" id="mydiv">
+			</div>
+		</div>
+
+	</div>
+</div>

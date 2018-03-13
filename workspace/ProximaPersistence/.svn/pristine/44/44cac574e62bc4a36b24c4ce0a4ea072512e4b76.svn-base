@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="panel panel-default ">
+		<div class="alert alert-success">
+			<span class="lead"> Proxima Crypto Charts </span>
+		</div>
+
+		<div>
+			<nav class="navbar">
+				<div class="container-fluid">
+					<button type="button" ng-click="lastDay()"
+						class="btn btn-success custom-width">Last Day</button>
+					<button type="button" ng-click="lastMonth()"
+						class="btn btn-success custom-width">Last Month</button>
+					<button type="button" ng-click="lastYear()"
+						class="btn btn-success custom-width">Last Year</button>
+				</div>
+			</nav>
+			<div class="container" id="daydiv">
+			    <canvas id="daily"></canvas>
+			</div>
+			<div class="container" id="monthdiv">
+			    <canvas id="monthly"></canvas>
+			</div>
+			<div class="container" id="yeardiv">
+			    <canvas id="yearly"></canvas>
+			</div>
+		</div>
+
+	</div>
+</div>

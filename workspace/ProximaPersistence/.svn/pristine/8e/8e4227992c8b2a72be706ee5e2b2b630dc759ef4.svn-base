@@ -1,0 +1,113 @@
+<div class="container">
+	<!-- nel caso l'error message sia diverso da null viene visualizzato l'error message -->
+	<div class="alert alert-danger" role="alert" ng-if="errorMessage">
+		{{errorMessage}}</div>
+	<div class="panel panel-default ">
+		<div class="alert alert-success">
+			<span class="lead">Register New User</span>
+			<p>Please maintain uniqueness of User-Name</p>
+		</div>
+		<div class="panel-body ">
+			<div class="container">
+				<!--         ng submit per la sottomissione del form viene chiamata la funzione al suo interno -->
+				<form ng-submit="submitUserForm()" name="myForm"
+					class="form-horizontal">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="fname">
+								FirstName </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.firstname" id="fname"
+									class="form-control input-sm" placeholder="First name*"
+									required />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="lname">
+								LastName </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.lastname" id="lname"
+									class="form-control input-sm" placeholder="Last name" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="email"> Email
+							</label>
+							<div class="col-md-7">
+								<input type="email" ng-model="user.email" ng-blur="checkEmail(user.email)"
+									id="email" class="form-control input-sm"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+									placeholder="Enter Email" /> <label ng-show="emailPresent">Email già presente</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="pass">
+								Password </label>
+							<div class="col-md-7">
+								<input type="password" ng-model="user.password" id="pass" 
+									 class="form-control input-sm" placeholder="Enter Passowrd" />
+								<label id="pasw1format" style="color: red; display: none">la
+									password deve essere lunga minimo 8 caratteri</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="passrep">
+								Repeat Password </label>
+							<div class="col-md-7">
+								<input type="password" id="passrep"
+									class="form-control input-sm" placeholder="Enter Passowrd" />
+								<label id="pswErrorMessage" style="color: red; display: none">le
+									password non corrispondono</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="dateofbirth">
+								Date of birth </label>
+							<div class="col-md-7">
+								<input type="date" ng-model="user.dateofbirth" id="dateofbirth"
+									class="form-control input-sm" />
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-md-7">
+							<input type="checkbox" id="gridCheck" class="form-check-input"
+								required /> <label class="form-check-label" for="gridCheck">I
+								agree with the terms and conditions for Registration.* </label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-actions floatRight">
+							<input type="submit" value="Register User"
+								class="btn btn-primary btn-sm">
+							<button type="button" ng-click="resetForm()"
+								class="btn btn-warning btn-sm">Reset Form</button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+
+		</div>
+	</div>
+</div>
+<!-- 	<script src="js/validatepass.js"></script> -->
+<!-- 	<script src="js/validateemail.js"></script> -->
+
+

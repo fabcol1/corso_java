@@ -1,0 +1,61 @@
+package org.proxima.cc.rest;
+
+import java.util.List;
+import javax.validation.Valid;
+import org.proxima.cc.entities.LitecoinHistorical;
+import org.proxima.cc.services.LitecoinHistoricalService;
+import org.slf4j.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/litecoin")
+public class LitecoinHistoricalRestController {
+	public static final Logger logger = LoggerFactory.getLogger(LitecoinHistoricalRestController.class);
+
+    @Autowired
+    LitecoinHistoricalService litecoinHistoricalService;
+	
+	@GetMapping("/")
+	public ResponseEntity<List<LitecoinHistorical>> listAllLitecoinHistoricals() {
+		List<LitecoinHistorical> litecoins = litecoinHistoricalService.listAllLitecoinHistoricals();
+		if (litecoins.isEmpty()) {
+			 return new ResponseEntity<List<LitecoinHistorical>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<LitecoinHistorical>>(litecoins, HttpStatus.OK);
+	}
+	
+	@GetMapping("/lastDay")
+	public ResponseEntity<List<LitecoinHistorical>> listAllLastDayLitecoinHistoricals() {
+		List<LitecoinHistorical> litecoins = litecoinHistoricalService.listAllLastDayLitecoinHistoricals();
+		if (litecoins.isEmpty()) {
+			 return new ResponseEntity<List<LitecoinHistorical>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<LitecoinHistorical>>(litecoins, HttpStatus.OK);
+	}
+	
+	@GetMapping("/lastMonth")
+	public ResponseEntity<List<LitecoinHistorical>> listAlllastMonthLitecoinHistoricals() {
+		List<LitecoinHistorical> litecoins = litecoinHistoricalService.listAlllastMonthLitecoinHistoricals();
+		if (litecoins.isEmpty()) {
+			 return new ResponseEntity<List<LitecoinHistorical>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<LitecoinHistorical>>(litecoins, HttpStatus.OK);
+	}
+	
+	@GetMapping("/lastYear")
+	public ResponseEntity<List<LitecoinHistorical>> listAlllastYearLitecoinHistoricals() {
+		List<LitecoinHistorical> litecoins = litecoinHistoricalService.listAlllastYearLitecoinHistoricals();
+		if (litecoins.isEmpty()) {
+			 return new ResponseEntity<List<LitecoinHistorical>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<LitecoinHistorical>>(litecoins, HttpStatus.OK);
+	}
+	
+	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<LitecoinHistorical> insertLitecoinHistorical(@Valid @RequestBody final LitecoinHistorical litecoin) {
+		litecoinHistoricalService.insertLitecoinHistorical(litecoin);
+		return new ResponseEntity<LitecoinHistorical>(litecoin, HttpStatus.CREATED);
+	}
+}
