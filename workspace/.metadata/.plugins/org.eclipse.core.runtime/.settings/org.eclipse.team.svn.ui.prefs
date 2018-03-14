@@ -19,5 +19,5 @@ org.eclipse.team.svn.ui.panel.local.ResourceListPanel.height=155
 org.eclipse.team.svn.ui.panel.local.ResourceListPanel.width=470
 org.eclipse.team.svn.ui.panel.remote.DiscardLocationFailurePanel.height=190
 org.eclipse.team.svn.ui.panel.remote.DiscardLocationFailurePanel.width=470
-org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.height=137
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.height=450
 org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.width=640

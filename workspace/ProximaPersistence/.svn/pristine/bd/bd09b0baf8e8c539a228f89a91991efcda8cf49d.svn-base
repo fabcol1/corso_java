@@ -1,0 +1,85 @@
+package org.proxima.cc.services;
+
+import java.math.BigInteger;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import org.proxima.cc.entities.BitcoinHistorical;
+import org.proxima.cc.repository.BitcoinHistoricalRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BitcoinHistoricalService {
+
+	public static final Logger logger = LoggerFactory.getLogger(BitcoinHistoricalService.class);
+	
+	@Autowired
+	private BitcoinHistoricalRepository bitcoinHistoricalRepository;
+	
+	public List<BitcoinHistorical> listAllBitcoinHistoricals() {
+		return bitcoinHistoricalRepository.findAll();
+	}
+	
+	public List<BitcoinHistorical> listAllLastDayBitcoinHistoricals(long id) {
+		LocalDateTime ldtNow = LocalDateTime.now() ;
+		LocalDateTime ldt = ldtNow.minusDays(1);
+		List<BitcoinHistorical> bitcoins=bitcoinHistoricalRepository.findAllByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(ldt, BigInteger.valueOf(id));
+		return bitcoins;
+	}
+	
+	public List<BitcoinHistorical> listAllLastDayBitcoinHistoricals() {
+		LocalDateTime ldtNow = LocalDateTime.now() ;
+		LocalDateTime ldt = ldtNow.minusDays(1);
+		List<BitcoinHistorical> bitcoins=bitcoinHistoricalRepository.findAllByExchangetimeGreaterThan(ldt);
+		return bitcoins;
+	}
+	public List<BitcoinHistorical> listAllLastWeekBitcoinHistoricals() {
+		LocalDateTime ldtNow = LocalDateTime.now() ;
+		LocalDateTime ldt = ldtNow.minusWeeks(1);
+		List<BitcoinHistorical> bitcoins = bitcoinHistoricalRepository.findAllByExchangetimeGreaterThan(ldt);
+		return bitcoins;
+	}
+	
+/*	public List<List<BitcoinHistorical>> listAllLastDayBitcoinHistoricals() {
+		LocalDateTime ldtNow = LocalDateTime.now() ;
+		LocalDateTime ldt = ldtNow.minusDays(1);
+//		List<BitcoinHistorical> bitcoins = bitcoinHistoricalRepository.findAllByExchangetimeGreaterThan(ldt);
+		List<BitcoinHistorical> bitcoinsOkex=bitcoinHistoricalRepository.findAllByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(ldt, BigInteger.valueOf(1));
+//		for (BitcoinHistorical bitcoinHistorical : bitcoinsOkex) {
+//			System.out.println(bitcoinHistorical.getExchangevalue());
+//		}
+		List<BitcoinHistorical> bitcoinsBitstamp=bitcoinHistoricalRepository.findAllByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(ldt, BigInteger.valueOf(2));
+		List<List<BitcoinHistorical>> bc=new ArrayList<List<BitcoinHistorical>>();
+		bc.add(bitcoinsOkex);
+		bc.add(bitcoinsBitstamp);
+
+//		System.err.println(bc.size());
+//		for (List<BitcoinHistorical> list : bc) {
+//			for (BitcoinHistorical bitcoinHistorical : list) {
+//				System.err.println(bitcoinHistorical.getCryptoexchangevaluesproviderid()+" "+bitcoinHistorical.getExchangevalue());
+//			}
+//		}
+		return bc;
+	}*/
+	
+	public List<BitcoinHistorical> listAlllastMonthBitcoinHistoricals() {
+		LocalDateTime ldtNow = LocalDateTime.now() ;
+		LocalDateTime ldt = ldtNow.minusMonths(1);
+		List<BitcoinHistorical> bitcoins = bitcoinHistoricalRepository.findAllByExchangetimeGreaterThan(ldt);
+		return bitcoins;
+	}
+	public List<BitcoinHistorical> listAlllastYearBitcoinHistoricals() {
+		LocalDateTime ldtNow = LocalDateTime.now() ;
+		LocalDateTime ldt = ldtNow.minusYears(1);
+		List<BitcoinHistorical> bitcoins = bitcoinHistoricalRepository.findAllByExchangetimeGreaterThan(ldt);
+		return bitcoins;
+	}
+	
+	public void insertBitcoinHistorical(final BitcoinHistorical bitcoin) {
+		logger.info("Insert BitcoinHistorical: {}", bitcoin);
+		bitcoinHistoricalRepository.save(bitcoin);
+	}
+}
