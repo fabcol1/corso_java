@@ -1,0 +1,13 @@
+package org.proxima.survey.repository;
+
+import java.util.List;
+
+import org.proxima.survey.entities.Question;
+import org.proxima.survey.entities.QuestionCategory;
+import org.proxima.survey.entities.QuestionTag;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface QuestionTagJPARepository extends JpaRepository<QuestionTag, Long> {
+//	List<QuestionCategory> findByQuestion(Question q);
+
+}

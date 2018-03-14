@@ -1,0 +1,124 @@
+package org.proxima.survey.rest;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.validation.Valid;
+
+import org.proxima.survey.entities.Question;
+import org.proxima.survey.entities.QuestionTag;
+import org.proxima.survey.helper.QuestionConverter;
+import org.proxima.survey.repository.QuestionJPARepository;
+import org.proxima.survey.repository.QuestionTagJPARepository;
+import org.proxima.survey.rest.bean.RequestQuestion;
+import org.proxima.survey.rest.exception.CustomQuestionError;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/question")
+public class QuestionManageRestController {
+
+	private static final Logger logger = LoggerFactory.getLogger(QuestionManageRestController.class);
+
+	@Autowired
+	private QuestionJPARepository questionRepository;
+	@Autowired
+	private QuestionTagJPARepository questionTagJPARepository;
+
+	@GetMapping("/")
+	public ResponseEntity<List<Question>> getAllQuestion() {
+		logger.debug("QuestionManageRestController.getAllQuestion - START");
+		List<Question> question = (List<Question>) questionRepository.findAll();
+		if (question.isEmpty()) {
+			return new ResponseEntity<List<Question>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<Question>>(question, HttpStatus.OK);
+	}
+
+	@GetMapping("/{id}")
+	public ResponseEntity<Question> getQuestionyById(@PathVariable("id") final Long id) {
+		logger.debug("QuestionManageRestController.getQuestionyById - START");
+		Optional<Question> optionalObj = questionRepository.findById(id);
+		if (!optionalObj.isPresent()) {
+			return new ResponseEntity<Question>(new CustomQuestionError("Question with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			return new ResponseEntity<Question>(optionalObj.get(), HttpStatus.OK);
+		}
+
+	}
+
+	@PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Question> updateQuestion(@PathVariable("id") final long id, @RequestBody final Question q) {
+		logger.debug("QuestionManageRestController.updateQuestion - START");
+		Optional<Question> optionalQuestion = questionRepository.findById(id);
+		if (!optionalQuestion.isPresent()) {
+			return new ResponseEntity<Question>(new CustomQuestionError("Question with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			Question question = optionalQuestion.get();
+			question.setLabel(q.getLabel());
+			question.setDescription(q.getDescription());
+			question.setAnsa(q.getAnsa());
+			question.setAnsb(q.getAnsb());
+			question.setAnsc(q.getAnsc());
+			question.setAnsd(q.getAnsd());
+			question.setAnse(q.getAnse());
+			question.setAnsf(q.getAnsf());
+			question.setCansa(q.getCansa());
+			question.setCansb(q.getCansb());
+			question.setCansc(q.getCansc());
+			question.setCansd(q.getCansd());
+			question.setCanse(q.getCanse());
+			question.setCansf(q.getCansf());
+			questionRepository.save(question);
+			return new ResponseEntity<Question>(question, HttpStatus.OK);
+		}
+	}
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Question> deleteQuestion(@PathVariable("id") final Long id) {
+		logger.debug("QuestionManageRestController.deleteQuestion - START");
+		Optional<Question> question = questionRepository.findById(id);
+		if (!question.isPresent()) {
+			return new ResponseEntity<Question>(new CustomQuestionError("Question with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			questionRepository.deleteById(id);
+			return new ResponseEntity<Question>(HttpStatus.NO_CONTENT);
+		}
+	}
+
+	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Question> createQuestion(@Valid @RequestBody final RequestQuestion q) {
+		logger.debug("QuestionManageRestController.createQuestion - START");
+		Question questionToInsert = QuestionConverter.questionFromRequestToEntity(q);
+		questionRepository.save(questionToInsert);
+		logger.debug("QuestionManageRestController.createQuestion - DEBUG 1");
+		List<QuestionTag> qtList = q.getQuestiontags();
+		if ((qtList!=null)&&(!qtList.isEmpty())) {
+			for(QuestionTag tag : qtList) {
+				QuestionTag tagToSave = new QuestionTag();
+				logger.debug("QuestionManageRestController.createQuestion - DEBUG 2 - questionToInsert.getId(): " + questionToInsert.getId() + " - tag.getQuestioncategoryId(): " + tag.getQuestioncategoryId());		
+				tagToSave.setQuestionId(questionToInsert.getId());
+				tagToSave.setQuestioncategoryId(tag.getQuestioncategoryId());
+				QuestionTag qt = questionTagJPARepository.save(tagToSave);
+			}		
+		}
+		
+		return new ResponseEntity<Question>(questionToInsert, HttpStatus.CREATED);
+	}
+}

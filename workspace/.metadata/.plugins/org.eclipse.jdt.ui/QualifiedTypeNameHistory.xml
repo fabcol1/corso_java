@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.google.gson.JsonSerializationContext"/>
-<fullyQualifiedTypeName name="com.google.gson.JsonPrimitive"/>
-<fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-<fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
-<fullyQualifiedTypeName name="json.LocalDateTimeAdapter"/>
-<fullyQualifiedTypeName name="org.hibernate.criterion.Order"/>
-<fullyQualifiedTypeName name="model.Bitcoin"/>
-<fullyQualifiedTypeName name="org.proxima.rest.bean.JSONResponseMessage"/>
 <fullyQualifiedTypeName name="org.db.BitcoinDBManager"/>
 <fullyQualifiedTypeName name="java.time.ZoneId"/>
 <fullyQualifiedTypeName name="java.time.Instant"/>
@@ -35,12 +27,10 @@
 <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
 <fullyQualifiedTypeName name="java.awt.TrayIcon.MessageType"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.Email"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Email"/>
 <fullyQualifiedTypeName name="org.springframework.context.MessageSource"/>
-<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="org.proxima.repository.BitcoinJpaRepository"/>
 <fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
 <fullyQualifiedTypeName name="org.proxima.entities.Bitcoin"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.EnableScheduling"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="org.proxima.cc.services.BitcoinHistoricalService"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="org.proxima.cc.services.LitecoinHistoricalService"/>
+<fullyQualifiedTypeName name="org.proxima.cc.repository.LitecoinHistoricalRepository"/>
+<fullyQualifiedTypeName name="org.proxima.cc.entities.LitecoinHistorical"/>
+<fullyQualifiedTypeName name="org.proxima.cc.repository.EthereumHistoricalRepository"/>
+<fullyQualifiedTypeName name="org.proxima.cc.entities.EthereumHistorical"/>
+<fullyQualifiedTypeName name="org.springframework.scheduling.support.CronSequenceGenerator"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

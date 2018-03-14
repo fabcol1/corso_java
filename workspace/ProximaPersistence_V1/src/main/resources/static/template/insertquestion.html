@@ -1,0 +1,118 @@
+<div class="container">
+	<div class="alert alert-danger" role="alert" ng-if="errorMessage">
+		{{errorMessage}}</div>
+	<div class="panel panel-default ">
+		<div class="alert alert-success">
+			<span class="lead">Insert New Question</span>
+			<p></p>
+		</div>
+		<div class="panel-body ">
+			<div class="container">
+				<form ng-submit="submitQuestionForm()" name="myForm" class="form-horizontal">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="qlabel"> Label
+							</label>
+							<div class="col-md-7">
+								<input type="textarea" ng-model="question.label" id="qlabel" class="form-control input-sm" placeholder="Enter question label" ng-required="true"/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="description">
+								Description </label>
+							<div class="col-md-7">
+								<textarea ng-model="question.description" id="description" class="form-control input-sm" placeholder="Enter Question Description" ng-required="true"/></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="ansa"> Answer
+								A </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="question.ansa" id="ansa" class="form-control input-sm" placeholder="Enter Answer A" ng-required="true"/>
+								<label class="col-md-2 control-lable" for="ansa"> True </label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansa" id="cansa" name="cansa" value='true' ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansa"> False</label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansa" id="cansa" name="cansa" value='false' ng-required="false"/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="ansb"> Answer
+								B </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="question.ansb" id="ansb" class="form-control input-sm" placeholder="Enter Answer B" ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansb"> True </label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansb" id="cansb" name="cansb" value='true' ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansb"> False</label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansb" id="cansb" name="cansb" value='false' ng-required="false" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="ansc"> Answer
+								C </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="question.ansc" id="ansc" class="form-control input-sm" placeholder="Enter Answer C" ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansc"> True </label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansc" id="cansc" name="cansc" value='true' ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansc"> False</label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansc" id="cansc" name="cansc" value='false' ng-required="false"/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="ansd"> Answer
+								D </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="question.ansd" id="ansd" class="form-control input-sm" placeholder="Enter Answer D" ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansd"> True </label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansd" id="cansd" name="cansd" value='true' ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansc"> False</label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansd" id="cansd" name="cansd" value='false' ng-required="false"/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="anse"> Answer
+								E </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="question.anse" id="anse" class="form-control input-sm" placeholder="Enter Answer E" ng-required="false"/>
+								<label class="col-md-2 control-lable" for="anse"> True </label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.canse" id="canse" name="canse" value='true' ng-required="false"/>
+								<label class="col-md-2 control-lable" for="anse"> False</label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.canse" id="canse" name="canse" value='false' ng-required="false" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="ansf"> Answer
+								F </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="question.ansf" id="ansf" class="form-control input-sm" placeholder="Enter Answer F" ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansf"> True </label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansf" id="cansf" name="cansf" value='true' ng-required="false"/>
+								<label class="col-md-2 control-lable" for="ansf"> False</label>
+								<input type="radio" class="col-md-2 control-lable" ng-model="question.cansf" id="cansf" name="cansf" value='false' ng-required="false" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-actions floatRight">
+							<input type="submit" value="Insert Question" class="btn btn-primary btn-sm">
+							<button type="button" ng-click="resetForm()" class="btn btn-warning btn-sm">Reset Form</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
