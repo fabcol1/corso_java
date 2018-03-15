@@ -1,4 +1,4 @@
-package org.proxima.cc.clients.okex;
+package org.proxima.cc.clients.coinmarketcap;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -16,14 +16,15 @@ import org.proxima.cc.repository.LitecoinHistoricalRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Component
-public class Okex {
-	final static Logger logger = LoggerFactory.getLogger(Okex.class);
-
+public class Coinmarketcap {
+	final static Logger logger = LoggerFactory.getLogger(Coinmarketcap.class);
+	
 	@Autowired
 	private BitcoinHistoricalRepository bitcoinHistoricalRepository;
 	@Autowired
@@ -31,26 +32,28 @@ public class Okex {
 	@Autowired
 	private EthereumHistoricalRepository ethereumHistoricalRepository;
 	
-	private JSON_Okex getFutureValue(String future) throws Exception {
+	private JSON_Coinmarketcap getFutureValue(String future) throws Exception {
 		// https://www.okex.com/api/v1/future_ticker.do?symbol=btc_usd&contract_type=this_week
 		String json = org.proxima.cc.clients.GETRequestUtil.sendGet(
-				"https://www.okex.com/api/v1/future_ticker.do?symbol=" + future + "&contract_type=this_week",
-				"application/x-www-form-urlencoded");
+				"https://api.coinmarketcap.com/v1/ticker/"+future+"/",
+				"");
 		logger.info(json);
 		ObjectMapper objectMapper = new ObjectMapper();
-		JSON_Okex futureValue = objectMapper.readValue(json, JSON_Okex.class);
-		logger.info(futureValue.getDate());
-		logger.info(Arrays.toString(futureValue.getTicker().values().toArray()));
-		return futureValue;
+		JSON_Coinmarketcap[] futureValue = objectMapper.readValue(json, JSON_Coinmarketcap[].class);
+		logger.info("LU:" + futureValue[0].getLast_updated());
+		logger.info(futureValue[0].getPrice_usd());
+		return futureValue[0];
 	}
-
+	//metodo per inserimento valori sul database
 	public void insertBTCtoDB() throws Exception {
-		JSON_Okex obj = getFutureValue("btc_usd");
-		String timeStamp = obj.getDate();
+		
+		JSON_Coinmarketcap obj = getFutureValue("bitcoin");
+		String timeStamp = obj.getLast_updated();
 		logger.info("TIMESTAMP: " + timeStamp);
 		int timeStampInt = Integer.parseInt(timeStamp);
 		logger.info("TIMESTAMP int: " + timeStampInt);
-		BigDecimal last = obj.getTicker().get("last");
+		
+		BigDecimal last = new BigDecimal(obj.getPrice_usd());
 		logger.info("LAST BITCOIN VAL: " + last);
 
 		BitcoinHistorical b  = new BitcoinHistorical();
@@ -61,74 +64,67 @@ public class Okex {
 
 		b.setExchangevalue(last);
 		b.setExchangetime(epoch);
-		b.setCryptoexchangevaluesproviderid(new BigInteger("1"));
-		b.setCurrencyregistryid(new BigInteger("2"));
+		b.setCryptoexchangevaluesproviderid(new BigInteger("4"));
+		b.setCurrencyregistryid(new BigInteger("1"));
 		
 		bitcoinHistoricalRepository.save(b);
+		
 	}
 	
-	public void insertLTCtoDB() throws Exception {
-		JSON_Okex obj = getFutureValue("ltc_usd");
-		String timeStamp = obj.getDate();
+	public void insertLTCtoDB() throws Exception{
+		JSON_Coinmarketcap obj = getFutureValue("litecoin");
+		String timeStamp = obj.getLast_updated();
 		logger.info("TIMESTAMP: " + timeStamp);
 		int timeStampInt = Integer.parseInt(timeStamp);
 		logger.info("TIMESTAMP int: " + timeStampInt);
-		BigDecimal last = obj.getTicker().get("last");
+		BigDecimal last = new BigDecimal(obj.getPrice_usd());
 		logger.info("LAST LITECOIN VAL: " + last);
-
-		LitecoinHistorical l  = new LitecoinHistorical();
+		
+		LitecoinHistorical l = new LitecoinHistorical();
 		
 		LocalDateTime epoch = LocalDateTime.ofEpochSecond(timeStampInt, 0, ZoneOffset.UTC);
 		epoch = LocalDateTime.ofInstant(epoch.toInstant(ZoneOffset.UTC), ZoneId.systemDefault());
 		logger.info("EPOCH: " + epoch);
-
+		
 		l.setExchangevalue(last);
 		l.setExchangetime(epoch);
-		l.setCryptoexchangevaluesproviderid(new BigInteger("1"));
-		l.setCurrencyregistryid(new BigInteger("2"));
-		
+		l.setCryptoexchangevaluesproviderid(new BigInteger("4"));
+		l.setCurrencyregistryid(new BigInteger("1"));
 		litecoinHistoricalRepository.save(l);
+		
 	}
 	
-	public void insertETHtoDB() throws Exception {
-		JSON_Okex obj = getFutureValue("eth_usd");
-		String timeStamp = obj.getDate();
+	public void insertETHtoDB() throws Exception{
+		JSON_Coinmarketcap obj = getFutureValue("ethereum");
+		String timeStamp = obj.getLast_updated();
 		logger.info("TIMESTAMP: " + timeStamp);
 		int timeStampInt = Integer.parseInt(timeStamp);
 		logger.info("TIMESTAMP int: " + timeStampInt);
-		BigDecimal last = obj.getTicker().get("last");
+		BigDecimal last = new BigDecimal(obj.getPrice_usd());
 		logger.info("LAST ETHEREUM VAL: " + last);
-
+		
 		EthereumHistorical e  = new EthereumHistorical();
 		
 		LocalDateTime epoch = LocalDateTime.ofEpochSecond(timeStampInt, 0, ZoneOffset.UTC);
 		epoch = LocalDateTime.ofInstant(epoch.toInstant(ZoneOffset.UTC), ZoneId.systemDefault());
 		logger.info("EPOCH: " + epoch);
-
+		
 		e.setExchangevalue(last);
 		e.setExchangetime(epoch);
-		e.setCryptoexchangevaluesproviderid(new BigInteger("1"));
-		e.setCurrencyregistryid(new BigInteger("2"));
-		
+		e.setCryptoexchangevaluesproviderid(new BigInteger("4"));
+		e.setCurrencyregistryid(new BigInteger("1"));
 		ethereumHistoricalRepository.save(e);
+		
 	}
-//	public static void main(String[] args)
-//	 {
-//	  CronSequenceGenerator cron1 = new CronSequenceGenerator("0 2/3 * * * ?");
-//	  Calendar cal = Calendar.getInstance();
-//	  cal.add(Calendar.DATE, 2); // add two days to current date
-//	  SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd HH:mm:ss"); 
-//	  
-//	  System.out.println("current date "+sdf.format(cal.getTime()));
-//	  
-//	  Date d = null;
-//		for(int i = 0; i < 10; i++) {
-//			if(d==null) {
-//				d =  cron1.next(cal.getTime()); 
-//			} else {
-//				d = cron1.next(d);
-//			}
-//			System.out.println("Next cron trigger date cron1 "+d);
-//		}
-//	 }
+	
+	
+//	@Scheduled(fixedRate = 60000)
+	public void insertToDBfromCoinmarketcap() throws Exception {
+		insertBTCtoDB();
+		insertLTCtoDB();
+		insertETHtoDB();
+	}
+	
+	
+	
 }

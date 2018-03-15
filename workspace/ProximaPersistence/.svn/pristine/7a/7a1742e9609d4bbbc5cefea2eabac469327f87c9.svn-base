@@ -49,7 +49,7 @@ function chartGenerator($http, $scope, $q, urlBase, chartTitle, unit, elementId)
 					},
 					title : {
 						text : chartTitle, // chart title
-						display : true
+						display : false
 					},
 					scales : {
 						xAxes : [ {

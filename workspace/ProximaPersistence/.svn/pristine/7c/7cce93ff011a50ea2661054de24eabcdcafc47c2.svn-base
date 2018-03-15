@@ -5,16 +5,12 @@ app.controller('bitcoinController', function($scope, $http, $location, $route, $
 		url : '/api/provider/'
 	}).then(function(response) {
 		$scope.providers = response.data;	
-		
-		$scope.labels = ['Okex', 'Bitstamp', 'Btcc', 'Coinmarketcap', 'Yogit'];
-		$scope.colors = ['rgb(65, 65, 65)', 'rgb(150, 65, 65)', 'rgb(65, 150, 65)', 'rgb(65, 65, 150)', 'rgb(65, 150, 150)'];
 	
-		chartGenerator($http, $scope, $q, '/api/bitcoin/lastDay/', 	 'BTC/USD ( Bitcoin )', 'minute', 'daily');
-		chartGenerator($http, $scope, $q, '/api/bitcoin/lastWeek/',  'BTC/USD ( Bitcoin )', 'day', 'weekly');
+		chartGenerator($http, $scope, $q, '/api/bitcoin/lastDay/', 'BTC/USD ( Bitcoin )', 'minute', 'daily');
+		chartGenerator($http, $scope, $q, '/api/bitcoin/lastWeek/', 'BTC/USD ( Bitcoin )', 'day', 'weekly');
 		chartGenerator($http, $scope, $q, '/api/bitcoin/lastMonth/', 'BTC/USD ( Bitcoin )', 'day', 'monthly');
-		chartGenerator($http, $scope, $q, '/api/bitcoin/lastYear/',  'BTC/USD ( Bitcoin )', 'month', 'yearly');
+		chartGenerator($http, $scope, $q, '/api/bitcoin/lastYear/', 'BTC/USD ( Bitcoin )', 'month', 'yearly');
 	});
-	
 });
 
 function chartGenerator($http, $scope, $q, urlBase, chartTitle, unit, elementId) {
@@ -27,11 +23,17 @@ function chartGenerator($http, $scope, $q, urlBase, chartTitle, unit, elementId)
 	$q.all(actions).then(function(arrayOfResults) {
 
 		$scope.chart = {};
-		var datasets = [];
-
+		$scope.buf = {};
 		for(var i = 0; i < arrayOfResults.length; i++) {
-			datasets.push(datasetGenerator(loadValues(arrayOfResults[i].data), $scope.labels[i], $scope.colors[i]  ));
+			$scope.buf[i] = loadValues(arrayOfResults[i].data);
 		}
+		
+		var datasets = [];
+		datasets.push(datasetGenerator($scope.buf[0], 'Okex'		 , 'rgb(65, 65, 65)'  ));
+		datasets.push(datasetGenerator($scope.buf[1], 'Bitstamp'	 , 'rgb(150, 65, 65)' ));
+		datasets.push(datasetGenerator($scope.buf[2], 'Btcc'		 , 'rgb(65, 150, 65)' ));
+		datasets.push(datasetGenerator($scope.buf[3], 'Coinmarketcap', 'rgb(65, 65, 150)' ));
+		datasets.push(datasetGenerator($scope.buf[4], 'Yogit'		 , 'rgb(65, 150, 150)' ));
 
 		var options = {
 					tooltips : {
@@ -49,7 +51,7 @@ function chartGenerator($http, $scope, $q, urlBase, chartTitle, unit, elementId)
 					},
 					title : {
 						text : chartTitle, // chart title
-						display : true
+						display : false
 					},
 					scales : {
 						xAxes : [ {
