@@ -1,0 +1,46 @@
+<div class="container">
+	<!-- nel caso l'error message sia diverso da null viene visualizzato l'error message -->
+	<div class="alert alert-danger" role="alert" ng-if="errorMessage">
+		{{errorMessage}}</div>
+	<div class="panel panel-default ">
+		<div class="alert alert-success">
+			<span class="lead">Login</span>
+		</div>
+		<div class="panel-body ">
+			<div class="container">
+				<!--         ng submit per la sottomissione del form viene chiamata la funzione al suo interno -->
+				<form ng-submit="executeLogin()" name="myForm" class="form-horizontal">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="fname">
+								Email </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="email" id="fname" class="form-control input-sm" placeholder="Enter email" required />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="pass">
+								Password </label>
+							<div class="col-md-7">
+								<input type="password" ng-model="password" id="pass" class="form-control input-sm" placeholder="Enter Passowrd" required/>
+								<label id="pasw1format" style="color: red; display: none">la
+									password deve essere lunga minimo 8 caratteri</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-actions floatRight">
+							<input type="submit" value="Login" class="btn btn-primary btn-sm">
+							<button type="button" ng-click="resetForm()" class="btn btn-warning btn-sm">Reset Form</button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+
+		</div>
+	</div>
+</div>

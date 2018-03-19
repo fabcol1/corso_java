@@ -1,23 +1,39 @@
-<div class="container">
+
+<div id="container">
+    <div id="xchangeValuesBar">
+	<div>
+
+				<div ng-repeat="provider in lastvalues">
+				<span class="providerSite">{{provider.providerSite}} - </span> 
+				<span class="providerExchange">{{provider.exchangevalue}} {{provider.currencyLabel}} </span>
+				- {{provider.exchangetime}}  
+<!-- 					<p>{{provider.providerSite}}</p> -->
+<!-- 					<p></p> {{provider.exchangevalue}} {{provider.currencyLabel}}-->
+<!-- 					<p>{{provider.exchangetime}}</p> -->
+				</div>
+	</div>
+	</div>
+
 	<div class="panel panel-default ">
-		<div class="alert alert-success">
-			<span class="lead"> Proxima Crypto Charts </span>
-		</div>
+		<!-- 					<div class="alert alert-success"> -->
+		<!-- 			<span class="lead"> Proxima Crypto Charts </span> -->
+		<!-- 		</div> -->
 
 		<div>
 			<div class="container" id="daydiv">
-			    <canvas id="daily"></canvas>
+				<canvas id="daily"></canvas>
 			</div>
-			<div class="container" id="weekdiv">
-			    <canvas id="weekly"></canvas>
+			<div class="container" id="weekdiv" ng-show="weeklyDisplay">
+				<canvas id="weekly"></canvas>
 			</div>
-			<div class="container" id="monthdiv">
-			    <canvas id="monthly"></canvas>
+			<div class="container" id="monthdiv" ng-show="weeklyDisplay">
+				<canvas id="monthly"></canvas>
 			</div>
-			<div class="container" id="yeardiv">
-			    <canvas id="yearly"></canvas>
+			<div class="container" id="yeardiv" ng-show="weeklyDisplay">
+				<canvas id="yearly"></canvas>
 			</div>
 		</div>
 
 	</div>
+
 </div>
