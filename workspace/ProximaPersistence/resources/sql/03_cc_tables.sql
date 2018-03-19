@@ -10,9 +10,12 @@ CREATE TABLE cryptoexchangevaluesprovider (
 	PRIMARY KEY (id)
 );
 INSERT INTO cryptoexchangevaluesprovider(label, site) VALUES ('Okex', 'https://www.okex.com/');
-INSERT INTO cryptoexchangevaluesprovider(label, site) VALUES ('Yogit', 'https://www.yobit.net/');
-INSERT INTO cryptoexchangevaluesprovider (label, site) VALUES ('btcc', 'https://www.btcc.com');
+INSERT INTO cryptoexchangevaluesprovider(label, site) VALUES ('Yobit', 'https://www.yobit.net/');
+INSERT INTO cryptoexchangevaluesprovider (label, site) VALUES ('Btcc', 'https://www.btcc.com');
 INSERT INTO cryptoexchangevaluesprovider(label, site) VALUES ('Bitstamp', 'https://www.bitstamp.net/');
+INSERT INTO cryptoexchangevaluesprovider(label, site) VALUES ('Bitcore', 'https://bitcore.cc/');
+INSERT INTO cryptoexchangevaluesprovider(label, site) VALUES ('Livecoin', 'www.livecoin.net/');
+
 
 CREATE TABLE currencyregistry (
 	id bigint NOT NULL AUTO_INCREMENT,
@@ -50,6 +53,19 @@ CREATE TABLE ethereumhistorical (
 	id bigint NOT NULL AUTO_INCREMENT,
 	exchangevalue DEC(20,2) NOT NULL,
 	exchangetime DATETIME NOT NULL,
+	cryptoexchangevaluesproviderid bigint NOT NULL,
+	currencyregistryid bigint NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (cryptoexchangevaluesproviderid) REFERENCES cryptoexchangevaluesprovider(id),
+    FOREIGN KEY (currencyregistryid) REFERENCES currencyregistry(id)
+);
+
+CREATE TABLE bitcoinhistoricalaverages ( 
+	id bigint NOT NULL AUTO_INCREMENT,
+	exchangedate DATE NOT NULL,
+	exchangeaverage DEC(20,2) NOT NULL,
+	exchangemin 	DEC(20,2) NOT NULL,
+	exchangemax 	DEC(20,2) NOT NULL,
 	cryptoexchangevaluesproviderid bigint NOT NULL,
 	currencyregistryid bigint NOT NULL,
 	PRIMARY KEY (id),

@@ -1,0 +1,37 @@
+package org.proxima.cc.clients.bitcore;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class JSON_Bitcore {
+	private String price_usd;
+	private String last_updated;
+
+	public String getPrice_usd() {
+		return price_usd;
+	}
+
+
+
+	public void setPrice_usd(String price_usd) {
+		this.price_usd = price_usd;
+	}
+
+
+
+	public String getLast_updated() {
+		return last_updated;
+	}
+
+
+
+	public void setLast_updated(String last_updated) {
+		this.last_updated = last_updated;
+	}
+	
+	@Override
+	public String toString() {
+		return "JSON_Bitcore [timestamp=" + last_updated + ", last=" + price_usd + "]";
+	}
+
+}
