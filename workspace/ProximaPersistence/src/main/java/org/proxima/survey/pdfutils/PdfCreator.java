@@ -16,12 +16,12 @@ import org.proxima.survey.repository.SurveyJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-//import com.itextpdf.text.BaseColor;
-//import com.itextpdf.text.Document;
-//import com.itextpdf.text.DocumentException;
-//import com.itextpdf.text.FontFactory;
-//import com.itextpdf.text.Paragraph;
-//import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 
 @Component
 public class PdfCreator {
@@ -47,38 +47,38 @@ public class PdfCreator {
 		userPath = PropertiesManager.getPropertyAsString("path.name");
 	}
 
-//	public void createPdf(SurveyReply sr) {
-//		initializePath();
-//		Document document = new Document();
-//		try {			
-//			FileOutputStream fos = new FileOutputStream(userPath + sr.getPdffilename());
-//			
-//			PdfWriter pw = PdfWriter.getInstance(document, fos); 
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (DocumentException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		 
-//		document.open();
-//		com.itextpdf.text.Font font = FontFactory.getFont(FontFactory.COURIER, 14, BaseColor.BLACK);
-//		String informationForReport = getInformationForReport(sr);
-//		String[] infoLines = informationForReport.split("\n");
-//		
-//		for(String str : infoLines) {
-//			System.out.println(str);
-//			try {
-//				document.add(new Paragraph(str, font));
-//			} catch (DocumentException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
-//		document.close();
+	public void createPdf(SurveyReply sr) {
+		initializePath();
+		Document document = new Document();
+		try {			
+			FileOutputStream fos = new FileOutputStream(userPath + sr.getPdffilename());
+			
+			PdfWriter pw = PdfWriter.getInstance(document, fos); 
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		document.open();
+		com.itextpdf.text.Font font = FontFactory.getFont(FontFactory.COURIER, 14, BaseColor.BLACK);
+		String informationForReport = getInformationForReport(sr);
+		String[] infoLines = informationForReport.split("\n");
 		
-//	}
+		for(String str : infoLines) {
+			System.out.println(str);
+			try {
+				document.add(new Paragraph(str, font));
+			} catch (DocumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		document.close();
+		
+	}
 	
 	private String getInformationForReport(SurveyReply sr) {
 		Calendar start = Calendar.getInstance();

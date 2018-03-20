@@ -1,0 +1,49 @@
+package org.proxima.cc.clients.btcc;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.util.Map;
+
+import org.proxima.cc.clients.CryptoCoinJSONInterface;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class JSON_Btcc implements CryptoCoinJSONInterface{
+	
+	private Map<String, String> ticker;
+	
+	public Map<String, String> getTicker() {
+		return ticker;
+	}
+
+
+	public void setTicker(Map<String, String> ticker) {
+		this.ticker = ticker;
+	}
+
+
+	public LocalDateTime getTimestampAsLocalDateTime () {
+		
+		String timestamp = ticker.get("Timestamp");
+		long timestampLong = Long.parseLong(timestamp);
+		LocalDateTime epoch = LocalDateTime.ofEpochSecond(timestampLong, 0, ZoneOffset.UTC);
+		epoch = LocalDateTime.ofInstant(epoch.toInstant(ZoneOffset.UTC), ZoneId.systemDefault());
+		return epoch;
+		
+	}
+
+	
+	@Override
+	public BigDecimal getExchangeValue () {
+		
+		String exchangeValue = ticker.get("Last");
+		return new BigDecimal(exchangeValue);
+		
+	}
+	
+}
+
+

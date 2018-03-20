@@ -102,7 +102,7 @@ public class SurveyManageRestController {
 			points.append(surveyEvaluator.evaluate(result) + " / " + survey.getSurveyquestions().size());
 			result.setPoints(points.toString());
 			surveyReplyRepository.save(result);
-//			pdfCreator.createPdf(result);
+			pdfCreator.createPdf(result);
 		} catch (IOException | ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

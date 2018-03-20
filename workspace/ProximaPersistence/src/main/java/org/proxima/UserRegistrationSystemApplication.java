@@ -1,13 +1,14 @@
 package org.proxima;
 
 import org.apache.log4j.Logger;
-import org.proxima.cc.clients.okex.Okex;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling
+//@EnableScheduling
+@EnableCaching
 public class UserRegistrationSystemApplication {
 	
 	final static Logger logger = Logger.getLogger(UserRegistrationSystemApplication.class);

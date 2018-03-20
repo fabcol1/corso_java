@@ -1,0 +1,19 @@
+<div class="container">
+  <!-- nel caso l'error message sia diverso da null viene visualizzato l'error message -->
+  <div class="alert alert-danger" role="alert" ng-if="errorMessage">
+    {{errorMessage}}</div>
+  <div class="panel panel-default ">
+    <div class="alert alert-success">
+      <span class="lead">Reset Password</button>
+		</div>
+		<div class="panel-body ">
+			<div class="container">
+					<div class="row">
+						<div class="form-actions floatRight">
+							<button type="button" ng-click="resetPassword()" class="btn btn-primary btn-sm">Reset Password</button>
+						</div>
+						<label style="color:green;"ng-show="pwdUpdate">Password aggiornata correttamente! Ti è stata inviata per email!</label>
+					</div>
+  </div>
+</div>
+</div>

@@ -13,6 +13,12 @@ FLUSH PRIVILEGES; --> aggiorna le istruzioni ma non fare il restart del db!!
 
 USE schema_name
 
+select * from bitcoinhistorical where cryptoexchangevaluesproviderid=1 AND exchangetime > '2018-03-19 12:54:03.0' ORDER BY exchangevalue DESC LIMIT 1;
+select * from bitcoinhistorical where cryptoexchangevaluesproviderid=1 AND exchangetime > '2018-03-19 12:54:03.0' ORDER BY exchangevalue ASC LIMIT 1;
+select AVG(exchangevalue) from bitcoinhistorical where cryptoexchangevaluesproviderid=3 AND exchangetime > '2018-03-19 16:04:03.0';
+
+
+
 
 
 
