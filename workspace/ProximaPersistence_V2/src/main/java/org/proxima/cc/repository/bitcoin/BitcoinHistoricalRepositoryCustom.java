@@ -1,0 +1,15 @@
+package org.proxima.cc.repository.bitcoin;
+
+import java.time.LocalDateTime;
+
+import org.proxima.cc.entities.bitcoin.BitcoinHistoricalCustom;
+
+public interface BitcoinHistoricalRepositoryCustom  {
+	
+	BitcoinHistoricalCustom findLastExchangeByProviderIdAndCurrency (Long providerId, Long currencyId) ;
+	
+	//	select AVG(exchangevalue) from bitcoinhistorical where cryptoexchangevaluesproviderid=7 AND exchangetime > '2018-03-19 11:23:03.0';
+	// AVERAGE 
+	BitcoinHistoricalCustom findAverageByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(LocalDateTime ldt, Long id);
+
+}

@@ -1,0 +1,15 @@
+<div class="container">
+<form ng-submit="surveySubmit()">
+<div class="container" ng-repeat="q in questions">
+		<label>{{q.question.description}}</label><br>
+        <input type="checkbox" value="answerA" name="{{q.question.id}}"/>{{q.question.ansa}}<br>
+        <input type="checkbox" value="answerB" name="{{q.question.id}}"/>{{q.question.ansb}}<br>
+        <input type="checkbox" value="answerC" name="{{q.question.id}}"/>{{q.question.ansc}}<br>
+        <input type="checkbox" value="answerD" name="{{q.question.id}}"/>{{q.question.ansd}}<br>
+		<input type="checkbox" value="answerE" name="{{q.question.id}}"/>{{q.question.anse}}<br>
+		<input type="checkbox" value="answerF" name="{{q.question.id}}"/>{{q.question.ansf}}<br>
+
+</div>
+<input type="submit" name="submitButt" value="Submit">
+</form>
+</div>

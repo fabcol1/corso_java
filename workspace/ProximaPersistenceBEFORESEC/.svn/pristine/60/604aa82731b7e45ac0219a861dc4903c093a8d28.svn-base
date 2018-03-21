@@ -1,0 +1,115 @@
+package org.proxima.survey.rest;
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Optional;
+
+import javax.validation.Valid;
+
+import org.proxima.survey.entities.Survey;
+import org.proxima.survey.entities.SurveyReply;
+import org.proxima.survey.helper.SurveyEvaluator;
+import org.proxima.survey.pdfutils.PdfCreator;
+import org.proxima.survey.repository.SurveyJPARepository;
+import org.proxima.survey.repository.SurveyReplyJPARepository;
+import org.proxima.survey.rest.exception.CustomSurveyError;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@RestController
+@RequestMapping("/api/survey")
+public class SurveyManageRestController {
+
+	private static final Logger logger = LoggerFactory.getLogger(SurveyManageRestController.class);
+	
+	@Autowired
+	private SurveyJPARepository surveyRepository;
+	
+	@Autowired
+	private SurveyReplyJPARepository surveyReplyRepository;
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Survey> getSurveyById (@PathVariable("id") final Long id) {
+		logger.debug("SurveyManageRestController.getSurvey - START");
+		Optional<Survey> optionalObj = surveyRepository.findById(id);
+		if (!optionalObj.isPresent()) {
+            return new ResponseEntity<Survey>(new CustomSurveyError("Survey with id " + id + " not found"), HttpStatus.NOT_FOUND);
+		} else {
+			return new ResponseEntity<Survey> (optionalObj.get(), HttpStatus.OK) ;	
+		}
+		
+	}
+	
+	@PutMapping(value="/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Survey> updateSurvey (
+			@PathVariable("id") final long id,
+			@RequestBody final Survey u) {
+		
+		Optional<Survey> optionalSurvey = surveyRepository.findById(id);
+		if (!optionalSurvey.isPresent()) {
+            return new ResponseEntity<Survey>(new CustomSurveyError("User with id " + id + " not found"), HttpStatus.NOT_FOUND);
+		} else {
+			Survey survey = optionalSurvey.get();
+			survey.setDescription(u.getDescription());
+			survey.setLabel(u.getLabel());
+			surveyRepository.save(survey);
+			return new ResponseEntity<Survey>(survey, HttpStatus.OK);
+		}
+	}
+	
+	@Autowired
+	private PdfCreator pdfCreator;
+	@Autowired
+	private SurveyEvaluator surveyEvaluator;
+	
+	@PostMapping(value="/", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<SurveyReply> replyToSurvey 
+	(@Valid @RequestBody final String s) {
+		SurveyReply result = new SurveyReply();
+		logger.debug("SurveyManageRestController.replyToSurvey - START");
+		try {
+			ObjectMapper objectMapper = new ObjectMapper();
+			JsonNode json = objectMapper.readTree(s);
+			result.setSurveyId(json.get("surveyId").asLong());
+			result.setUserId(json.get("userId").asLong());
+			result.setAnswers(json.get("replies").toString());
+			DateFormat format = new SimpleDateFormat("MMM dd yyyy HH:mm:ss");
+			Date startDate = format.parse(json.get("starttime").asText().substring(4, 25));
+			Date endDate = format.parse(json.get("endtime").asText().substring(4, 25));
+			result.setStarttime(startDate);
+			result.setEndtime(endDate);
+			surveyReplyRepository.save(result);
+			result.setPdffilename(result.getId().toString()+ "_" + result.getUserId().toString() + ".pdf");
+			Survey survey = surveyRepository.findById(result.getSurveyId()).get();
+			StringBuilder points = new StringBuilder();
+			points.append(surveyEvaluator.evaluate(result) + " / " + survey.getSurveyquestions().size());
+			result.setPoints(points.toString());
+			surveyReplyRepository.save(result);
+			pdfCreator.createPdf(result);
+		} catch (IOException | ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return new ResponseEntity<SurveyReply>(new SurveyReply(), HttpStatus.BAD_REQUEST);
+		}
+		return new ResponseEntity<SurveyReply>(result, HttpStatus.OK);
+	}
+	
+	
+}

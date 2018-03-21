@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app_survey">
+<head>
+<title>ProximaSurvey</title>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div ng-include="'template/question.html'"></div>
+	
+	<div ng-view></div>
+		<script src="/webjars/angularjs/1.4.9/angular.js"></script>
+		<script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+		<script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+		<script src="/webjars/momentjs/2.18.1/moment.js"></script>
+	
+		<script src="/js/app_survey.js"></script>
+		<script src="/js/insertQuestionController.js"></script>
+		<script src="/js/listQuestionController.js"></script>
+		<script src="/js/questionsDetailsController.js"></script>
+		<script src="/js/surveyController.js"></script>
+		<link rel="stylesheet"
+			href="/webjars/bootstrap/3.3.6/css/bootstrap.css">
+			<link rel="stylesheet" href="/css/main.css">
+	        <link rel="stylesheet" href="/css/form.css">
+			<link rel="stylesheet" href="/css/topnav.css">
+</body>
+</html>

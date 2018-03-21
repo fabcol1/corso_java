@@ -1,0 +1,338 @@
+/**
+ * 
+ */
+package org.proxima.rest;
+
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
+import javax.xml.crypto.Data;
+
+import org.apache.log4j.Logger;
+import org.proxima.entities.User;
+import org.proxima.repository.UserRepository;
+import org.proxima.rest.exception.CustomErrorType;
+import org.proxima.rest.service.UserService;
+import org.proxima.util.MailUtility;
+import org.proxima.util.RandomPassword;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+/**
+ * @author maurizio
+ *
+ */
+@RestController
+@RequestMapping("/api/user")
+public class UserRegistrationRestController {
+
+	final static Logger logger = Logger.getLogger(UserRegistrationRestController.class);
+
+	@Autowired
+	private UserRepository userRepository;
+	@Autowired
+	private UserService userService;
+
+	@GetMapping("/")
+	public ResponseEntity<List<User>> getAllUsers() {
+		logger.info("UserRegistrationRestController.getAllUsers - START");
+		List<User> users = userService.getAllUsers();
+		if (users.isEmpty()) {
+			return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
+	}
+
+	@GetMapping("/orderByLastname")
+	public ResponseEntity<List<User>> getAllUsersOrderByLastname() {
+		logger.info("UserRegistrationRestController.getAllUsersOrderByLastname  - START");
+		List<User> users = userService.getAllUsersOrderByLastname();
+		if (users.isEmpty()) {
+			return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
+	}
+
+	@GetMapping("/{id}")
+	// @PreAuthorize("hasAuthority('ADMIN')")
+	public ResponseEntity<User> getUserById(@PathVariable("id") final Long id) {
+		logger.info("UserRegistrationRestController.getUserById - START");
+		try {
+			return new ResponseEntity<User>(userService.loadUserById(id), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<User>(new CustomErrorType("User with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		}
+
+	}
+
+	@GetMapping("/email/{email}")
+	// @PreAuthorize("hasAuthority('ADMIN')")
+	public ResponseEntity<User> getUserByEmail(@PathVariable("email") final String email) {
+		logger.info("UserRegistrationRestController.getUserByEmail - START");
+		try {
+			return new ResponseEntity<User>(userService.loadUserByEmail(email), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<User>(new CustomErrorType("User with email " + email + " not found"),
+					HttpStatus.NOT_FOUND);
+		}
+
+	}
+
+	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> createUser(@Valid @RequestBody final User u) {
+		Optional<User> optionalUser = userRepository.findByEmail(u.getEmail());
+		if (optionalUser.isPresent()) {
+			return new ResponseEntity<User>(
+					new CustomErrorType(
+							"Unable to create new user. A User with email " + u.getEmail() + " already exist."),
+					HttpStatus.CONFLICT);
+		} else {
+			userRepository.save(u);
+			return new ResponseEntity<User>(u, HttpStatus.CREATED);
+		}
+
+	}
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<User> deleteUser(@PathVariable("id") final Long id) {
+		Optional<User> user = userRepository.findById(id);
+		if (!user.isPresent()) {
+			return new ResponseEntity<User>(new CustomErrorType("User with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			userRepository.deleteById(id);
+			return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+		}
+	}
+
+	// UPDATE di UNO USER (NO id, role, regdate)
+	@PutMapping(value = "/updateUser/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> updateUserByUser(@PathVariable final long id, @RequestBody final User u) {
+		Optional<User> user = userRepository.findById(id);
+		if (!user.isPresent()) {
+			return new ResponseEntity<User>(
+					new CustomErrorType("Unable to update user. The User with id: " + id + " doesn't exist."),
+					HttpStatus.CONFLICT);
+		} else {
+			User userUpdate = user.get();
+			userUpdate.setEmail(u.getEmail());
+			userUpdate.setDateofbirth(u.getDateofbirth());
+			userUpdate.setFirstname(u.getFirstname());
+			userUpdate.setImgpath(u.getImgpath());
+			userUpdate.setLastname(u.getLastname());
+			userUpdate.setPassword(u.getPassword());
+			userRepository.save(userUpdate);
+			return new ResponseEntity<User>(userUpdate, HttpStatus.OK);
+		}
+	}
+
+	// UPDATE solo della Password
+	@PutMapping(value = "/updatePassword/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> updatePassword(@PathVariable final long id, @RequestBody final User u) {
+		Optional<User> user = userRepository.findById(id);
+		if (!user.isPresent()) {
+			return new ResponseEntity<User>(
+					new CustomErrorType("Unable to update user. The User with id: " + id + " doesn't exist."),
+					HttpStatus.CONFLICT);
+		} else {
+			User userUpdate = user.get();
+			userUpdate.setPassword(u.getPassword());
+			userRepository.save(userUpdate);
+			return new ResponseEntity<User>(userUpdate, HttpStatus.OK);
+		}
+	}
+
+	// RESET solo della Password
+	@PutMapping(value = "/resetPassword/{id}")
+	public ResponseEntity<User> resetPassword(@PathVariable final long id) {
+		Optional<User> user = userRepository.findById(id);
+		if (!user.isPresent()) {
+			return new ResponseEntity<User>(
+					new CustomErrorType("Unable to update user. The User with id: " + id + " doesn't exist."),
+					HttpStatus.CONFLICT);
+		} else {
+			User userUpdate = user.get();
+			String newGeneratedPassword = RandomPassword.generate();
+			userUpdate.setPassword(newGeneratedPassword);
+			userRepository.save(userUpdate);
+			MailUtility.sendSimpleMail(userUpdate.getEmail(), "Nuova password", "Ecco la nuova password: "+newGeneratedPassword);
+			return new ResponseEntity<User>(userUpdate, HttpStatus.OK);
+		}
+	}
+
+	// @PutMapping(value="/updateEmail/{id}", consumes =
+	// MediaType.APPLICATION_JSON_VALUE)
+	// public ResponseEntity<User> updateUserEmail (
+	// @PathVariable("id") final long id,
+	// @RequestBody final HashMap<String, String> xxx) {
+	// //logger.info("updateUserEmail: " + email);
+	// System.out.println("updateUserEmail: " + xxx.get("email"));
+	// Optional<User> optionalUser = userRepository.findById(id);
+	//// if (!optionalUser.isPresent()) {
+	//// return new ResponseEntity<User>(new CustomErrorType("User with id " + id +
+	// " not found"), HttpStatus.NOT_FOUND);
+	//// } else {
+	////// return new ResponseEntity<User> (user.get(), HttpStatus.OK) ;
+	// User user = optionalUser.get();
+	//// user.setEmail(email);
+	//// userRepository.save(user);
+	// return new ResponseEntity<User>(user, HttpStatus.OK);
+	//// }
+	// }
+
+	// @PutMapping(value="/updateRole/{id}", consumes =
+	// MediaType.APPLICATION_JSON_VALUE)
+	// public ResponseEntity<User> updateUserRole (
+	// @PathVariable("id") final long id,
+	// @RequestBody final int role) {
+	//
+	// Optional<User> optionalUser = userRepository.findById(id);
+	// if (!optionalUser.isPresent()) {
+	// return new ResponseEntity<User>(new CustomErrorType("User with id " + id + "
+	// not found"), HttpStatus.NOT_FOUND);
+	// } else {
+	// User user = optionalUser.get();
+	// user.setRole(role);
+	// userRepository.save(user);
+	// return new ResponseEntity<User>(user, HttpStatus.OK);
+	// }
+	// }
+
+	/**
+	 * Update user method. Doesn't update password(call updateUserPassword method)
+	 * Doesn't update role(call updateUserRole method)
+	 * 
+	 * @param id
+	 * @param u
+	 * @return
+	 */
+	@PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> updateUser(@PathVariable("id") final long id, @RequestBody final User u) {
+
+		Optional<User> optionalUser = userRepository.findById(id);
+		if (!optionalUser.isPresent()) {
+			return new ResponseEntity<User>(new CustomErrorType("User with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			User user = optionalUser.get();
+			user.setEmail(u.getEmail());
+			user.setFirstname(u.getFirstname());
+			user.setLastname(u.getLastname());
+			user.setImgpath(u.getImgpath());
+			user.setRegdate(u.getRegdate());
+			userRepository.save(user);
+			return new ResponseEntity<User>(user, HttpStatus.OK);
+		}
+	}
+
+	@PutMapping(value = "/user/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> updateUserForUser(@PathVariable("id") final long id, @RequestBody final User u) {
+
+		Optional<User> optionalUser = userRepository.findById(id);
+		if (!optionalUser.isPresent()) {
+			return new ResponseEntity<User>(new CustomErrorType("User with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			User user = optionalUser.get();
+			user.setEmail(u.getEmail());
+			user.setFirstname(u.getFirstname());
+			user.setLastname(u.getLastname());
+			user.setDateofbirth(u.getDateofbirth());
+			user.setImgpath(u.getImgpath());
+			userRepository.save(user);
+			return new ResponseEntity<User>(user, HttpStatus.OK);
+		}
+	}
+
+	/**
+	 * Update user method for admin. Doesn't update regdate(call updateUserRegdate
+	 * method)
+	 * 
+	 * @param id
+	 * @param u
+	 * @return
+	 */
+	@PutMapping(value = "/admin/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> updateUserForAdmin(@PathVariable("id") final long id, @RequestBody final User u) {
+
+		Optional<User> optionalUser = userRepository.findById(id);
+		if (!optionalUser.isPresent()) {
+			return new ResponseEntity<User>(new CustomErrorType("User with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			User user = optionalUser.get();
+			user.setEmail(u.getEmail());
+			user.setPassword(u.getPassword());
+			user.setFirstname(u.getFirstname());
+			user.setLastname(u.getLastname());
+			user.setDateofbirth(u.getDateofbirth());
+			user.setRole(u.getRole());
+			user.setImgpath(u.getImgpath());
+			userRepository.save(user);
+			return new ResponseEntity<User>(user, HttpStatus.OK);
+		}
+	}
+
+	@PutMapping(value = "/users/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<User> updateImgPath(@PathVariable("id") final long id, @RequestBody final User u) {
+
+		Optional<User> optionalUser = userRepository.findById(id);
+		if (!optionalUser.isPresent()) {
+			return new ResponseEntity<User>(new CustomErrorType("User with id " + id + " not found"),
+					HttpStatus.NOT_FOUND);
+		} else {
+			User user = optionalUser.get();
+			user.setImgpath(u.getImgpath());
+			userRepository.save(user);
+			return new ResponseEntity<User>(user, HttpStatus.OK);
+		}
+
+	}
+
+	@RequestMapping(value = "/fileUpload", method = RequestMethod.POST)
+	// , consumes = MediaType.APPLICATION_JSON_VALUE
+	public Data continueFileUpload(HttpServletRequest request, HttpServletResponse response) {
+		MultipartHttpServletRequest mRequest;
+		// String filename = "upload.xlsx";
+		try {
+			mRequest = (MultipartHttpServletRequest) request;
+			mRequest.getParameterMap();
+			Iterator<String> itr = mRequest.getFileNames();
+			System.err.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+			while (itr.hasNext()) {
+				MultipartFile mFile = mRequest.getFile("" + itr.next());
+				String fileName = mFile.getOriginalFilename();
+				System.out.println("XXXXXXXXXXXXX" + fileName);
+				java.nio.file.Path path = Paths.get("C:\\profile\\images\\" + fileName);
+				Files.deleteIfExists(path);
+				InputStream in = mFile.getInputStream();
+				Files.copy(in, path);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

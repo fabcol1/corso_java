@@ -15,7 +15,7 @@
 				<p class="providerTime">{{provider.exchangetime | date: 'H:mm dd-MM-yyyy'}}</p>
 				
 <!-- 					<p>{{provider.providerSite}}</p> -->
-<!-- 					<p></p> {{provider.exchangevalue}} {{provider.currencyLabel}}-->
+<!-- 					<p></p> {{provider.exchangevalue}} {{provider.currencyLabel}} -->
 <!-- 					<p>{{provider.exchangetime}}</p> -->
 				</div>
 				
@@ -50,3 +50,14 @@
 	</div>
 
 </div>
+<footer class="bd-footer text-muted">
+  <div class="container">
+   <div id="xchangeValuesBarOLD">
+	<div ng-repeat="provider in lastvalues">
+		<span class="providerSiteOLD">{{provider.providerSite}} - </span> 
+		<span class="providerExchangeOLD">{{provider.exchangevalue}} {{provider.currencyLabel}} </span>
+		- {{provider.exchangetime}}  
+	</div>
+	</div>
+  </div>
+</footer>

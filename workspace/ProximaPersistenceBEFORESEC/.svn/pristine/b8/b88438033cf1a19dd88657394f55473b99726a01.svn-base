@@ -1,0 +1,37 @@
+<div class="container">
+<form id="formContainer" class="panel-body" ng-submit="surveySubmit()">
+<div class="container" ng-repeat="q in questions track by $index" ng-show="show[$index]">
+		<label class="label">{{q.question.description}}</label><br>
+		<div class="question-answer">
+        	<input class="survey-q" type="checkbox" value="answerA" name="{{q.question.id}}"/>{{q.question.ansa}}<br>
+        </div>
+        <div class="question-answer">
+        	<input class="survey-q" type="checkbox" value="answerB" name="{{q.question.id}}"/>{{q.question.ansb}}<br>
+        </div>
+        <div class="question-answer">
+        	<input class="survey-q" type="checkbox" value="answerC" name="{{q.question.id}}"/>{{q.question.ansc}}<br>
+        </div>
+        <div class="question-answer">
+        	<input class="survey-q" type="checkbox" value="answerD" name="{{q.question.id}}"/>{{q.question.ansd}}<br>
+        </div>
+        <div class="question-answer">
+			<input class="survey-q" type="checkbox" value="answerE" name="{{q.question.id}}"/>{{q.question.anse}}<br>
+		</div>
+		<div class="question-answer">
+			<input class="survey-q" type="checkbox" value="answerF" name="{{q.question.id}}"/>{{q.question.ansf}}<br>
+		</div>
+</div>
+<!-- <input type="button" name="submitButt" value="Next" ng-click="checkShowNext()">
+<input type="button" name="submitButt" value="Previous" ng-click="checkShowPrevious()">
+ <input type="submit" name="submitButt" value="Submit"> -->
+
+<section id="sub" class="submit-question"> 
+	<button type="button" class="sub-previous" name="submitPrevious" value="Previous" ng-click="checkShowPrevious()">Previous</button>
+					
+	<button type="button" class="sub-next" name="submitNext" value="Next" ng-click="checkShowNext()">Next</button>
+					
+	<input class="sub-ques" type="submit" name="submitButt" value="Submit">
+</section>
+
+</form>
+</div>

@@ -1,0 +1,50 @@
+
+.alert-success {
+	margin-left: 100px;
+	margin-right: 100px;
+	background: #bce8f1;
+}
+
+.panel-body, .panel-default{
+	border-color: rgb(100%, 100%, 100%);
+    height: 100%;
+	background: repeat-y 48%;
+ 	font-family: 'Oxygen', sans-serif;
+	    background-size: cover;
+}
+
+.container {
+	width: 80%;
+}
+
+.form-group{
+    border-bottom: 1px solid #dee8f1;
+	margin-bottom: 15px;
+}
+
+.form-horizontal{
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-bottom: 15px;
+    height: auto!important;
+	padding: 8px 12px !important;
+}
+
+.control-lable {
+	    float: left;
+    width: 185px;
+    padding-right: 15px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.form-control {
+	padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #848484 #c1c1c1 #e1e1e1 #c1c1c1;
+    background: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 10px;
+}

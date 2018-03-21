@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">     
+      <a class="navbar-brand" href="#">
+<!--           <img class="img-responsive2" src="images/logo_proxima.png"> -->
+          Proxima.Accademy.Mi
+      </a>
+    </div>
+<!--     <div class="page-header text-center"> -->
+<!-- 		<a href="http://www.proximainformatica.com/" target="_blank"> <img -->
+<!-- 			class="img-responsive2" src="images/logo_proxima.png"> -->
+<!-- 		</a> -->
+<!-- 	</div> -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+<!--       markets -->
+        <li><a href="#/show-charts-BTC">BITCOIN</a></li>
+        <li><a href="#/show-charts-LTC">LITECOIN</a></li>
+        <li><a href="#/show-charts-ETH">ETHEREUM</a></li>
+<!--         administration -->
+		<li><a href="#/register-new-user">Register New User</a></li>
+		<li><a href="#/list-all-users">List All Users </a></li>
+<!-- 		profile -->
+		<li><a href="#/update-singleUser/:id">Update User</a>
+		
+		
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+

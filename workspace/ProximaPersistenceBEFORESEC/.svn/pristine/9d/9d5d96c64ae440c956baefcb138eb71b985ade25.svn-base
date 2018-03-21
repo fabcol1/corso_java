@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="userregistrationsystem">
+<head>
+<title>Full Stack Development</title>
+<!-- <link rel="stylesheet" href="/css/app.css"> -->
+</head>
+<body>
+        <div class="page-header text-center">
+        	<a href="http://www.proximainformatica.com/" target="_blank">
+        		<img class="img-responsive2" src="images/logo_proxima.png">
+        	</a>
+        </div>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                        <a href="#/login"
+                                class="btn btn-info"
+                                role="button">
+                                        Login
+                        </a>
+                        <a href="#/"
+                                class="btn btn-info navbar-btn"
+                                role="button">
+                                        Home
+                        </a>
+                        <a href="#/register-new-user"
+                                class="btn btn-info navbar-btn"
+                                role="button">
+                                        Register New User
+                        </a>
+                                              <a href="#/update-userPassword/{{user.userId}}"
+                              class="btn btn-info"
+                              role="button">
+                                      Update User Password
+                      </a>
+                      
+                                            <a href="#/reset-userPassword/{{user.userId}}"
+                              class="btn btn-info"
+                              role="button">
+                                      Reset User Password
+                      </a>
+                      
+                        <a href="#/list-all-users"
+                                class="btn btn-info"
+                                role="button">
+                                        List All Users
+                        </a>
+                        <input type="text" ng-model="user.userId" />
+                        <!-- ng-click="editUser(user.id)" -->
+                        <a href="#/update-singleUser/{{user.userId}}" 
+                                class="btn btn-info"
+                                role="button">
+                                        Update User
+                        </a>
+
+                         <a href="#/show-charts-BTC"
+                                class="btn btn-info"
+                                role="button">
+                                        BITCOIN
+                        </a>
+                        
+                         <a href="#/show-charts-LTC"
+                                class="btn btn-info"
+                                role="button">
+                                        LITECOIN
+                        </a>
+                        
+                         <a href="#/show-charts-ETH"
+                                class="btn btn-info"
+                                role="button">
+                                        ETHEREUM
+                        </a>
+                        
+                        <a href="#/insert-new-question"
+                                class="btn btn-info navbar-btn"
+                                role="button">
+                                        Insert New Question
+                        </a>
+                        <a href="#/list-all-questions"
+                                class="btn btn-info"
+                                role="button">
+                                        List All Questions
+                        </a>
+                        <a href="#/complete-survey"
+                                class="btn btn-info"
+                                role="button">
+                                        Complete Survey
+                        </a>
+
+                </div>
+        </nav>
+        <div ng-view></div>
+        <script src="/webjars/angularjs/1.4.9/angular.js"></script>
+        <script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+        <script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+        <script src="/webjars/momentjs/2.18.1/moment.js"></script>
+        <script src="/webjars/chartjs/2.6.0/Chart.js"></script>
+       
+        <script src="/js/app_userregistrationsystem.js"></script>
+        <script src="/js/listUserController.js"></script>
+        <script src="/js/userController.js"></script>
+        <script src="/js/registerUserController.js"></script>
+        <script src="/js/usersDetailsController.js"></script>
+        <script src="/js/chartsController.js"></script>
+        <script src="/js/bitcoinController.js"></script>
+        <script src="/js/litecoinController.js"></script>
+        <script src="/js/ethereumController.js"></script>
+        <script src="/js/insertQuestionController.js"></script>
+        <script src="/js/questionsDetailsController.js"></script>
+        <script src="/js/listQuestionController.js"></script>
+        <script src="/js/surveyController.js"></script>
+        <script src="/js/loginController.js"></script>
+                <script src="/js/resetPasswordController.js"></script>
+                                <script src="/js/updatePasswordController.js"></script>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.6/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/form.css">
+		<link rel="stylesheet" href="/css/topnav.css">
+		<link rel="stylesheet" href="/css/question.css">
+</body>
+</html>

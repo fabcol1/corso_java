@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="panel panel-default ">
+    <div class="alert alert-info">
+      <span class="lead">List of Questions </span>
+    </div>
+    <div class="panel-body ">
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered ">
+          <thead>
+            <tr>
+              <th>Label</th>
+              <th>Description</th>
+              <th width="100">Edit</th>
+              <th width="100">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="question in questions">
+              <td>{{question.label}}</td>
+              <td>{{question.description}}</td>
+              <td>
+                <button type="button" ng-click="editQuestion(question.id)" class="btn btn-primary custom-width">
+                                        <span class="glyphicon glyphicon-edit">
+                                        </span>
+                                                Edit
+                                  </button>
+              </td>
+              <td>
+                <button type="button" ng-click="deleteQuestion(question.id)" class="btn btn-danger custom-width">
+                                        <span class="glyphicon glyphicon-remove">
+                                        </span>
+                                                Delete
+                                  </button>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="deletePermission" style="color:red; text-align: right;" ng-show="deletePermission">
+        <label>{{notDeletable}}</label></div>
+    </div>
+  </div>
+</div>
