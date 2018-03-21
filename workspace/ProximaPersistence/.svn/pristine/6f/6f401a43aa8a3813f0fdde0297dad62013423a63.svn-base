@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="userregistrationsystem">
+<head>
+<title>Full Stack Development</title>
+<!-- <link rel="stylesheet" href="/css/app.css"> -->
+</head>
+<body>
+
+
+	<!-- 	<nav class="navbar navbar-default"  ng-show="authenticated"> -->
+	<!-- 		<div class="container-fluid"> -->
+
+	<!-- 			<div> -->
+
+
+	<!-- 				<a href="#/login" class="btn btn-info" role="button"> Login </a> <a -->
+	<!-- 					href="#/" class="btn btn-info navbar-btn" role="button"> Home </a> -->
+	<!-- 				<a href="#/register-new-user" class="btn btn-info navbar-btn" -->
+	<!-- 					role="button"> Register New User </a>  -->
+	<!-- 					                         <a href="#/update-userPassword/{{user.userId}}" -->
+	<!--                               class="btn btn-info" -->
+	<!--                               role="button"> -->
+	<!--                                       Update User Password -->
+	<!--                       </a> -->
+
+	<!--                                             <a href="#/reset-userPassword/{{user.userId}}" -->
+	<!--                               class="btn btn-info" -->
+	<!--                               role="button"> -->
+	<!--                                       Reset User Password -->
+	<!--                       </a> -->
+	<!--                       <a href="#/list-all-users" -->
+	<!-- 					class="btn btn-info" role="button"> List All Users </a> <input -->
+	<!-- 					type="text" ng-model="user.userId" /> -->
+	<!-- 				ng-click="editUser(user.id)" -->
+	<!-- 				<a href="#/update-singleUser/{{user.userId}}" class="btn btn-info" -->
+	<!-- 					role="button"> Update User </a> <a href="#/show-charts-BTC" -->
+	<!-- 					class="btn btn-info" role="button"> BITCOIN </a> <a -->
+	<!-- 					href="#/show-charts-LTC" class="btn btn-info" role="button"> -->
+	<!-- 					LITECOIN </a> <a href="#/show-charts-ETH" class="btn btn-info" -->
+	<!-- 					role="button"> ETHEREUM </a> <a href="#/insert-new-question" -->
+	<!-- 					class="btn btn-info navbar-btn" role="button"> Insert New -->
+	<!-- 					Question </a> <a href="#/list-all-questions" class="btn btn-info" -->
+	<!-- 					role="button"> List All Questions </a> <a href="#/complete-survey" -->
+	<!-- 					class="btn btn-info" role="button"> Complete Survey </a> <a -->
+	<!-- 					href="#/logout" class="btn btn-danger navbar-btn pull-right" -->
+	<!-- 					role="button"> Logout </a> -->
+	<!-- 			</div> -->
+
+	<!-- 	</nav> -->
+	
+	<nav class="navbar navbar-default" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"> <!--           <img class="img-responsive2" src="images/logo_proxima.png"> -->
+					Proxima.Accademy.Mi TEST
+				</a>
+			</div>
+			<!--     <div class="page-header text-center"> -->
+			<!-- 		<a href="http://www.proximainformatica.com/" target="_blank"> <img -->
+			<!-- 			class="img-responsive2" src="images/logo_proxima.png"> -->
+			<!-- 		</a> -->
+			<!-- 	</div> -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1" >
+				<ul class="nav navbar-nav navbar-right">
+					<!--       markets -->
+					<li><a href="#/show-charts-BTC">BITCOIN</a></li>
+					<li><a href="#/show-charts-LTC">LITECOIN</a></li>
+					<li><a href="#/show-charts-ETH">ETHEREUM</a></li>
+					<!--       markets -->
+					<!--         administration -->
+					<li><a href="#/register-new-user">Registration</a></li>
+					<li><a href="#/login">LOGIN</a></li>
+					<li ng-show="authenticated"><a href="#/list-all-users">List All Users </a></li>
+					<!-- 		profile -->
+					<li ng-show="authenticated"><a href="#/update-singleUser/:id">Update User</a> <!-- survey administration -->
+					<li ng-show="authenticated"><a href="#/insert-new-question">Insert New Question</a></li>
+					<li ng-show="authenticated"><a href="#/list-all-questions">List All Question</a></li>
+					<li ng-show="authenticated"><a href="#/complete-survey">Complete Survey</a></li>
+					<!-- profile survey -->
+					<li ng-show="authenticated"><a href="#/complete-survey">Complete Survey</a></li>
+					<!-- 		LOGOUT -->
+					<li ng-show="authenticated"><a href="#/logout">LOGOUT</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+	<div ng-view></div>
+	<script src="/webjars/angularjs/1.4.9/angular.js"></script>
+	<script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+	<script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+	<script src="/webjars/momentjs/2.18.1/moment.js"></script>
+	<script src="/webjars/chartjs/2.6.0/Chart.js"></script>
+
+	<script src="/js/app_userregistrationsystem.js"></script>
+	<script src="/js/listUserController.js"></script>
+	<script src="/js/userController.js"></script>
+	<script src="/js/homeController.js"></script>
+	<script src="/js/loginController.js"></script>
+	<script src="/js/logoutController.js"></script>
+	<script src="/js/registerUserController.js"></script>
+	<script src="/js/usersDetailsController.js"></script>
+	<script src="/js/chartsController.js"></script>
+	<script src="/js/bitcoinController.js"></script>
+	<script src="/js/litecoinController.js"></script>
+	<script src="/js/ethereumController.js"></script>
+	<script src="/js/insertQuestionController.js"></script>
+	<script src="/js/questionsDetailsController.js"></script>
+	<script src="/js/listQuestionController.js"></script>
+	<script src="/js/surveyController.js"></script>
+	<script src="/js/loginController.js"></script>
+	<script src="/js/resetPasswordController.js"></script>
+	<script src="/js/updatePasswordController.js"></script>
+	<link rel="stylesheet"
+		href="/webjars/bootstrap/3.3.6/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/form.css">
+	<!-- 	<link rel="stylesheet" href="/css/topnav.css"> -->
+	<link rel="stylesheet" href="/css/question.css">
+</body>
+</html>

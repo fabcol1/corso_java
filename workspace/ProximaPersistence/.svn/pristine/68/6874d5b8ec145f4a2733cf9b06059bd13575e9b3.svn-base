@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		background-color: lightblue;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="tarea"><h1>Chat Login</h1></div>
+<div class="chatdiv bg-info">	
+	<form action="loginResponse2.jsp">
+	<label>EMAIL:</label>
+	<div class="input-group">
+		
+		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		 <input type="text" name="email" class="form-control" required/>
+		 </div>
+		  <label>PASSWORD:</label><br>
+		  <div class="input-group">
+		  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+		<input type="password" name="password"  class="form-control" required/>
+		</div>
+		 <input type="submit" value="Login" class="btn btn-lg btn-primary greenbut"/>		
+	</form>
+	
+	
+	<span class="psw boxwithoutborder">Not a member? <a href="#">Register</a></span>
+	</div>
+</body>
+</html>

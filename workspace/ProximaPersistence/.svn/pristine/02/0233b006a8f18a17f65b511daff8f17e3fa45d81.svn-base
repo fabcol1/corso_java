@@ -1,0 +1,63 @@
+
+<div id="container">
+    <div id="xchangeValuesBar">
+	<div>
+
+				<div ng-repeat="provider in lastvalues">
+				<div class="card">
+<!--                 <img ng-src="{{provider.imgPath}}"  alt="Provider Logo" style="width:100px"> -->
+                <img ng-src="../images/{{provider.providerIconImgpath}}"  alt="" class = "img_center" ng-show="provider.providerIconImgpath!=null">
+                <p ng-show="provider.providerIconImgpath==null">{{provider.providerSite}}</p>
+<!--                 <hr class= "style-four"> -->
+                <div class="container">
+<!-- 				<p class="providerSite">{{provider.providerSite}}</p>  -->
+				<p class="providerExchange">{{provider.exchangevalue}} {{provider.currencyLabel}} </p>
+				<p class="providerTime">{{provider.exchangetime | date: 'H:mm dd-MM-yyyy'}}</p>
+				
+<!-- 					<p>{{provider.providerSite}}</p> -->
+<!-- 					<p></p> {{provider.exchangevalue}} {{provider.currencyLabel}} -->
+<!-- 					<p>{{provider.exchangetime}}</p> -->
+				</div>
+				
+				</div>
+				
+				</div>
+				
+	</div>
+	</div>
+	
+
+	<div class="panel panel-default ">
+		<!-- 					<div class="alert alert-success"> -->
+		<!-- 			<span class="lead"> Proxima Crypto Charts </span> -->
+		<!-- 		</div> -->
+
+		<div>
+			<div class="container" id="daydiv">
+				<canvas id="daily"></canvas>
+			</div>
+			<div class="container" id="weekdiv" ng-show="weeklyDisplay">
+				<canvas id="weekly"></canvas>
+			</div>
+			<div class="container" id="monthdiv" ng-show="weeklyDisplay">
+				<canvas id="monthly"></canvas>
+			</div>
+			<div class="container" id="yeardiv" ng-show="weeklyDisplay">
+				<canvas id="yearly"></canvas>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<footer class="bd-footer text-muted">
+  <div class="container">
+   <div id="xchangeValuesBarOLD">
+	<div ng-repeat="provider in lastvalues">
+		<span class="providerSiteOLD">{{provider.providerSite}} - </span> 
+		<span class="providerExchangeOLD">{{provider.exchangevalue}} {{provider.currencyLabel}} </span>
+		- {{provider.exchangetime}}  
+	</div>
+	</div>
+  </div>
+</footer>

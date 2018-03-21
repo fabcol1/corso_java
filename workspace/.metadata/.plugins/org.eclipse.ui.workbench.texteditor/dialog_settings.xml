@@ -6,12 +6,15 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Ethereum" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Bitcoin"/>
+			<item value="bitcoin"/>
+			<item value="bit"/>
 			<item value="tomcat"/>
 			<item value="security"/>
 			<item value="log4"/>
@@ -22,16 +25,13 @@
 			<item value="LitecoinHistorical"/>
 			<item value="LitecoinHistoricalRepository"/>
 			<item value="bitcoinHistoricalRepository"/>
-			<item value="bitcoin"/>
 			<item value="bitcoinHistoricalService"/>
 			<item value="BitcoinHistorical"/>
-			<item value="Bitcoin"/>
-			<item value="console.log"/>
 		</list>
 		<list key="replacehistory">
-			<item value="Long"/>
 			<item value="Ethereum"/>
 			<item value="ethereum"/>
+			<item value="Long"/>
 			<item value="EthereumHistorical"/>
 			<item value="ethereumHistoricalRepository"/>
 			<item value="EthereumHistoricalRepository"/>
@@ -45,7 +45,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="198" key="DIALOG_X_ORIGIN"/>
-		<item value="214" key="DIALOG_Y_ORIGIN"/>
+		<item value="763" key="DIALOG_X_ORIGIN"/>
+		<item value="222" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

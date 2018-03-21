@@ -1,0 +1,40 @@
+<div class="container">
+  <!-- nel caso l'error message sia diverso da null viene visualizzato l'error message -->
+  <div class="alert alert-danger" role="alert" ng-if="errorMessage">
+    {{errorMessage}}</div>
+  <div class="panel panel-default ">
+    <div class="alert alert-success">
+      <span class="lead">Recovery Password</span>
+    </div>
+    <div class="panel-body ">
+      <div class="container">
+        <!--         ng submit per la sottomissione del form viene chiamata la funzione al suo interno -->
+        <form ng-submit="submitUserForm()" name="myForm" class="form-horizontal">
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label class="col-md-2 control-lable" for="fname">
+								Email </label>
+              <div class="col-md-7">
+                <input type="text" ng-model="user.email" class="form-control input-sm" placeholder="Email" required />
+                <label ng-show="!emailPresent" style="color:red;">Email non presente!</label>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-actions floatRight">
+              <input type="button" ng-click="checkEmail(user.email)" value="Recover Password" class="btn btn-primary btn-sm">
+              <button type="button" ng-click="resetForm()" class="btn btn-warning btn-sm">Reset Form</button>
+            </div>
+            <label style="color:green;" ng-show="pwdUpdate">Controlla la tua email per la procedura di recupero password!</label>
+
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
