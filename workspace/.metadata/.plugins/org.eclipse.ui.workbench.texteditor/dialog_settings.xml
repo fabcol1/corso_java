@@ -6,36 +6,38 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Ethereum" key="selection"/>
+		<item value="ethereum" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="Bitcoin"/>
+			<item value="LITECOIN"/>
+			<item value="litecoin"/>
+			<item value="Litecoin"/>
+			<item value="ethereum"/>
+			<item value="Ethereum"/>
+			<item value="getM"/>
+			<item value="BITCOIN"/>
 			<item value="bitcoin"/>
+			<item value="Bitcoin"/>
 			<item value="bit"/>
 			<item value="tomcat"/>
 			<item value="security"/>
 			<item value="log4"/>
 			<item value="long"/>
 			<item value="weeklyDisplay"/>
-			<item value="Litecoin"/>
-			<item value="litecoin"/>
-			<item value="LitecoinHistorical"/>
-			<item value="LitecoinHistoricalRepository"/>
-			<item value="bitcoinHistoricalRepository"/>
-			<item value="bitcoinHistoricalService"/>
-			<item value="BitcoinHistorical"/>
 		</list>
 		<list key="replacehistory">
-			<item value="Ethereum"/>
 			<item value="ethereum"/>
+			<item value="Ethereum"/>
+			<item value="litecoin"/>
+			<item value="Litecoin"/>
+			<item value="LITECOIN"/>
 			<item value="Long"/>
 			<item value="EthereumHistorical"/>
 			<item value="ethereumHistoricalRepository"/>
 			<item value="EthereumHistoricalRepository"/>
-			<item value="litecoin"/>
 			<item value="litecoinHistoricalService"/>
 			<item value="LitecoinHistorical"/>
 			<item value="&apos;"/>
@@ -45,7 +47,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="763" key="DIALOG_X_ORIGIN"/>
-		<item value="222" key="DIALOG_Y_ORIGIN"/>
+		<item value="79" key="DIALOG_X_ORIGIN"/>
+		<item value="163" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

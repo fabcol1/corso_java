@@ -7,7 +7,7 @@ app.controller('litecoinController', function($scope, $http, $location, $route, 
 		var cryptocurrencyId = 2 ;
 	$http({
 		method : 'GET',
-		url : '/api/bitcoin/lastvalues/' + cryptocurrencyId
+		url : '/api/litecoin/lastvalues/' + cryptocurrencyId
 	}).then(function(response) {
 		$scope.lastvalues = response.data;			
 		
@@ -74,7 +74,10 @@ function chartGeneratorForLite($http, $scope, $q, urlBase, chartTitle, unit, ele
 		var datasets = [];
 
 		for(var i = 0; i < arrayOfResults.length; i++) {
-			datasets.push(datasetGenerator(loadValues(arrayOfResults[i].data), $scope.labels[i], $scope.colors[i]  ));
+			if (arrayOfResults[i].data.length>0) {
+				datasets.push(datasetGenerator(loadValues(arrayOfResults[i].data), $scope.labels[i], $scope.colors[i]  ));	
+			}
+			
 		}
 
 		var options = {

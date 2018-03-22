@@ -1,0 +1,25 @@
+package org.proxima.cc.repository.ethereum;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.proxima.cc.entities.ethereum.EthereumHistorical;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+
+public interface EthereumHistoricalRepository extends JpaRepository<EthereumHistorical, Integer>, JpaSpecificationExecutor<EthereumHistorical>, EthereumHistoricalRepositoryCustom {
+
+
+	List<EthereumHistorical> findAllByExchangetimeGreaterThan (LocalDateTime ldt) ;
+	List<EthereumHistorical> findAllByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(LocalDateTime ldt, Long id);
+	// MAX
+	EthereumHistorical findFirstByExchangetimeGreaterThanAndCryptoexchangevaluesprovideridOrderByExchangevalueDesc(LocalDateTime ldt, Long id);
+	
+	// MIN
+	EthereumHistorical findFirstByExchangetimeGreaterThanAndCryptoexchangevaluesprovideridOrderByExchangevalueAsc(LocalDateTime ldt, Long id);
+
+
+}

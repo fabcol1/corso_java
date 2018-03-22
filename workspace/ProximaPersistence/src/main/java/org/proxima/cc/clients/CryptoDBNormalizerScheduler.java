@@ -3,6 +3,7 @@ package org.proxima.cc.clients;
 import org.apache.log4j.Logger;
 import org.proxima.cc.services.BitcoinHistoricalAverageService;
 import org.proxima.cc.services.EthereumHistoricalAverageService;
+import org.proxima.cc.services.LitecoinHistoricalAverageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,8 @@ public class CryptoDBNormalizerScheduler {
 	private BitcoinHistoricalAverageService bitcoinHistoricalAverageService;
 	@Autowired
 	private EthereumHistoricalAverageService ethereumHistoricalAverageService;
+	@Autowired
+	private LitecoinHistoricalAverageService litecoinHistoricalAverageService;
 	
 	@Scheduled(cron = "0 0 0 * * ?")
 	public void lastDayBitcoinHistoricalsAverageScheduler() {
@@ -27,6 +30,13 @@ public class CryptoDBNormalizerScheduler {
 	public void lastDayEthereumHistoricalsAverageScheduler() {
 		logger.info("-----------------------------SCHEDULER LAST DAY VALUES ETHEREUM--------------------------------");
 		ethereumHistoricalAverageService.lastDayEthereumHistoricalsAverage();
+		logger.info("------------------------------------------------------------------");
+	}
+	
+	@Scheduled(cron = "0 0 0 * * ?")
+	public void lastDayLitecoinHistoricalsAverageScheduler() {
+		logger.info("-----------------------------SCHEDULER LAST DAY VALUES LITECOIN--------------------------------");
+		litecoinHistoricalAverageService.lastDayLitecoinHistoricalsAverage();
 		logger.info("------------------------------------------------------------------");
 	}
 	

@@ -33,23 +33,25 @@ public class BitcoinHistoricalAverageService {
 		for(CryptoExchangeValuesProvider prov : providers) {
 			logger.info("------------------------------------" + prov.getLabel() + "------------------------------------");
 			BitcoinHistorical min = bitcoinHistoricalService.getMinLastDayBitcoinHistoricals(prov.getId());
-			logger.info("MIN: " + min.getExchangevalue());
 			BitcoinHistorical max = bitcoinHistoricalService.getMaxLastDayBitcoinHistoricals(prov.getId());
-			logger.info("MAX: " + max.getExchangevalue());
 			BitcoinHistoricalCustom avg = bitcoinHistoricalService.getAverageLastDayBitcoinHistoricals(prov.getId());
-			logger.info("AVG: " + avg.getExchangevalue());
 			
-			BitcoinHistoricalAverage btcAverage = new BitcoinHistoricalAverage();
-			btcAverage.setExchangedate(LocalDate.now());
-			btcAverage.setExchangeaverage(avg.getExchangevalue());
-			btcAverage.setExchangemax(max.getExchangevalue());
-			btcAverage.setExchangemin(min.getExchangevalue());
-			btcAverage.setCryptoexchangevaluesproviderid(prov.getId());
-			btcAverage.setCurrencyregistryid(max.getCurrencyregistryid());
-			
-			logger.info("BITCOIN HISTORICAL AVERAGE: " + btcAverage);
-			
-			bitcoinHistoricalAverageRepository.save(btcAverage);
+			if(min!=null && max!=null && avg!=null) {
+				logger.info("MIN: " + min.getExchangevalue());
+				logger.info("MAX: " + max.getExchangevalue());
+				logger.info("AVG: " + avg.getExchangevalue());			
+				BitcoinHistoricalAverage btcAverage = new BitcoinHistoricalAverage();
+				btcAverage.setExchangedate(LocalDate.now());
+				btcAverage.setExchangeaverage(avg.getExchangevalue());
+				btcAverage.setExchangemax(max.getExchangevalue());
+				btcAverage.setExchangemin(min.getExchangevalue());
+				btcAverage.setCryptoexchangevaluesproviderid(prov.getId());
+				btcAverage.setCurrencyregistryid(max.getCurrencyregistryid());
+				
+				logger.info("BITCOIN HISTORICAL AVERAGE: " + btcAverage);
+				
+				bitcoinHistoricalAverageRepository.save(btcAverage);
+			}
 		}
 	}
 	

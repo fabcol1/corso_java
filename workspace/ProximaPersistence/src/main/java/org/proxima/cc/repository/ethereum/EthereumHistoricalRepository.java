@@ -9,15 +9,14 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
+
 public interface EthereumHistoricalRepository extends JpaRepository<EthereumHistorical, Integer>, JpaSpecificationExecutor<EthereumHistorical>, EthereumHistoricalRepositoryCustom {
+
 
 	List<EthereumHistorical> findAllByExchangetimeGreaterThan (LocalDateTime ldt) ;
 	List<EthereumHistorical> findAllByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(LocalDateTime ldt, Long id);
 	// MAX
 	EthereumHistorical findFirstByExchangetimeGreaterThanAndCryptoexchangevaluesprovideridOrderByExchangevalueDesc(LocalDateTime ldt, Long id);
-	
 	// MIN
 	EthereumHistorical findFirstByExchangetimeGreaterThanAndCryptoexchangevaluesprovideridOrderByExchangevalueAsc(LocalDateTime ldt, Long id);
-
-
 }

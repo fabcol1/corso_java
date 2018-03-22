@@ -30,39 +30,24 @@ public class BitcoinHistoricalService {
 	public BitcoinHistorical getMinLastDayBitcoinHistoricals(Long id) {
 		LocalDateTime ldtNow = LocalDateTime.now();
 		LocalDateTime ldt = ldtNow.minusDays(1);
-		BitcoinHistorical bitcoin = null;
-		try {
-			bitcoin = bitcoinHistoricalRepository
+		BitcoinHistorical bitcoin = bitcoinHistoricalRepository
 				.findFirstByExchangetimeGreaterThanAndCryptoexchangevaluesprovideridOrderByExchangevalueAsc(ldt, id);
-		} catch(Exception e) {
-			logger.error(e.getMessage());
-		}
 		return bitcoin;
 	}
 	
 	public BitcoinHistorical getMaxLastDayBitcoinHistoricals(Long id) {
 		LocalDateTime ldtNow = LocalDateTime.now();
 		LocalDateTime ldt = ldtNow.minusDays(1);
-		BitcoinHistorical bitcoin = null;
-		try {
-			bitcoin = bitcoinHistoricalRepository
+		BitcoinHistorical bitcoin  = bitcoinHistoricalRepository
 				.findFirstByExchangetimeGreaterThanAndCryptoexchangevaluesprovideridOrderByExchangevalueDesc(ldt, id);
-		} catch(Exception e) {
-			logger.error(e.getMessage());
-		}
 		return bitcoin;
 	}
 	
 	public BitcoinHistoricalCustom getAverageLastDayBitcoinHistoricals(Long id) {
 		LocalDateTime ldtNow = LocalDateTime.now();
 		LocalDateTime ldt = ldtNow.minusDays(1);
-		BitcoinHistoricalCustom bitcoin = null;
-		try {
-			bitcoin = bitcoinHistoricalRepository
+		BitcoinHistoricalCustom bitcoin = bitcoinHistoricalRepository
 				.findAverageByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(ldt, id);
-		} catch(Exception e) {
-			logger.error(e.getMessage());
-		}
 		return bitcoin;
 	}
 	

@@ -11,6 +11,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import org.apache.log4j.Logger;
 import org.proxima.cc.entities.CryptoExchangeValuesProvider;
 import org.proxima.cc.entities.CurrencyRegistry;
 import org.proxima.cc.entities.bitcoin.BitcoinHistorical;
@@ -19,6 +20,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class BitcoinHistoricalRepositoryImpl implements BitcoinHistoricalRepositoryCustom {
+
+	public static final Logger logger = Logger.getLogger(BitcoinHistoricalRepositoryImpl.class);
 
 	@PersistenceContext
 	private EntityManager em;
@@ -92,42 +95,12 @@ public class BitcoinHistoricalRepositoryImpl implements BitcoinHistoricalReposit
 		
 		TypedQuery<Double> q = em.createQuery(query);
 		Double returnValue = q.getSingleResult();
+		logger.info("Double AVG: " + returnValue);
+
 		BitcoinHistoricalCustom bhist = new BitcoinHistoricalCustom();
-		bhist.setExchangevalue(new BigDecimal(returnValue));
+		if(returnValue!=null) {
+			bhist.setExchangevalue(new BigDecimal(returnValue));
+		}
 		return bhist ;	
 	}
-	
-//	@Override
-//	public BitcoinHistoricalCustom findAverageByExchangetimeGreaterThanAndCryptoexchangevaluesproviderid(LocalDateTime ldt, Long id) {
-//
-//		  // Get Average Salary
-////        CriteriaQuery<Double> criteriaQuery3 = builder.createQuery(Double.class);
-////        Root<Employee> root3 = criteriaQuery3.from(Employee.class);
-////        criteriaQuery3.select(builder.avg(root3.get("salary")));
-////        Query<Double> query3 = session.createQuery(criteriaQuery3);
-////        double avgSalary = query3.getSingleResult();
-////        System.out.println("Average Salary = " + avgSalary);
-//		
-//		CriteriaBuilder cb = em.getCriteriaBuilder();
-//		CriteriaQuery<BitcoinHistoricalCustom> query = null;
-//		query = cb.createQuery(BitcoinHistoricalCustom.class);
-//		Root<BitcoinHistorical> bitcoinHistoricalTable = query.from(BitcoinHistorical.class);
-//		List<Predicate> criteria = new ArrayList<Predicate>();
-//		criteria.add(cb.equal(bitcoinHistoricalTable.get("cryptoexchangevaluesproviderid"), id));
-//		criteria.add(cb.greaterThan(bitcoinHistoricalTable.get("exchangetime"), ldt));
-//		
-//		query.where(criteria.toArray(new Predicate[criteria.size()]));
-//		
-//		TypedQuery<BitcoinHistoricalCustom> q = em.createQuery(query.multiselect(
-//				bitcoinHistoricalTable.get("id"),
-//				bitcoinHistoricalTable.get("cryptoexchangevaluesproviderid"), 
-//				bitcoinHistoricalTable.get("currencyregistryid"),
-//				bitcoinHistoricalTable.get("exchangetime"),
-//				cb.avg(bitcoinHistoricalTable.get("exchangevalue")).as(BigDecimal.class)));
-//		
-//		q.setMaxResults(1);
-//		BitcoinHistoricalCustom returnValue = q.getSingleResult();
-//		return returnValue ;	
-//		}
-	
 }

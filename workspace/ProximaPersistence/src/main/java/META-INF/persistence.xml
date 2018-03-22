@@ -18,5 +18,6 @@
 		<class>org.proxima.cc.entities.ethereum.EthereumHistorical</class>
 		<class>org.proxima.cc.entities.bitcoin.BitcoinHistoricalAverage</class>
 		<class>org.proxima.cc.entities.ethereum.EthereumHistoricalAverage</class>
+		<class>org.proxima.cc.entities.litecoin.LitecoinHistoricalAverage</class>
 	</persistence-unit>
 </persistence>

@@ -4,7 +4,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.proxima.cc.entities.ethereum.EthereumHistorical;
-import org.proxima.cc.entities.litecoin.LitecoinHistorical;
+import org.proxima.cc.entities.ethereum.EthereumHistoricalCustom;
+
 import org.proxima.cc.services.EthereumHistoricalService;
 import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,5 +80,35 @@ public class EthereumHistoricalRestController {
 	public ResponseEntity<EthereumHistorical> insertEthereumHistorical(@Valid @RequestBody final EthereumHistorical ethereum) {
 		ethereumHistoricalService.insertEthereumHistorical(ethereum);
 		return new ResponseEntity<EthereumHistorical>(ethereum, HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/lastvalue/{cryptoexchangevaluesproviderId}/{currencyRegistryId}")
+	public ResponseEntity<EthereumHistoricalCustom> lastExcangeValueForProviderAndCurrency(
+			@PathVariable("cryptoexchangevaluesproviderId") final long cryptoexchangevaluesproviderId,
+			@PathVariable("currencyRegistryId") final long currencyRegistryId) {
+		EthereumHistoricalCustom toReturn = ethereumHistoricalService.getLastExcangeByProviderIdAndCurrencyId(cryptoexchangevaluesproviderId, currencyRegistryId);
+		if (toReturn == null) {
+
+			return new ResponseEntity<EthereumHistoricalCustom>(HttpStatus.NO_CONTENT);
+		}
+
+		return new ResponseEntity<EthereumHistoricalCustom>(toReturn, HttpStatus.OK);
+	}
+
+	
+
+	@GetMapping("/lastvalues/{currencyRegistryId}")
+	public ResponseEntity<List<EthereumHistoricalCustom>> lastExchangeValuesForCurrency(
+			@PathVariable("currencyRegistryId") final long currencyRegistryId) {
+		
+		System.out.println("inizio");
+		List<EthereumHistoricalCustom> toReturn = ethereumHistoricalService.getLastExchangeValuesByCurrencyId(currencyRegistryId);
+		
+		if (toReturn == null) {
+
+			return new ResponseEntity<List<EthereumHistoricalCustom>>(HttpStatus.NO_CONTENT);
+		}
+
+		return new ResponseEntity<List<EthereumHistoricalCustom>>(toReturn, HttpStatus.OK);
 	}
 }

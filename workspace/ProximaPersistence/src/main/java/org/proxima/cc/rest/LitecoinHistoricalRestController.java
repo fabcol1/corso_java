@@ -3,8 +3,8 @@ package org.proxima.cc.rest;
 import java.util.List;
 import javax.validation.Valid;
 
-import org.proxima.cc.entities.bitcoin.BitcoinHistorical;
 import org.proxima.cc.entities.litecoin.LitecoinHistorical;
+import org.proxima.cc.entities.litecoin.LitecoinHistoricalCustom;
 import org.proxima.cc.services.LitecoinHistoricalService;
 import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,4 +89,36 @@ public class LitecoinHistoricalRestController {
 		litecoinHistoricalService.insertLitecoinHistorical(litecoin);
 		return new ResponseEntity<LitecoinHistorical>(litecoin, HttpStatus.CREATED);
 	}
+	
+	@GetMapping("/lastvalue/{cryptoexchangevaluesproviderId}/{currencyRegistryId}")
+	public ResponseEntity<LitecoinHistoricalCustom> lastExcangeValueForProviderAndCurrency(
+			@PathVariable("cryptoexchangevaluesproviderId") final long cryptoexchangevaluesproviderId,
+			@PathVariable("currencyRegistryId") final long currencyRegistryId) {
+		LitecoinHistoricalCustom toReturn = litecoinHistoricalService
+				.getLastExcangeByProviderIdAndCurrencyId(cryptoexchangevaluesproviderId, currencyRegistryId);
+		if (toReturn == null) {
+
+			return new ResponseEntity<LitecoinHistoricalCustom>(HttpStatus.NO_CONTENT);
+		}
+
+		return new ResponseEntity<LitecoinHistoricalCustom>(toReturn, HttpStatus.OK);
+	}
+
+	
+
+	@GetMapping("/lastvalues/{currencyRegistryId}")
+	public ResponseEntity<List<LitecoinHistoricalCustom>> lastExchangeValuesForCurrency(
+			@PathVariable("currencyRegistryId") final long currencyRegistryId) {
+		
+		System.out.println("inizio");
+		List<LitecoinHistoricalCustom> toReturn = litecoinHistoricalService.getLastExchangeValuesByCurrencyId(currencyRegistryId);
+		
+		if (toReturn == null) {
+
+			return new ResponseEntity<List<LitecoinHistoricalCustom>>(HttpStatus.NO_CONTENT);
+		}
+
+		return new ResponseEntity<List<LitecoinHistoricalCustom>>(toReturn, HttpStatus.OK);
+	}
+	
 }

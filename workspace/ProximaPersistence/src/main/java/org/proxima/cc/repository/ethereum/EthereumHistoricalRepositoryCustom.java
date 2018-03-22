@@ -1,8 +1,11 @@
+
 package org.proxima.cc.repository.ethereum;
 
 import java.time.LocalDateTime;
 
 import org.proxima.cc.entities.ethereum.EthereumHistoricalCustom;
+
+
 
 public interface EthereumHistoricalRepositoryCustom  {
 	
